@@ -7,6 +7,11 @@ body {
         width: 150px;
         height: 200px;
     }
+
+    .lectures-list img{
+        width: 350px;
+        height: 250px;
+    }
 }
 
 footer {
