@@ -1,20 +1,110 @@
 header {
+  background: #aeccc6;
+}
 
+header > h1 {
+  margin-top: 0;
 }
 
 body {
-    img {
-        width: 150px;
-        height: 200px;
-    }
-
-    .lectures-list img{
-        width: 350px;
-        height: 250px;
-    }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #bbe9db; 
+  width: auto;
+  height: auto;
 }
 
-footer {
-    
+.footer-container {
+  background-color: rgb(68, 64, 64);
+  text-align: center;
+  height: 140px;
+  margin: 0;
 }
 
+.footer-container > p {
+  color: white;
+}
+
+.sidebar footer {
+  background-color: #f4f4f4;
+  text-align: right;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: 102px; 
+  float: left;
+}
+
+header > h1 {
+  text-align: right;
+}
+
+.menu > ul {
+  background-color: #212121; 
+  list-style-type: none;
+  margin: 0px;
+  height: 41px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  display: flex;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none; 
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 4;
+  }
+
+  .content {
+    grid-column: 1;
+  }
+  
+.introduction {
+  padding: 20px;
+  margin: 25px;
+  }
+  
+.sidebar {
+  font-family: 'Brush Script MT', cursive;
+  font-style: italic;
+  grid-column-start: 4;
+  background-color: #f4f4f4; 
+  margin: 25px;
+  padding: 10px;
+  width: 50%;    
+  }
+
+blockquote {
+  margin: 0px;
+}
+
+blockquote p {
+  padding: 0px 5px;
+  margin: 0px;
+}
+
+.sidebar h3 {
+  font-size: x-large;
+  padding-left: 20px;
+}
+
+.introduction>p::first-letter {
+  font-size: 200%;
+  }
+
+#signature {
+  text-align: right;
+  }
+
+#signature::first-letter {
+  font-size: 100%;
+  }
