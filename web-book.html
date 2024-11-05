@@ -25,6 +25,49 @@
 
     <!--Main-->
     <main>
+        <section class="book-details">
+            <img src="images/micro-APIs_cover.jpg">
+            <p><strong>Rating:</strong> (4.6/5) - 150 Reviews</p>
+            <h3>Microservice APIs</h3>
+            <p><strong>Author:</strong>José Haro Peralta</p>
+            <p><strong>Year:</strong>2022</p>
+            <a href="web.html">Back</a>
+        </section>
+
+        <section class="summary">
+            <article>
+                <h4>Summary</h4>
+
+                <p>The book <em>"Microservice APIs"</em> by José Haro Peralta provides a comprehensive guide on
+                    designing,
+                    building, and maintaining APIs in microservices architectures. Peralta emphasizes the best practices
+                    and principles necessary for creating reliable, scalable, and maintainable API systems tailored to
+                    microservices, which rely on distributed and decoupled components.</p>
+                <p>Key topics include:</p>
+
+                <ol>
+                    <li><b>API Design Fundamentals:</b> Covers principles of API design, such as RESTful APIs,
+                        asynchronous communication, and the use of gRPC.</li>
+                    <li><b>Microservice Interactions:</b> Discusses strategies for handling interactions across
+                        microservices,
+                        such as data consistency, event-driven communication, and API versioning to ensure smooth
+                        integration and evolution.</li>
+                    <li><b>Security:</b> Addresses critical security measures, including authentication, authorization,
+                        and secure data transmission to protect APIs in distributed systems.</li>
+                    <li><b>Testing and Observability:</b> Provides methods for testing APIs, monitoring, and logging
+                        within microservice ecosystems, focusing on debugging, reliability, and overall system health.
+                    </li>
+                    <li><b>Practical Applications:</b> Offers real-world examples and case studies that show how these
+                        principles are applied in actual microservices projects.</li>
+                </ol>
+
+                <p>Through a combination of theory and hands-on examples, <em>Microservice APIs</em> is a valuable resource for
+                    software engineers, architects, and developers who want to excel in API development for
+                    microservice-oriented architectures.</p>
+            </article>
+        </section>
+
+        </section>
         <section class="book-contents">
             <h2>Table of Contents</h2>
             <ul>
@@ -47,6 +90,8 @@
 
         <section>
             <h3 id="chapter1">What are microservice APIs?</h3>
+            <img src="images/web-category-images/01-01.png">
+            <img src="images/web-category-images/01-03.png">
             <article>
                 <p>Microservice APIs serve as the connectors between different microservices in a distributed
                     application. Each microservice is a small, independently deployable unit that performs a specific
@@ -84,6 +129,8 @@
 
         <section>
             <h3 id="chapter2">A basic API implementation</h3>
+            <img src="images/web-category-images/02-01.png">
+            <img src="images/web-category-images/02-02.png">
             <article>
                 <p>Implementing a basic API often involves defining a set of endpoints that handle HTTP requests and
                     return data in JSON format. This process typically starts with identifying the core functionalities
@@ -117,6 +164,7 @@
 
         <section>
             <h3 id="chapter3">Designing microservices</h3>
+            <img src="images/web-category-images/03-03.png">
             <article>
                 <p>Designing microservices requires a shift from traditional monolithic architecture to a modular,
                     distributed system. The primary goal is to create small, focused services that handle specific
@@ -151,6 +199,7 @@
 
         <section>
             <h3 id="chapter4">Principles of REST API design</h3>
+            <img src="images/web-category-images/04-04.png">
             <article>
                 <p>REST (Representational State Transfer) APIs are designed based on key principles that ensure
                     consistency, scalability, and efficiency. One of the fundamental principles is statelessness, which
@@ -182,6 +231,7 @@
 
         <section>
             <h3 id="chapter5">Documenting REST APIs with OpenAPI</h3>
+            <img src="images/web-category-images/05-01.png">
             <article>
                 <p>OpenAPI is a widely-used standard for documenting REST APIs, providing a clear, structured format
                     that developers and systems can understand. Documentation is essential in REST APIs because it helps
@@ -215,6 +265,8 @@
 
         <section>
             <h3 id="chapter6">Building REST APIs with Python</h3>
+            <img src="images/web-category-images/06-05.png">
+            <img src="images/web-category-images/06-07.png">
             <article>
                 <p>Python is a popular language for building REST APIs due to its simplicity and readability. Frameworks
                     like Flask and FastAPI make it easy to define endpoints, handle requests, and return responses,
@@ -248,6 +300,8 @@
 
         <section>
             <h3 id="chapter7">Service implementation patterns for microservices</h3>
+            <img src="images/web-category-images/07-01.png">
+            <img src="images/web-category-images/07-03.png">
             <article>
                 <p>When implementing microservices, several patterns are commonly used to ensure they operate
                     efficiently and maintainably. One essential pattern is the Single Responsibility Principle, where
@@ -288,6 +342,7 @@
 
         <section>
             <h3 id="chapter8">Designing GraphQL APIs</h3>
+            <img src="images/web-category-images/08-03.png">
             <article>
                 <p>Designing GraphQL APIs is distinct from REST in that it allows clients to specify exactly what data
                     they need, reducing over-fetching and under-fetching issues. A well-designed GraphQL API begins with
@@ -326,6 +381,7 @@
 
         <section>
             <h3 id="chapter9">Consuming GraphQL APIs</h3>
+            <img src="images/web-category-images/09-04.png">
             <article>
                 <p>Consuming GraphQL APIs requires understanding the unique capabilities of GraphQL queries, mutations,
                     and subscriptions. Unlike REST, where each endpoint provides a specific resource, a GraphQL API
@@ -361,6 +417,7 @@
 
         <section>
             <h3 id="chapter10">Building GraphQL APIs with Python</h3>
+            <img src="images/web-category-images/10-02.png">
             <article>
                 <p>Building a GraphQL API with Python is straightforward, thanks to frameworks like Graphene and
                     Ariadne. These libraries simplify the creation of schemas, resolvers, and the overall structure
@@ -402,6 +459,8 @@
 
         <section>
             <h3 id="chapter11">API authorization and authentication</h3>
+            <img src="images/web-category-images/11-04.png">
+            <img src="images/web-category-images/11-11.png">
             <article>
                 <p>Authorization and authentication are essential for securing APIs, ensuring that only authorized users
                     have access to resources. <b>Authentication</b> verifies the identity of a user, while Authorization
@@ -444,6 +503,8 @@
 
         <section>
             <h3 id="chapter12">Testing and validating APIs</h3>
+            <img src="images/web-category-images/12-06.png">
+            <img src="images/web-category-images/12-07.png">
             <article>
                 <p>Testing and validating APIs is essential to ensure they operate as expected, are reliable, and handle
                     errors gracefully. <b>Unit Testing</b> is often the first step, where individual functions or
@@ -486,6 +547,7 @@
 
         <section>
             <h3 id="chapter13">Dockerizing microservice APIs</h3>
+            <img src="images/web-category-images/13-01.png">
             <article>
                 <p>Dockerizing microservice APIs is a popular approach to simplify deployment, improve consistency, and
                     enhance scalability. Docker containers encapsulate an application and its dependencies, making it
@@ -529,6 +591,8 @@
 
         <section>
             <h3 id="chapter14">Deploying microservice APIs with Kubernetes</h3>
+            <img src="images/web-category-images/14-02.png">
+            <img src="images/web-category-images/14-04.png">
             <article>
                 <p>Kubernetes (K8s) is an orchestration platform that simplifies the deployment, scaling, and management
                     of containerized microservices. It provides tools for automating tasks, such as scheduling,
@@ -562,7 +626,8 @@
                     can route incoming HTTP and HTTPS requests to specific services, providing secure access to
                     microservices. Ingress also supports SSL termination, making it easier to manage secure
                     communications across the cluster.</p>
-                <p>Finally, <b>Kubernetes Monitoring and Logging</b> are essential for managing microservices at scale. Tools
+                <p>Finally, <b>Kubernetes Monitoring and Logging</b> are essential for managing microservices at scale.
+                    Tools
                     like Prometheus and Grafana monitor performance metrics, while centralized logging tools like
                     Fluentd and Elasticsearch collect and analyze logs. These monitoring solutions help identify
                     bottlenecks, debug issues, and maintain high availability in production environments.</p>
