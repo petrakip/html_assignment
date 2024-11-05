@@ -61,7 +61,8 @@
                         principles are applied in actual microservices projects.</li>
                 </ol>
 
-                <p>Through a combination of theory and hands-on examples, <em>Microservice APIs</em> is a valuable resource for
+                <p>Through a combination of theory and hands-on examples, <em>Microservice APIs</em> is a valuable
+                    resource for
                     software engineers, architects, and developers who want to excel in API development for
                     microservice-oriented architectures.</p>
             </article>
@@ -90,8 +91,19 @@
 
         <section>
             <h3 id="chapter1">What are microservice APIs?</h3>
-            <img src="images/web-category-images/01-01.png">
-            <img src="images/web-category-images/01-03.png">
+            <figure>
+                <img src="images/web-category-images/01-01.png">
+                <figcaption>In microservices architecture, every service implements a specific business subdomain and is
+                    deployed as an independent component that runs in its own process.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/01-03.png">
+                <figcaption>An application can have multiple interfaces, such as a web API, a CLI, a web UI, and a
+                    desktop UI.
+                </figcaption>
+            </figure>
+
             <article>
                 <p>Microservice APIs serve as the connectors between different microservices in a distributed
                     application. Each microservice is a small, independently deployable unit that performs a specific
@@ -129,8 +141,21 @@
 
         <section>
             <h3 id="chapter2">A basic API implementation</h3>
-            <img src="images/web-category-images/02-01.png">
-            <img src="images/web-category-images/02-02.png">
+
+            <figure>
+                <img src="images/web-category-images/02-01.png">
+                <figcaption>The orders API exposes seven endpoints structured around four URL paths. Each endpoint
+                    implements different capabilities, such as placing and cancelling an order.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/02-02.png">
+                <figcaption>To enforce separation of concerns among the different components of our service, we
+                    structure our code around three layers: the data layer knows how to interface with the source of
+                    data; the business layer implements the service’s capabilities; and the interface layer implements
+                    the service’s API.</figcaption>
+            </figure>
+
             <article>
                 <p>Implementing a basic API often involves defining a set of endpoints that handle HTTP requests and
                     return data in JSON format. This process typically starts with identifying the core functionalities
@@ -164,7 +189,13 @@
 
         <section>
             <h3 id="chapter3">Designing microservices</h3>
-            <img src="images/web-category-images/03-03.png">
+
+            <figure>
+                <img src="images/web-category-images/03-03.png">
+                <figcaption>Using service decomposition by business capability, we reflect the structure of the business
+                    in our microservices architecture.</figcaption>
+            </figure>
+
             <article>
                 <p>Designing microservices requires a shift from traditional monolithic architecture to a modular,
                     distributed system. The primary goal is to create small, focused services that handle specific
@@ -199,7 +230,14 @@
 
         <section>
             <h3 id="chapter4">Principles of REST API design</h3>
-            <img src="images/web-category-images/04-04.png">
+
+            <figure>
+                <img src="images/web-category-images/04-04.png">
+                <figcaption>REST’s layered system principle states that the complexity of our backend must be hidden
+                    from the client. A common solution to this problem is the API gateway pattern, which serves as an
+                    entry point to all the services in the platform.</figcaption>
+            </figure>
+
             <article>
                 <p>REST (Representational State Transfer) APIs are designed based on key principles that ensure
                     consistency, scalability, and efficiency. One of the fundamental principles is statelessness, which
@@ -231,7 +269,14 @@
 
         <section>
             <h3 id="chapter5">Documenting REST APIs with OpenAPI</h3>
-            <img src="images/web-category-images/05-01.png">
+
+            <figure>
+                <img src="images/web-category-images/05-01.png">
+                <figcaption>An OpenAPI specification contains five sections. For example, the paths section describes
+                    the API endpoints, while the components section contains reusable schemas referenced across the
+                    document.</figcaption>
+            </figure>
+
             <article>
                 <p>OpenAPI is a widely-used standard for documenting REST APIs, providing a clear, structured format
                     that developers and systems can understand. Documentation is essential in REST APIs because it helps
@@ -265,8 +310,19 @@
 
         <section>
             <h3 id="chapter6">Building REST APIs with Python</h3>
-            <img src="images/web-category-images/06-05.png">
-            <img src="images/web-category-images/06-07.png">
+            <figure>
+                <img src="images/web-category-images/06-05.png">
+                <figcaption>Architecture of an application built with flask-smorest. Flask-smorest implements a typical
+                    Flask blueprint, which allows us to build and configure our API endpoints just as we would in a
+                    standard Flask application.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/06-07.png">
+                <figcaption>When a URL path exposes only one HTTP method, it’s more convenient to implement it as a
+                    function-based view.</figcaption>
+            </figure>
+
             <article>
                 <p>Python is a popular language for building REST APIs due to its simplicity and readability. Frameworks
                     like Flask and FastAPI make it easy to define endpoints, handle requests, and return responses,
@@ -300,8 +356,23 @@
 
         <section>
             <h3 id="chapter7">Service implementation patterns for microservices</h3>
-            <img src="images/web-category-images/07-01.png">
-            <img src="images/web-category-images/07-03.png">
+
+            <figure>
+                <img src="images/web-category-images/07-01.png">
+                <figcaption>In hexagonal architecture, we distinguish a core layer in our application, the business
+                    layer, which implements the service’s capabilities. Other components, such as a web API interface or
+                    a database, are considered adapters that depend on the business layer.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/07-03.png">
+                <figcaption>The orders service consist of three packages: the core business logic, which implements the
+                    capabilities of the service; an API layer, which allows clients to interact with the service over
+                    HTTP; and a data layer, which allows the service to interact with the database. The core business
+                    logic exposes interfaces against which the API layer and the data layer are implemented.
+                </figcaption>
+            </figure>
+
             <article>
                 <p>When implementing microservices, several patterns are commonly used to ensure they operate
                     efficiently and maintainably. One essential pattern is the Single Responsibility Principle, where
@@ -342,7 +413,12 @@
 
         <section>
             <h3 id="chapter8">Designing GraphQL APIs</h3>
-            <img src="images/web-category-images/08-03.png">
+
+            <figure>
+                <img src="images/web-category-images/08-03.png">
+                <figcaption>To interact with the products service, clients use the products API.</figcaption>
+            </figure>
+
             <article>
                 <p>Designing GraphQL APIs is distinct from REST in that it allows clients to specify exactly what data
                     they need, reducing over-fetching and under-fetching issues. A well-designed GraphQL API begins with
@@ -381,7 +457,13 @@
 
         <section>
             <h3 id="chapter9">Consuming GraphQL APIs</h3>
-            <img src="images/web-category-images/09-04.png">
+
+            <figure>
+                <img src="images/web-category-images/09-04.png">
+                <figcaption>In GraphQL, we can run multiple queries within the same request, and the response will
+                    contain one dataset for each query.</figcaption>
+            </figure>
+
             <article>
                 <p>Consuming GraphQL APIs requires understanding the unique capabilities of GraphQL queries, mutations,
                     and subscriptions. Unlike REST, where each endpoint provides a specific resource, a GraphQL API
@@ -417,7 +499,14 @@
 
         <section>
             <h3 id="chapter10">Building GraphQL APIs with Python</h3>
-            <img src="images/web-category-images/10-02.png">
+            <figure>
+                <img src="images/web-category-images/10-02.png">
+                <figcaption>To run the GraphQL server with Ariadne, we produce an executable schema by loading the
+                    GraphQL schema for the API and a collection of resolvers for the queries and mutations. Ariadne uses
+                    the executable schema to validate data the user sent to the server, as well as data sent from the
+                    server to the user.</figcaption>
+            </figure>
+
             <article>
                 <p>Building a GraphQL API with Python is straightforward, thanks to frameworks like Graphene and
                     Ariadne. These libraries simplify the creation of schemas, resolvers, and the overall structure
@@ -459,8 +548,21 @@
 
         <section>
             <h3 id="chapter11">API authorization and authentication</h3>
-            <img src="images/web-category-images/11-04.png">
-            <img src="images/web-category-images/11-11.png">
+
+            <figure>
+                <img src="images/web-category-images/11-04.png">
+                <figcaption>In the client credentials flow, a server application exchanges a secret with the
+                    authorization server to obtain an access token.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/11-11.png">
+                <figcaption>When working with SQLite, we use batch operations to make changes to our tables. In a batch
+                    operation, we copy data from the original table to a temporary table; then, we drop the original
+                    table and re-create it with the new fields; and, finally, we copy back data from the temporary
+                    table.</figcaption>
+            </figure>
+
             <article>
                 <p>Authorization and authentication are essential for securing APIs, ensuring that only authorized users
                     have access to resources. <b>Authentication</b> verifies the identity of a user, while Authorization
@@ -503,8 +605,19 @@
 
         <section>
             <h3 id="chapter12">Testing and validating APIs</h3>
-            <img src="images/web-category-images/12-06.png">
-            <img src="images/web-category-images/12-07.png">
+
+            <figure>
+                <img src="images/web-category-images/12-06.png">
+                <figcaption> In property-based testing, we use a framework to generate test cases for our functions, and
+                    we make assertions on the result of running our code on such cases.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/12-07.png">
+                <figcaption>We can combine various Hypothesis strategies into one. The resulting strategy will produce a
+                    value from any of the combined strategies at random.</figcaption>
+            </figure>
+
             <article>
                 <p>Testing and validating APIs is essential to ensure they operate as expected, are reliable, and handle
                     errors gracefully. <b>Unit Testing</b> is often the first step, where individual functions or
@@ -547,7 +660,13 @@
 
         <section>
             <h3 id="chapter13">Dockerizing microservice APIs</h3>
-            <img src="images/web-category-images/13-01.png">
+
+            <figure>
+                <img src="images/web-category-images/13-01.png">
+                <figcaption> Docker containers run in isolated processes on top of the host operating system.
+                </figcaption>
+            </figure>
+
             <article>
                 <p>Dockerizing microservice APIs is a popular approach to simplify deployment, improve consistency, and
                     enhance scalability. Docker containers encapsulate an application and its dependencies, making it
@@ -591,8 +710,19 @@
 
         <section>
             <h3 id="chapter14">Deploying microservice APIs with Kubernetes</h3>
-            <img src="images/web-category-images/14-02.png">
-            <img src="images/web-category-images/14-04.png">
+
+            <figure>
+                <img src="images/web-category-images/14-02.png">
+                <figcaption>AWS Fargate automatically provisions the servers required to operate our Kubernetes cluster.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/web-category-images/14-04.png">
+                <figcaption>Pods can authenticate with an OIDC provider to assume an IAM role, which gives them access
+                    to the AWS API, and therefore gives them access to AWS services.</figcaption>
+            </figure>
+
             <article>
                 <p>Kubernetes (K8s) is an orchestration platform that simplifies the deployment, scaling, and management
                     of containerized microservices. It provides tools for automating tasks, such as scheduling,
