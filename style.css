@@ -146,4 +146,20 @@ blockquote p {
 
 #signature::first-letter {
   font-size: 100%;
-  }
+}
+
+main article a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* web.thml style in img */
+.web > .book img {
+  height: 300px;
+  width: 250px;
+}
+
+.web > .lectures-list img {
+  width: 500px;
+  height: 350px;
+}
