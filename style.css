@@ -32,7 +32,7 @@ body {
 
 .logo {
   width: 150px;
-  height: 102px; 
+  height: 110px; 
   float: left;
 }
 
@@ -40,23 +40,62 @@ header > h1 {
   text-align: right;
 }
 
-.menu > ul {
-  background-color: #212121; 
-  list-style-type: none;
-  margin: 0px;
-  height: 41px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* Navigation bar style */
+nav {
+  background-color: #000000;
+  padding: 5px;
   display: flex;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none; 
+/*Horizontal Menu*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 nav ul li {
-  padding: 10px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: rgb(77, 75, 75);
+}
+
+/* Submenu Style */
+.submenu1, .submenu2, .submenu3 {
+  display: none;
+  position: absolute;
+  color: white;
+  background-color: black;
+  min-width: 150px;
+  top: 100%;
+  left: 0;  
+}
+
+li:hover > .submenu1 {
+  display: block;
+  margin: 0;
+}
+
+.submenu1 li:hover > .submenu2 {
+  display: block;
+  left: 100%; /* The third layer should appear on the right */
+  top: 0;
+}
+
+.submenu1 li:hover > .submenu3 {
+  display: block;
+  left: 100%; /* The third layer should appear on the right */
+  top: 0;
 }
 
 .container {
@@ -64,10 +103,10 @@ nav ul li {
   grid-template-columns: 4;
   }
 
-  .content {
-    grid-column: 1;
-  }
-  
+.content {
+  grid-column: 1;
+}
+
 .introduction {
   padding: 20px;
   margin: 25px;
