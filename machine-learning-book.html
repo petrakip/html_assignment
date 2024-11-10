@@ -1,12 +1,228 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;    standard header&ndash;&gt;-->
+<!--<header class="header">-->
+<!--    <img class="logo" src="images/logo.jpg">-->
+<!--    <h1>e-School</h1>-->
+
+<!--    <nav class="menu">-->
+<!--        <ul>-->
+<!--            <li><a href="index.html">Home</a></li>-->
+<!--            <li><a href="categories.html">Categories</a></li>-->
+<!--            <li><a href="about-us.html">About Us</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+<!--</header>-->
+<!--&lt;!&ndash;main content of a document&ndash;&gt;-->
+<!--<main>-->
+<!--    <h1>Natural Language Processing in Action</h1>-->
+<!--    <p>Author: Hobson Lane, Maria Dyshel</p>-->
+<!--    <p>Published:November 2024</p>-->
+<!--    &lt;!&ndash; Book Cover Image &ndash;&gt;-->
+<!--    <img src="machine-learning-cover.png" alt="Machine Learning Book Cover" width="200">-->
+
+<!--    <section>-->
+<!--        <h2>Summary</h2>-->
+<!--        <p>-->
+<!--            Machine Learning Algorithms in Depth dissects and explains dozens of algorithms across a variety of-->
+<!--            applications, including finance, computer vision, and NLP. Each algorithm is mathematically derived,-->
+<!--            followed by its hands-on Python implementation along with insightful code annotations and informative-->
+<!--            graphics. You’ll especially appreciate author Vadim Smolyakov’s clear interpretations of Bayesian-->
+<!--            algorithms for Monte Carlo and Markov models.-->
+<!--        </p>-->
+
+<!--        &lt;!&ndash; Book Rating &ndash;&gt;-->
+<!--        <h3>Rating</h3>-->
+<!--        <p>⭐⭐⭐⭐☆ (4.5/5)</p>-->
+<!--        <p>2,345 ratings</p>-->
+
+<!--        &lt;!&ndash; Link to Sub-Category &ndash;&gt;-->
+<!--        <p>-->
+<!--            <a href="machine-learning.html">Back to Machine Learning Educational Material</a>-->
+<!--        </p>-->
+<!--    </section>-->
+<!--</main>-->
+<!--</main>-->
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Microservice APIs</title>
 </head>
+
 <body>
-    
+<!-- Header -->
+<header class="header">
+    <img class="logo" src="images/logo.jpg">
+    <h1>e-School</h1>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--Main-->
+<main>
+    <section class="book-details">
+        <img src="images/ml-category-images/Lane-2ed-MEAP-HI.png" alt="Book Cover"
+             style="width: 200px; height: auto; margin-right: 20px;">
+        <h3>Natural Language Processing in Action</h3>
+        <p><strong>Rating:</strong> (4/5) - 16 Reviews</p>
+        <p><strong>Author:</strong>Hobson Lane, Maria Dyshel</p>
+        <p><strong>Published:</strong>November 2024</p>
+        <a href="machine-learning.html">Back</a>
+    </section>
+
+    <section class="summary">
+        <article>
+            <h4>Summary</h4>
+
+            <p>The book <em>"Natural Language Processing in Action"</em> by Hobson Lane and Maria Dyshel provides a
+                comprehensive guide on
+            </p>
+            <p>In Natural Language Processing in Action, Second Edition you will learn how to:</p>
+
+            <ol>
+                <li>Process, analyze, understand, and generate natural language text</li>
+                <li>Build production-quality NLP pipelines with spaCy</li>
+                <li>Build neural networks for NLP using Pytorch</li>
+                <li>BERT and GPT transformers for English composition, writing code, and even organizing your thoughts
+                </li>
+                <li>Create chatbots and other conversational AI agents</li>
+            </ol>
+
+            <p>Build your NLP skills from the ground up with this updated bestseller, now featuring the latest Python
+                packages, Transformers, HuggingFace tools, and chatbot frameworks. Perfect for those looking to dive
+                into modern NLP techniques, this book provides a comprehensive, hands-on approach to mastering language
+                processing.</p>
+        </article>
+    </section>
+
+    <section class="book-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#chapter1">Machines that read and write: a natural language processing overview</a></li>
+            <li><a href="#chapter2">Tokens of thought (natural language words)</a></li>
+            <li><a href="#chapter3">Math with words (TF-IDF vectors)</a></li>
+            <li><a href="#chapter4">Finding meaning in word counts (semantic analysis)</a></li>
+            <li><a href="#chapter5">Word brain (neural networks)</a></li>
+            <li><a href="#chapter6">Reasoning with word embeddings (word vectors)</a></li>
+            <li><a href="#chapter7">Finding Kernels of Knowledge in Text with Convolutional Neural Networks (CNNs)</a></li>
+            <li><a href="#chapter8">Designing GraphQL APIs</a></li>
+            <li><a href="#chapter9">Consuming GraphQL APIs</a></li>
+            <li><a href="#chapter10">Building GraphQL APIs with Python</a></li>
+            <li><a href="#chapter11">API authorization and authentication</a></li>
+            <li><a href="#chapter12">Testing and validating APIs</a></li>
+            <li><a href="#chapter13">Dockerizing microservice APIs</a></li>
+            <li><a href="#chapter14">Deploying microservice APIs with Kubernetes</a></li>
+        </ul>
+    </section>
+
+    <section id="chapter1">
+        <h3>Machines that read and write: a natural language processing overview</h3>
+        <figure>
+            <img src="images/ml-category-images/encoding_nat_language.png">
+            <figcaption>Encoding involves transforming raw text data, which is unstructured and inherently difficult for
+                machines to process, into a structured numerical format known as a vector. This numerical representation
+                captures the semantic meaning of the text in a way that machines can work with, making it possible to
+                apply mathematical operations to language data.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/ml-category-images/ch1_decoding.png">
+            <figcaption>In decoding, the numerical representation (vector) is processed by algorithms to generate
+                natural language that closely matches the intended meaning captured in the vector. Decoding models, such
+                as those used in neural networks, leverage patterns in the data to predict and construct sentences,
+                taking into account context, grammar, and semantics.
+            </figcaption>
+        </figure>
+
+        <article>
+            <p>Programming languages and natural languages serve distinct purposes and exhibit unique characteristics,
+                though both are used for communication. Programming languages are artificial, structured systems created
+                with strict syntax and rules, designed to instruct computers to perform specific tasks. They prioritize
+                precision and unambiguity, as even a minor syntax error can lead to failure in execution.</p>
+            <p> Natural languages, however, are organic and evolve over time, influenced by culture, region, and social
+                factors.
+                Unlike programming languages, natural languages are filled with nuances, ambiguity, and
+                context-dependent meanings, allowing for rich expression but also making them challenging for machines
+                to understand fully. While programming languages aim for clarity and efficiency to ensure computers
+                interpret commands accurately, natural languages embrace complexity and flexibility, enabling humans to
+                convey emotions, intentions, and abstract ideas. </p>
+            <p>Understanding the differences between these two types
+                of languages is essential in natural language processing, where the goal is often to bridge the gap and
+                enable computers to interpret human language with precision and contextual understanding.</p>
+        </article>
+    </section>
+
+    <section id="chapter2">
+        <h3>Tokens of thought (natural language words)</h3>
+
+        <figure>
+            <img src="images/web-category-images/02-01.png">
+            <figcaption>tokenization involves splitting text into smaller units, known as tokens, which can be
+                individual
+                words, phrases, sentences, or even characters, depending on the application's requirements.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/web-category-images/02-02.png">
+            <figcaption>Dependency parsing is a process in natural language processing (NLP) where the syntactic
+                structure of a sentence is analyzed by identifying relationships between words. Arrows show dependency,
+                indicating how each word is syntactically related to another.
+            </figcaption>
+        </figure>
+
+        <article>
+            <p>Parsing text into words and n-grams, also known as tokenization, is a fundamental process in natural
+                language processing (NLP) that breaks down text into manageable units for computational analysis.
+                Tokenization involves dividing a sentence or document into individual components called tokens, which
+                can be single words, sub-words, or phrases.
+                For example, in a simple word tokenization approach, the
+                sentence "Tokenizing text is fun" would be split into ["Tokenizing", "text", "is", "fun"]. Beyond single
+                words, n-grams—sequences of "n" words—capture context by grouping words together, creating bigrams like
+                ["Tokenizing text", "text is", "is fun"] or trigrams like ["Tokenizing text is", "text is fun"]. These
+                n-grams help retain contextual information, allowing NLP systems to understand common phrases,
+                disambiguate meanings based on word combinations, and capture more nuanced language patterns than single
+                words alone.</p>
+            <p>Tokenization and n-grams are especially useful in applications like text classification,
+                where they serve as features for models, and in language modeling, where they help predict the next word
+                in a sequence. Despite its simplicity, tokenization presents challenges, such as handling punctuation,
+                special characters, and language-specific structures, especially in languages that lack clear word
+                boundaries or follow complex grammatical rules. Tools like NLTK, spaCy, and HuggingFace’s Tokenizers
+                offer robust solutions for these challenges, enabling tokenization to be performed effectively across
+                multiple languages and use cases. By transforming raw text into structured, analyzable units,
+                tokenization lays the groundwork for a wide range of NLP applications, from sentiment analysis to
+                machine translation.</p>
+        </article>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer-container">
+    <address></address>
+    <p>© Copyright 2024-2025</p>
+</footer>
 </body>
+
 </html>
