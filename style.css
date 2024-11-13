@@ -1,4 +1,6 @@
 header {
+  position: sticky;
+  top: 0;
   margin: 0px;
   padding-bottom: 0px;
 }
@@ -72,6 +74,12 @@ header > h1 {
   border-right: 1px solid #000000;
   text-align: center;
   margin: 20px;
+}
+
+/* Symbol for 'X' social media*/
+.fa.fa-twitter::before{
+	content:"𝕏";
+	font-size:1.1em;
 }
 
 #social-media > i {
@@ -228,20 +236,126 @@ main article a {
   color: #000000;
 }
 
-/* web.thml style in img */
-.web > .book img {
-  height: 300px;
-  width: 250px;
+/* web.html style */
+.web h3{
+  display: inline-block;
+  margin: 15px;
 }
 
-.web > .lectures-list img {
-  width: 500px;
-  height: 300px;
+.book {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  margin: 0 15%;
 }
 
-/* Symbol for 'X' social media*/
-.fa.fa-twitter::before{
-	content:"𝕏";
-	font-size:1.1em;
+.book article {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 6%;
+  width: 80%;
 }
 
+.book article a {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: (2, 1fr);
+}
+
+.book article img {
+  width: 100%;
+  height: auto;
+  grid-column: 1;
+  border: 1px solid #515052;
+}
+
+.details {
+  width: 100%;
+  grid-column: 2;
+  padding: 0px 10px;
+}
+
+.book article h4 {
+  display: flex;
+  font-size: 0.80rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.book article a p {
+  display: grid;
+  grid-column: 2;
+  margin: 0px;
+  padding-top: 5px;
+  font-size: 0.75rem;
+}
+
+.book article p strong {
+  color:#515052;
+}
+
+.description {
+  display: flex;
+  grid-column: span 2;
+  text-align: justify;
+  margin-top: 10px;
+  text-wrap: wrap;
+}
+
+.description p strong {
+  text-decoration: none;
+}
+
+.lectures-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Δημιουργία 3 στηλών */
+  gap: 20px; /* Απόσταση μεταξύ των στηλών */
+}
+
+.lectures-list article a {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+  grid-template-rows: (2, 1fr);
+}
+
+.lectures-list article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5%;
+  width: 80%;
+}
+
+.lectures-list article img {
+  width: 100%;
+  height: auto;
+  margin: 15px;
+}
+
+.lectures-list article h4 {
+  margin: 15px;
+  font-size: 0.80rem;
+}
+
+.lectures-list article p {
+  margin: 15px;
+  font-size: 0.75rem;
+}
+
+.lectures-list li {
+  font-size: 0.75rem;
+}
+
+.to-top {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-rows: 1fr auto; 
+  min-height: 100vh;
+}
+
+.back-to-top {
+  position: sticky;
+  top: 85%;
+  right: auto;
+  justify-self: end;
+}
