@@ -3,10 +3,6 @@ header {
   padding-bottom: 0px;
 }
 
-#slogan {
-  font-size: larger;
-}
-
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #fffffa; 
@@ -21,7 +17,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
   margin: 0px;
   padding: 0px;
 }
@@ -98,6 +94,7 @@ nav {
   background-color: #000103;
   padding: 0px;
   margin-top: 0px;
+  width: 100%;
 }
 
 
@@ -159,32 +156,25 @@ li:hover > .submenu1 {
 
 .introduction {
   padding: 100px 25px;
-  padding-left: 150px;
   margin: 25px 50px;
   display: grid;
   justify-content: space-between;  
-  width: auto;
+  width: 90%;
 }
 
   /* Sidebar's style */
 .sidebar {
   font-family: 'Brush Script MT', cursive;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   display: grid;
   grid-column: 4fr;
   background-color: #fffffa; 
   margin: 25px;
   padding: 10px;
-  width: 60%;  
-}
-
-.sidebar-border {
-  border: #9fa0a0;  
-  border-width: 1px;
+  width: 50%;  
+  border: #000103;  
   border-style: solid;
   border-radius: 15px;
-  padding: 5px;
-  margin: 100px 0px;
 }
 
 blockquote {
