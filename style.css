@@ -74,6 +74,17 @@ header > h1 {
   margin: 20px;
 }
 
+#social-media > i {
+  padding: 0px 10px;;
+}
+
+@media screen  and (max-width: 600px) {
+  #social-media > i {
+    display: flex;
+  }
+  
+}
+
 #terms-privacy {
   text-align: center;
   width: 100%;
