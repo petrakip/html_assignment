@@ -236,12 +236,13 @@ main article a {
   color: #000000;
 }
 
-/* web.html style */
+/* ----------web.html style -----------*/
 .web h3{
   display: inline-block;
   margin: 15px;
 }
 
+/* -- book's layout */
 .book {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
@@ -274,6 +275,14 @@ main article a {
   padding: 0px 10px;
 }
 
+.book  article  .details  h4 {
+  margin-bottom: 15px;
+}
+
+.book .details p {
+  padding-bottom: 10px;
+}
+
 .book article h4 {
   display: flex;
   font-size: 0.80rem;
@@ -299,6 +308,10 @@ main article a {
   text-align: justify;
   margin-top: 10px;
   text-wrap: wrap;
+}
+
+.book .description {
+  margin-top: 15px;
 }
 
 .description p strong {
