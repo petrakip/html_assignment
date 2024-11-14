@@ -307,8 +307,8 @@ main article a {
 
 .lectures-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Δημιουργία 3 στηλών */
-  gap: 20px; /* Απόσταση μεταξύ των στηλών */
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+  gap: 20px; /* gap between columns */
 }
 
 .lectures-list article a {
@@ -349,40 +349,71 @@ main article a {
 /*  --------------- Book style ------------- */
 .pdf-container {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* Τρεις στήλες, η δεύτερη είναι η μεγαλύτερη */
-  gap: 20px; /* Κενό μεταξύ των στηλών */
+  grid-template-columns: 1fr 3fr 1fr; /* 3 columns, 2nd bigger than the others */
+  gap: 20px; /* gap between columns */
   padding: 20px;
+  font-size: 0.9rem;
 }
 
 .pdf-content{
-  grid-column: 2 / 3; /* Τοποθετεί το περιεχόμενο στη δεύτερη στήλη */
+  grid-column: 2 / 3; /* It places the content in the second column */
   background-color: #fffffa;
-  padding: 20px;
   border: 1px solid #ccc;
 }
 
+/* Cover style */
 .book-details img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+  margin: auto;
+  margin-top: 70px;
+  width: 55%;
+  border: 1px solid #ccc;
 }
 
-.book-details h1 {
+.book-details p {
+text-align: center;
+}
+
+/* Title of book style */
+.pdf-container h1 {
+  display: flex;
+  grid-column: 1 / 3;
   font-size: medium;
   margin-bottom: 30px;
+  padding: 20px;
+  padding-left: 40px;
 }
 
-.book-details h1 a {
+/* Title is a path */
+.pdf-container h1 a {
   text-decoration: none;
 }
 
-.book-details h1 a:hover {
+.pdf-container h1 a:hover {
   color: #ff312e;
 }
 
-.book-details h1 a:visited{
+.pdf-container h1 a:visited{
   color: black;
+}
+
+.summary h4 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.summary p, ol {
+  font-size: 0.9rem;
+}
+
+.summary {
+  margin: 120px 80px;
+}
+
+.summary ol {
+  margin: 20px;
 }
 
 /* Table of contents style */
@@ -429,4 +460,56 @@ hr {
 
 .book-contents table tr td a:hover {
   color:#ff312e
+}
+
+.content-section {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+.content-section p {
+  text-align: justify;
+}
+
+.content-section h3 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.chapter-change {
+  background-color: #e2e0e0;
+  text-align: right;
+  padding: 7px;
+  font-size: 0.7rem;
+}
+
+.content-section > article  > figure {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.content-section > article >  figure > figcaption {
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.top-btn {
+  display: block;
+  top: 85vh;
+  right: 100%;
+  text-align: end;
+  position: sticky;
+}
+
+.top-btn img {
+  max-width: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
