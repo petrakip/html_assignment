@@ -8,20 +8,18 @@ header {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #fffffa; 
-  width: auto;
-  height: auto;
   font-size: 1em;
-  margin: 0px;
-  padding: 0px;
-  grid-template-columns: 2fr 1fr;
+  margin: 0;
+  padding: 0;
+  display: flexbox;
 }
 
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
@@ -107,7 +105,8 @@ header > h1 {
 .footer-container > section > h3 {
   padding-bottom: 10px;
 }
-/* Navigation bar style */
+
+/* -------- Navigation bar style -------------*/
 nav {
   grid-column: 1 / 3;
   background-color: #000103;
@@ -172,7 +171,76 @@ li:hover > .submenu1 {
   left: 100%; /* The third layer should appear on the right */
   top: 0;
 }
+/* -------- !Navigation bar style -------------*/
 
+ /* ------------------index.html sidebar--------------- */
+.sidebar {
+  display: grid;
+  grid-column: 3;
+  margin: 0;
+  padding: 0;
+}
+
+.dot {
+  height: 200px;
+  width: 200px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  left: 100px;
+  box-shadow: 3px 10px 10px 2px #000;
+}
+
+.dot:nth-child(even) {z-index: -50; background-color: #666; color: #fff; }
+.dot:nth-child(odd) {margin-left: 120px; z-index: -100;}
+
+.dot#quote1 { top: 0px; }
+.dot#quote1 blockquote { top: 45px; }
+
+.dot#quote2 { top: -70px; }
+
+.dot#quote3 { top: -140px; }
+.dot#quote3 blockquote { top: 50px; }
+
+.dot#quote4 { top: -210px; }
+.dot#quote4 blockquote { top: 60px; }
+
+.dot#quote5 { top: -280px; }
+.dot#quote5 blockquote { top: 40px; }
+
+.dot#quote6 { top: -350px; }
+.dot#quote6 blockquote { top: 65px; }
+
+.dot blockquote p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.dot blockquote {
+  border-radius: 50%;
+  position: relative;
+  top: 30px;
+}
+
+.dot blockquote footer {
+  font-size: .8em;
+  border-radius: 0%;
+  background: transparent;
+}
+
+.dot blockquote footer:before {
+  content: "- ";
+}
+
+.sidebar footer {
+  background-color: #bbb;
+  border-radius: 50%;
+  text-align: right;
+  font-size: 0.8rem;
+  font-style: italic;
+} 
+/* -----------------!index.html sidebar--------------- */
 .introduction {
   padding: 100px 25px;
   margin: 25px 50px;
@@ -181,43 +249,7 @@ li:hover > .submenu1 {
   width: 90%;
 }
 
-  /* Sidebar's style */
-.sidebar {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 1.3rem;
-  display: grid;
-  grid-column: 4fr;
-  background-color: #fffffa; 
-  margin: 25px;
-  padding: 10px;
-  width: 50%;  
-  border: #000103;  
-  border-style: solid;
-  border-radius: 15px;
-}
-
-blockquote {
-  margin: 0px;
-  background-color: #fffffa;
-}
-
-blockquote p {
-  padding: 0px 5px;
-  margin: 0px;
-}
-
-.sidebar h3 {
-  font-size: x-large;
-  padding-left: 20px;
-}
-
-.sidebar footer {
-  background-color: #fffffa;
-  text-align: right;
-  padding: 20px;
-}
-
-.introduction>p::first-letter {
+.introduction > p::first-letter {
   font-size: 200%;
   }
 
