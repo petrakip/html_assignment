@@ -11,7 +11,6 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
-  display: flexbox;
 }
 
 .container {
@@ -49,10 +48,6 @@ header > h1 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.footer-container > p {
-  color: white;
-}
-
 #contact-info{
   float:left;
   width:100%;
@@ -74,14 +69,18 @@ header > h1 {
   margin: 20px;
 }
 
+#social-media a {
+  padding: 0px 10px;
+}
 /* Symbol for 'X' social media*/
 .fa.fa-twitter::before{
 	content:"𝕏";
 	font-size:1.1em;
 }
 
-#social-media > i {
-  padding: 0px 10px;;
+#terms-privacy p a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen  and (max-width: 600px) {
@@ -98,6 +97,7 @@ header > h1 {
 }
 
 .footer-container > p {
+  color: white;
   text-align: center;
   grid-column: 2;
 }
@@ -175,7 +175,6 @@ li:hover > .submenu1 {
 
  /* ------------------index.html sidebar--------------- */
 .sidebar {
-  display: grid;
   grid-column: 3;
   margin: 0;
   padding: 0;
@@ -581,6 +580,7 @@ hr {
 html {
   scroll-behavior: smooth;
 }
+/*  --------------- !Book style ------------- */
 
 /* --------- about-us.html --------- */
 .about-us {
