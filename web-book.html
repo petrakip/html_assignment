@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>Microservice APIs</title>
 </head>
 
 <body>
     <!-- Header -->
     <header class="header">
-        <img class="logo" src="images/logo.jpg">
-        <h1>e-School</h1>
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categories</a>
+                <img class="logo" src="images/logo.png">
+                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
                     <ul class="submenu1">
-                        
+
                         <li><a href="machine-learning.html">Machine Learning</a>
                             <ul class="submenu2">
                                 <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
                                 <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
                             </ul>
                         </li>
-                        
+
                         <li><a href="web.html">Web</a>
                             <ul class="submenu3">
                                 <li><a href="web-book.html">Microservice APIs</a></li>
@@ -35,758 +36,1148 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="about-us.html"><i class="	fa fa-info-circle"></i>About Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!--Main-->
-    <main>
-        <section class="book-details">
-            <img src="images/micro-APIs_cover.jpg">
-            <p><strong>Rating:</strong> (4.6/5) - 150 Reviews</p>
-            <h3>Microservice APIs</h3>
-            <p><strong>Author:</strong>José Haro Peralta</p>
-            <p><strong>Year:</strong>2022</p>
-            <a href="web.html">Back</a>
-        </section>
+    <div class="pdf-container">
+        <h1><a href="index.html">Home </a>> <a href="categories.html">Categories </a>> <a href="web.html">Web </a> >
+            Microservice APIs</h1>
+        <main class="pdf-content">
+            <section class="book-details">
 
-        <section class="summary">
-            <article>
-                <h4>Summary</h4>
-
-                <p>The book <em>"Microservice APIs"</em> by José Haro Peralta provides a comprehensive guide on
-                    designing,
-                    building, and maintaining APIs in microservices architectures. Peralta emphasizes the best practices
-                    and principles necessary for creating reliable, scalable, and maintainable API systems tailored to
-                    microservices, which rely on distributed and decoupled components.</p>
-                <p>Key topics include:</p>
-
-                <ol>
-                    <li><b>API Design Fundamentals:</b> Covers principles of API design, such as RESTful APIs,
-                        asynchronous communication, and the use of gRPC.</li>
-                    <li><b>Microservice Interactions:</b> Discusses strategies for handling interactions across
-                        microservices,
-                        such as data consistency, event-driven communication, and API versioning to ensure smooth
-                        integration and evolution.</li>
-                    <li><b>Security:</b> Addresses critical security measures, including authentication, authorization,
-                        and secure data transmission to protect APIs in distributed systems.</li>
-                    <li><b>Testing and Observability:</b> Provides methods for testing APIs, monitoring, and logging
-                        within microservice ecosystems, focusing on debugging, reliability, and overall system health.
-                    </li>
-                    <li><b>Practical Applications:</b> Offers real-world examples and case studies that show how these
-                        principles are applied in actual microservices projects.</li>
-                </ol>
-
-                <p>Through a combination of theory and hands-on examples, <em>Microservice APIs</em> is a valuable
-                    resource for
-                    software engineers, architects, and developers who want to excel in API development for
-                    microservice-oriented architectures.</p>
-            </article>
-        </section>
-
-        </section>
-        <section class="book-contents">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#chapter1">What are microservice APIs?</a></li>
-                <li><a href="#chapter2">A basic API implementation</a></li>
-                <li><a href="#chapter3">Designing microservices</a></li>
-                <li><a href="#chapter4">Principles of REST API design</a></li>
-                <li><a href="#chapter5">Documenting REST APIs with OpenAPI</a></li>
-                <li><a href="#chapter6">Building REST APIs with Python</a></li>
-                <li><a href="#chapter7">Service implementation patterns for microservices</a></li>
-                <li><a href="#chapter8">Designing GraphQL APIs</a></li>
-                <li><a href="#chapter9">Consuming GraphQL APIs</a></li>
-                <li><a href="#chapter10">Building GraphQL APIs with Python</a></li>
-                <li><a href="#chapter11">API authorization and authentication</a></li>
-                <li><a href="#chapter12">Testing and validating APIs</a></li>
-                <li><a href="#chapter13">Dockerizing microservice APIs</a></li>
-                <li><a href="#chapter14">Deploying microservice APIs with Kubernetes</a></li>
-            </ul>
-        </section>
-
-        <section id="chapter1">
-            <h3>What are microservice APIs?</h3>
-            <figure>
-                <img src="images/web-category-images/01-01.png">
-                <figcaption>In microservices architecture, every service implements a specific business subdomain and is
-                    deployed as an independent component that runs in its own process.</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/web-category-images/01-03.png">
-                <figcaption>An application can have multiple interfaces, such as a web API, a CLI, a web UI, and a
-                    desktop UI.
-                </figcaption>
-            </figure>
-
-            <article>
-                <p>Microservice APIs serve as the connectors between different microservices in a distributed
-                    application. Each microservice is a small, independently deployable unit that performs a specific
-                    business function. The API, or Application Programming Interface, enables these services to
-                    communicate effectively, exchanging data and instructions in a standardized format. By separating an
-                    application into smaller, modular parts, microservice APIs make the system easier to develop, test,
-                    and scale.</p>
-                <p>Microservices allow organizations to scale parts of their applications independently. For instance,
-                    if one part of the application experiences high demand, only that particular microservice can be
-                    scaled without affecting the entire system. The API provides the framework for each microservice to
-                    "talk" to the others while maintaining loose coupling and minimal dependencies. This decoupling
-                    helps maintain performance even during heavy loads.</p>
-                <p>The use of APIs also promotes code reusability and consistency. Since each microservice has its own
-                    API, different teams can develop separate microservices using different languages or frameworks
-                    while still adhering to the API specifications. This flexibility is essential for large teams
-                    working on complex systems.</p>
-                <p>Microservice APIs can be public or private. Public APIs enable external services and clients to
-                    interact with certain microservices, enhancing interoperability. Private APIs, on the other hand,
-                    are intended for internal use and optimize communication between microservices, preserving security
-                    and efficiency.</p>
-                <p>APIs within microservices are typically lightweight and designed to perform a specific action or set
-                    of actions. This design minimizes overhead, reduces latency, and enhances the user experience. By
-                    handling smaller tasks, microservice APIs can respond faster and with fewer system resources than
-                    larger, monolithic APIs.</p>
-                <p>Additionally, microservice APIs make it easier to adopt a continuous integration and continuous
-                    delivery (CI/CD) pipeline. Changes to one microservice can be deployed independently, reducing the
-                    risk of system-wide failures. These benefits collectively improve development speed, testing
-                    accuracy, and overall system reliability.</p>
-                <p>Finally, microservice APIs are essential for adopting cloud-native technologies and frameworks. By
-                    aligning with cloud infrastructure, microservices can be distributed across multiple servers,
-                    allowing for fault tolerance and disaster recovery, critical in today’s scalable, resilient
-                    applications.</p>
-            </article>
-        </section>
-
-        <section  id="chapter2">
-            <h3>A basic API implementation</h3>
-
-            <figure>
-                <img src="images/web-category-images/02-01.png">
-                <figcaption>The orders API exposes seven endpoints structured around four URL paths. Each endpoint
-                    implements different capabilities, such as placing and cancelling an order.</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/web-category-images/02-02.png">
-                <figcaption>To enforce separation of concerns among the different components of our service, we
-                    structure our code around three layers: the data layer knows how to interface with the source of
-                    data; the business layer implements the service’s capabilities; and the interface layer implements
-                    the service’s API.</figcaption>
-            </figure>
-
-            <article>
-                <p>Implementing a basic API often involves defining a set of endpoints that handle HTTP requests and
-                    return data in JSON format. This process typically starts with identifying the core functionalities
-                    needed by the application and structuring them into clear, distinct endpoints. Each endpoint
-                    represents a specific action, such as retrieving or updating data, and provides a clear URL path for
-                    clients to access.</p>
-                <p>A simple API implementation often includes CRUD (Create, Read, Update, Delete) operations. These
-                    operations are mapped to HTTP methods like POST for creation, GET for reading, PUT for updating, and
-                    DELETE for removing resources. These methods provide a standardized way to interact with resources
-                    on a server.</p>
-                <p>To implement the API, developers frequently use frameworks like Flask for Python, Express for
-                    JavaScript, or FastAPI for high-performance applications. These frameworks provide built-in tools
-                    and shortcuts for defining routes, handling requests, and generating responses. Using these
-                    frameworks helps developers quickly set up a robust and maintainable API.</p>
-                <p>In a basic API, data is usually stored in a database, and each API endpoint interacts with this
-                    database. For example, a GET /users endpoint might query the database to retrieve a list of users,
-                    while a POST /users endpoint might add a new user to the database. This setup ensures that the API
-                    provides real-time data and accurate information.</p>
-                <p>Error handling is crucial for a basic API, as it ensures that clients receive informative messages
-                    when something goes wrong. Standardized HTTP status codes, such as 404 for "Not Found" and 500 for
-                    "Internal Server Error," help the client understand the API’s state and troubleshoot issues
-                    accordingly.</p>
-                <p>Security is a key consideration in API implementation. Even a basic API should include some form of
-                    authentication or validation to ensure that only authorized users access the data. This may involve
-                    token-based authentication or implementing an API key system.</p>
-                <p>Lastly, API documentation is essential. Good documentation helps other developers understand how to
-                    use the API, the required parameters, and the expected responses. Many API implementations use tools
-                    like OpenAPI to generate interactive documentation that simplifies integration for developers.</p>
-            </article>
-        </section>
-
-        <section id="chapter3">
-            <h3>Designing microservices</h3>
-
-            <figure>
-                <img src="images/web-category-images/03-03.png">
-                <figcaption>Using service decomposition by business capability, we reflect the structure of the business
-                    in our microservices architecture.</figcaption>
-            </figure>
-
-            <article>
-                <p>Designing microservices requires a shift from traditional monolithic architecture to a modular,
-                    distributed system. The primary goal is to create small, focused services that handle specific
-                    business functions independently. This approach enables teams to develop, deploy, and scale each
-                    microservice separately, providing flexibility and efficiency across the application.</p>
-                <p>One critical aspect of microservice design is defining service boundaries. A microservice should
-                    represent a single responsibility within the application, aligning with the "single responsibility
-                    principle." When each service focuses on one purpose, teams can update and maintain it without
-                    impacting other parts of the application, reducing the risk of cascading errors.</p>
-                <p>Communication between microservices is another essential consideration. Most microservices
-                    communicate over HTTP using RESTful APIs, but other protocols like gRPC or message queues can be
-                    more efficient in some cases. Choosing the right communication method depends on factors like
-                    latency, reliability, and the complexity of data transfer.</p>
-                <p>Data management is more complex in microservices. Each service should ideally have its own database
-                    to maintain isolation and avoid coupling between services. This "database per service" approach
-                    makes it easier to scale and prevents data-related bottlenecks, but it also requires careful
-                    planning for data consistency and transactions across services.</p>
-                <p>Resilience is a core principle of microservice design. To build resilient services, patterns such as
-                    circuit breakers, retries, and fallbacks are commonly used. These techniques help manage failures
-                    and improve the stability of the system, ensuring that one failing service doesn't take down the
-                    entire application.</p>
-                <p>Scalability is also a key focus in microservices architecture. By designing services that can be
-                    scaled independently, teams can allocate resources more effectively and respond to user demand
-                    dynamically. This agility is especially valuable in cloud environments, where resources can be
-                    adjusted as needed.</p>
-                <p>Security in microservices is managed at both the service and data level. Since each service can
-                    expose its own API, robust authentication, and authorization mechanisms are crucial to prevent
-                    unauthorized access. Encryption and secure communication channels between services further protect
-                    data integrity.</p>
-            </article>
-        </section>
-
-        <section id="chapter4">
-            <h3>Principles of REST API design</h3>
-
-            <figure>
-                <img src="images/web-category-images/04-04.png">
-                <figcaption>REST’s layered system principle states that the complexity of our backend must be hidden
-                    from the client. A common solution to this problem is the API gateway pattern, which serves as an
-                    entry point to all the services in the platform.</figcaption>
-            </figure>
-
-            <article>
-                <p>REST (Representational State Transfer) APIs are designed based on key principles that ensure
-                    consistency, scalability, and efficiency. One of the fundamental principles is statelessness, which
-                    means that each request from a client contains all the information the server needs to fulfill it.
-                    This setup allows servers to handle each request independently, making scaling and caching easier.
+                <img src="images/web-book-lecture/micro-APIs_cover.jpg">
+                <p><i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
+                    <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
+                    <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
+                    <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
+                    <i class="fa fa-star-half-full" style="font-size:22px;color:#ff312e"></i> - 150 Reviews
                 </p>
-                <p>Another important principle is uniformity. REST APIs should have a standardized structure, including
-                    predictable URL patterns and consistent methods like GET, POST, PUT, and DELETE for CRUD operations.
-                    This consistency makes it easier for developers to understand and use the API.</p>
-                <p>Resource-based design is essential for REST. Resources represent entities, such as users, products,
-                    or orders, and are typically accessed using specific endpoints. Each resource should be identifiable
-                    through a unique URL, and requests to the URL should return the current state of the resource,
-                    usually in JSON format.</p>
-                <p>RESTful APIs use a layered system architecture. The API’s design separates the client, server, and
-                    any intermediary components, such as load balancers or gateways. This separation allows for greater
-                    flexibility, enabling each layer to be independently maintained, scaled, or replaced without
-                    affecting other parts of the system.</p>
-                <p>Caching is a key optimization in REST. By marking certain responses as cacheable, REST APIs can
-                    reduce the load on servers and improve response times for clients. Cacheable responses make REST
-                    APIs more efficient, especially for data that doesn’t change frequently.</p>
-                <p>Self-descriptive messages are a defining feature of REST. Each response should include sufficient
-                    information for clients to interpret it without relying on additional data or calls. This approach
-                    simplifies API interactions and reduces the need for custom parsing or error handling.</p>
-                <p>Finally, REST APIs benefit from HATEOAS (Hypermedia as the Engine of Application State), a principle
-                    where each response includes links to related actions or resources. This guiding structure improves
-                    navigation within the API and enables clients to discover additional capabilities dynamically.</p>
-            </article>
-        </section>
+                <p><strong>Author:</strong>José Haro Peralta</p>
+                <p><strong>Year:</strong>2022</p>
+            </section>
 
-        <section id="chapter5">
-            <h3>Documenting REST APIs with OpenAPI</h3>
+            <p class="chapter-change"></p>
 
-            <figure>
-                <img src="images/web-category-images/05-01.png">
-                <figcaption>An OpenAPI specification contains five sections. For example, the paths section describes
-                    the API endpoints, while the components section contains reusable schemas referenced across the
-                    document.</figcaption>
-            </figure>
+            <section class="content-section">
+                <article class="summary">
+                    <h4>Summary</h4>
 
-            <article>
-                <p>OpenAPI is a widely-used standard for documenting REST APIs, providing a clear, structured format
-                    that developers and systems can understand. Documentation is essential in REST APIs because it helps
-                    developers understand endpoints, parameters, and expected responses, improving ease of integration
-                    and reducing errors.</p>
-                <p>One of the key features of OpenAPI is its ability to describe endpoints in detail. Each endpoint can
-                    include information about its HTTP method, URL path, query parameters, headers, and expected request
-                    and response bodies. This specificity allows developers to interact with the API accurately and
-                    efficiently.</p>
-                <p>OpenAPI also supports data validation, making it easier to specify the structure and types of data
-                    for each request and response. By defining data models, developers can ensure that clients send
-                    valid data, minimizing the risk of errors and improving overall API reliability.</p>
-                <p>Interactivity is another benefit of OpenAPI. Many documentation tools, like Swagger UI, use OpenAPI
-                    specifications to create interactive documentation, enabling developers to test API endpoints
-                    directly within the documentation interface. This approach accelerates development and debugging.
-                </p>
-                <p>API versioning is simplified with OpenAPI. By documenting different versions of the API, developers
-                    can provide backward compatibility, allowing clients to continue using older versions even as new
-                    functionality is introduced. Versioning reduces the need for sudden, disruptive changes.</p>
-                <p>OpenAPI documentation is machine-readable, enabling automated tools to generate client libraries,
-                    server stubs, and testing scripts based on the specification. This automation reduces manual work
-                    and helps maintain consistency between documentation and the actual API implementation.</p>
-                <p>Security features in OpenAPI allow developers to specify authorization and authentication methods,
-                    including OAuth, API keys, or JWTs. Clear security documentation helps ensure that clients
-                    understand how to authenticate correctly and safely access the API.</p>
-                <p>Lastly, OpenAPI supports comprehensive error handling documentation, where developers can specify
-                    different error codes and messages for various failure scenarios. By defining expected errors,
-                    OpenAPI documentation guides users in troubleshooting issues and reduces confusion.</p>
-            </article>
-        </section>
+                    <p>The book <em>"Microservice APIs"</em> by José Haro Peralta provides a comprehensive guide on
+                        designing,
+                        building, and maintaining APIs in microservices architectures. Peralta emphasizes the best
+                        practices
+                        and principles necessary for creating reliable, scalable, and maintainable API systems tailored
+                        to
+                        microservices, which rely on distributed and decoupled components.</p>
+                    <p>Microservice APIs refer to the application programming interfaces used in a microservices
+                        architecture. In this architecture, an application is divided into small, independently
+                        deployable services, each with a specific business function. These microservices communicate
+                        with each other through APIs, typically using lightweight protocols like HTTP/REST, gRPC, or
+                        messaging systems. The primary purpose of a microservice API is to enable seamless interaction
+                        between these small services, ensuring that they can share data and functionality efficiently
+                        without being tightly coupled.</p>
+                    <p>The use of microservice APIs allows for greater scalability, flexibility, and resilience in
+                        software development. Each microservice can be developed, updated, and deployed independently,
+                        enabling faster iterations and easier maintenance. This approach contrasts with traditional
+                        monolithic architectures, where changes to one part of the system often require modifications
+                        across the entire codebase. By using APIs, microservices can evolve without affecting the entire
+                        application, promoting a modular, agile development process that can more easily adapt to new
+                        requirements or technologies.</p>
+                    <p>Key topics include:</p>
 
-        <section id="chapter6">
-            <h3>Building REST APIs with Python</h3>
-            <figure>
-                <img src="images/web-category-images/06-05.png">
-                <figcaption>Architecture of an application built with flask-smorest. Flask-smorest implements a typical
-                    Flask blueprint, which allows us to build and configure our API endpoints just as we would in a
-                    standard Flask application.</figcaption>
-            </figure>
+                    <ol>
+                        <li><b>API Design Fundamentals:</b> Covers principles of API design, such as RESTful APIs,
+                            asynchronous communication, and the use of gRPC.</li>
+                        <li><b>Microservice Interactions:</b> Discusses strategies for handling interactions across
+                            microservices,
+                            such as data consistency, event-driven communication, and API versioning to ensure smooth
+                            integration and evolution.</li>
+                        <li><b>Security:</b> Addresses critical security measures, including authentication,
+                            authorization,
+                            and secure data transmission to protect APIs in distributed systems.</li>
+                        <li><b>Testing and Observability:</b> Provides methods for testing APIs, monitoring, and logging
+                            within microservice ecosystems, focusing on debugging, reliability, and overall system
+                            health.
+                        </li>
+                        <li><b>Practical Applications:</b> Offers real-world examples and case studies that show how
+                            these
+                            principles are applied in actual microservices projects.</li>
+                    </ol>
 
-            <figure>
-                <img src="images/web-category-images/06-07.png">
-                <figcaption>When a URL path exposes only one HTTP method, it’s more convenient to implement it as a
-                    function-based view.</figcaption>
-            </figure>
+                    <p>Through a combination of theory and hands-on examples, <em>Microservice APIs</em> is a valuable
+                        resource for
+                        software engineers, architects, and developers who want to excel in API development for
+                        microservice-oriented architectures.</p>
+                </article>
+            </section>
 
-            <article>
-                <p>Python is a popular language for building REST APIs due to its simplicity and readability. Frameworks
-                    like Flask and FastAPI make it easy to define endpoints, handle requests, and return responses,
-                    allowing developers to create efficient APIs with minimal code.</p>
-                <p>Flask is often used for smaller or lightweight APIs. It provides basic tools for routing and handling
-                    requests, making it ideal for straightforward APIs. With Flask, developers can set up endpoints by
-                    defining routes and handling requests directly, using simple decorators to map HTTP methods to
-                    functions.</p>
-                <p>For high-performance APIs, FastAPI is an excellent choice. It uses asynchronous programming to handle
-                    many requests simultaneously, making it suitable for APIs with high concurrency demands. FastAPI
-                    also integrates with OpenAPI, generating interactive documentation automatically based on code
-                    annotations.</p>
-                <p>Python REST APIs typically use libraries like SQLAlchemy for database interactions. SQLAlchemy allows
-                    developers to define models for database tables, making it easier to query and update data. Combined
-                    with a Python framework, SQLAlchemy helps ensure efficient data management within the API.</p>
-                <p>JSON is the standard format for REST API responses in Python. Python's json module makes it easy to
-                    format data as JSON, which is lightweight and compatible with most client applications. Flask and
-                    FastAPI handle JSON serialization natively, simplifying data exchange between clients and servers.
-                </p>
-                <p>Authentication and authorization can be managed with libraries like Flask-JWT-Extended or OAuth2
-                    integrations in FastAPI. These libraries add secure access control to Python APIs, protecting
-                    sensitive data and ensuring only authorized users interact with the API.</p>
-                <p>Python APIs benefit from clear error handling practices. By defining custom error messages and HTTP
-                    status codes, developers ensure that clients receive informative feedback on issues, improving user
-                    experience. Both Flask and FastAPI support structured error handling.</p>
-                <p>Testing is straightforward with Python APIs. Tools like Pytest and Requests simplify API testing,
-                    allowing developers to write unit tests for individual endpoints. Testing ensures that APIs work
-                    correctly and helps catch issues early in development.</p>
-            </article>
-        </section>
+            <hr id="top">
+            <section class="book-contents">
+                <table cellspacing="0" cellpadding="0" class="table-of-contents">
+                    <caption>Table of Contents</caption>
+                    <colgroup>
+                        <col id="chapter-column" />
+                        <col id="description-column" />
+                    </colgroup>
+                    <tr>
+                        <th>Chapter</th>
+                        <th>Title</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="#chapter1">What are microservice APIs?</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="#chapter2">A basic API implementation</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="#chapter3">Designing microservices</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="#chapter4">Principles of REST API design</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="#chapter5">Documenting REST APIs with OpenAPI</a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a href="#chapter6">Building REST APIs with Python</a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><a href="#chapter7">Service implementation patterns for microservices</a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><a href="#chapter8">Designing GraphQL APIs</a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><a href="#chapter9">Consuming GraphQL APIs</a></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><a href="#chapter10">Building GraphQL APIs with Python</a></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><a href="#chapter11">API authorization and authentication</a></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><a href="#chapter12">Testing and validating APIs</a></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><a href="#chapter13">Dockerizing microservice APIs</a></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><a href="#chapter14">Deploying microservice APIs with Kubernetes</a></td>
+                    </tr>
+                </table>
+                <!-- <ol>
+                    <li><a href="#chapter1">What are microservice APIs?</a></li>
+                    <li><a href="#chapter2">A basic API implementation</a></li>
+                    <li><a href="#chapter3">Designing microservices</a></li>
+                    <li><a href="#chapter4">Principles of REST API design</a></li>
+                    <li><a href="#chapter5">Documenting REST APIs with OpenAPI</a></li>
+                    <li><a href="#chapter6">Building REST APIs with Python</a></li>
+                    <li><a href="#chapter7">Service implementation patterns for microservices</a></li>
+                    <li><a href="#chapter8">Designing GraphQL APIs</a></li>
+                    <li><a href="#chapter9">Consuming GraphQL APIs</a></li>
+                    <li><a href="#chapter10">Building GraphQL APIs with Python</a></li>
+                    <li><a href="#chapter11">API authorization and authentication</a></li>
+                    <li><a href="#chapter12">Testing and validating APIs</a></li>
+                    <li><a href="#chapter13">Dockerizing microservice APIs</a></li>
+                    <li><a href="#chapter14">Deploying microservice APIs with Kubernetes</a></li>
+                </ol> -->
+            </section>
+            <hr>
 
-        <section id="chapter7">
-            <h3>Service implementation patterns for microservices</h3>
+            <section class="content-section" id="chapter1">
+                <h3>1. What are microservice APIs?</h3>
 
-            <figure>
-                <img src="images/web-category-images/07-01.png">
-                <figcaption>In hexagonal architecture, we distinguish a core layer in our application, the business
-                    layer, which implements the service’s capabilities. Other components, such as a web API interface or
-                    a database, are considered adapters that depend on the business layer.</figcaption>
-            </figure>
+                <article>
+                    <p>Microservice APIs serve as the connectors between different microservices in a distributed
+                        application. Each microservice is a small, independently deployable unit that performs a
+                        specific
+                        business function. The API, or Application Programming Interface, enables these services to
+                        communicate effectively, exchanging data and instructions in a standardized format. By
+                        separating an
+                        application into smaller, modular parts, microservice APIs make the system easier to develop,
+                        test,
+                        and scale.</p>
+                    <p>Microservices allow organizations to scale parts of their applications independently. For
+                        instance,
+                        if one part of the application experiences high demand, only that particular microservice can be
+                        scaled without affecting the entire system. The API provides the framework for each microservice
+                        to
+                        "talk" to the others while maintaining loose coupling and minimal dependencies. This decoupling
+                        helps maintain performance even during heavy loads.</p>
 
-            <figure>
-                <img src="images/web-category-images/07-03.png">
-                <figcaption>The orders service consist of three packages: the core business logic, which implements the
-                    capabilities of the service; an API layer, which allows clients to interact with the service over
-                    HTTP; and a data layer, which allows the service to interact with the database. The core business
-                    logic exposes interfaces against which the API layer and the data layer are implemented.
-                </figcaption>
-            </figure>
+                    <figure>
+                        <img src="images/web-category-images/01-01.png">
+                        <figcaption>1.1 In microservices architecture, every service implements a specific business
+                            subdomain
+                            and is
+                            deployed as an independent component that runs in its own process.</figcaption>
+                    </figure>
 
-            <article>
-                <p>When implementing microservices, several patterns are commonly used to ensure they operate
-                    efficiently and maintainably. One essential pattern is the Single Responsibility Principle, where
-                    each microservice focuses on one specific function or business capability. This separation
-                    simplifies development and minimizes interdependencies, making it easier to manage and update
-                    services independently.</p>
-                <p>Another critical pattern is the <b>API Gateway</b>. Instead of allowing each client to directly
-                    communicate
-                    with all microservices, an API gateway consolidates requests and routes them to the appropriate
-                    service. This layer adds a degree of separation between the client and services, simplifying the
-                    client architecture and providing additional control over authentication, logging, and rate
-                    limiting.</p>
-                <p><b>Database per Service</b> is another pattern frequently used in microservices architecture. Each
-                    microservice is responsible for its own data, stored independently from other services. This
-                    approach prevents data coupling across services, although it requires careful planning for data
-                    consistency in complex transactions across multiple services.</p>
-                <p>The <b>Service Registry</b> pattern is also important. In a dynamic environment, microservices can
-                    change IP
-                    addresses or be redeployed frequently. A service registry maintains a list of available
-                    microservices and their locations, allowing services to find and communicate with each other
-                    automatically, which is particularly useful in distributed systems.</p>
-                <p><b>Circuit Breaker</b> is a resilience pattern designed to handle failures gracefully. If a service
-                    is
-                    experiencing issues or is down, the circuit breaker temporarily "breaks" the connection, preventing
-                    cascading failures across the system. This pattern is particularly useful in maintaining stability
-                    during peak load or in case of partial service failures.</p>
-                <p><b>Event-Driven Communication</b> is used for asynchronous tasks and long-running processes. By using
-                    message brokers or event buses, services can communicate indirectly, allowing tasks to be processed
-                    without blocking other services. This pattern is ideal for microservices that handle high traffic or
-                    have tasks that don't require an immediate response.</p>
-                <p>Finally, <b>Bulkhead Isolation</b> separates resources by service to prevent a single service from
-                    consuming
-                    all available resources in the system. By isolating resource allocation, bulkheads ensure that other
-                    services remain unaffected by high load or errors in any individual service, thus improving overall
-                    reliability.</p>
-            </article>
-        </section>
+                    <p>The use of APIs also promotes code reusability and consistency. Since each microservice has its
+                        own
+                        API, different teams can develop separate microservices using different languages or frameworks
+                        while still adhering to the API specifications. This flexibility is essential for large teams
+                        working on complex systems.</p>
+                    <p>Microservice APIs can be public or private. Public APIs enable external services and clients to
+                        interact with certain microservices, enhancing interoperability. Private APIs, on the other
+                        hand,
+                        are intended for internal use and optimize communication between microservices, preserving
+                        security
+                        and efficiency.</p>
+                    <p>APIs within microservices are typically lightweight and designed to perform a specific action or
+                        set
+                        of actions. This design minimizes overhead, reduces latency, and enhances the user experience.
+                        By
+                        handling smaller tasks, microservice APIs can respond faster and with fewer system resources
+                        than
+                        larger, monolithic APIs.</p>
 
-        <section id="chapter8">
-            <h3>Designing GraphQL APIs</h3>
+                    <figure>
+                        <img src="images/web-category-images/01-03.png">
+                        <figcaption>1.2 An application can have multiple interfaces, such as a web API, a CLI, a web UI,
+                            and a
+                            desktop UI.
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <img src="images/web-category-images/08-03.png">
-                <figcaption>To interact with the products service, clients use the products API.</figcaption>
-            </figure>
+                    <p>Additionally, microservice APIs make it easier to adopt a continuous integration and continuous
+                        delivery (CI/CD) pipeline. Changes to one microservice can be deployed independently, reducing
+                        the
+                        risk of system-wide failures. These benefits collectively improve development speed, testing
+                        accuracy, and overall system reliability.</p>
+                    <p>Finally, microservice APIs are essential for adopting cloud-native technologies and frameworks.
+                        By
+                        aligning with cloud infrastructure, microservices can be distributed across multiple servers,
+                        allowing for fault tolerance and disaster recovery, critical in today’s scalable, resilient
+                        applications.</p>
+                </article>
+            </section>
+            <a class="top-btn" href="#top">
+                <img src="images/arrow.png">
+            </a>
+            <p class="chapter-change">The end of chapter 1</p>
 
-            <article>
-                <p>Designing GraphQL APIs is distinct from REST in that it allows clients to specify exactly what data
-                    they need, reducing over-fetching and under-fetching issues. A well-designed GraphQL API begins with
-                    defining a clear schema that specifies types, queries, and mutations, providing the foundation for
-                    all client-server interactions.</p>
-                <p>The <b>Schema Definition Language (SDL)</b> is a central feature of GraphQL. It allows developers to
-                    define
-                    types and their relationships, such as User, Post, or Comment. By using SDL, developers create a
-                    strong, contract-based API that clearly outlines the available data and structure, improving
-                    reliability and developer experience.</p>
-                <p><b>Queries and Mutations</b> in GraphQL are similar to GET and POST requests in REST. Queries
-                    retrieve data,
-                    while mutations modify or create new data. Defining these actions in the schema enables clients to
-                    interact with data in a structured and predictable manner. A well-designed schema should balance
-                    flexibility with simplicity, providing clients with the information they need without excessive
-                    complexity.</p>
-                <p><b>Resolvers</b> are functions that fetch data for each field in the schema. Each resolver connects a
-                    field
-                    in a query or mutation to the underlying data source, such as a database or another API. Efficient
-                    resolvers are crucial for minimizing latency and ensuring that data is retrieved quickly.</p>
-                <p><b>Pagination and Filtering</b> are necessary when dealing with large datasets in GraphQL. Using
-                    parameters
-                    like limit and offset in queries, or adding filtering criteria, reduces the volume of data
-                    transferred and optimizes response times. These features help GraphQL APIs handle large amounts of
-                    data without overwhelming clients or servers.</p>
-                <p><b>Error Handling</b> in GraphQL involves providing detailed error messages within the API response.
-                    Unlike
-                    REST, where errors are often communicated through HTTP status codes, GraphQL uses a structured error
-                    object, making it easier for clients to understand issues and manage responses appropriately.</p>
-                <p>Finally, <b>Authorization and Security</b> are paramount. Developers can implement role-based access
-                    control, permissions on specific fields, and token-based authentication to restrict access to
-                    sensitive data. Ensuring security within GraphQL is vital since it often grants broad access to data
-                    in a single query, making it a potential target for exploitation.</p>
-            </article>
-        </section>
+            <section class="content-section" id="chapter2">
+                <h3>2. A basic API implementation</h3>
 
-        <section id="chapter9">
-            <h3>Consuming GraphQL APIs</h3>
+                <article>
+                    <p>Implementing a basic API often involves defining a set of endpoints that handle HTTP requests and
+                        return data in JSON format. This process typically starts with identifying the core
+                        functionalities
+                        needed by the application and structuring them into clear, distinct endpoints. Each endpoint
+                        represents a specific action, such as retrieving or updating data, and provides a clear URL path
+                        for
+                        clients to access.</p>
+                    <p>A simple API implementation often includes CRUD (Create, Read, Update, Delete) operations. These
+                        operations are mapped to HTTP methods like POST for creation, GET for reading, PUT for updating,
+                        and
+                        DELETE for removing resources. These methods provide a standardized way to interact with
+                        resources
+                        on a server.</p>
 
-            <figure>
-                <img src="images/web-category-images/09-04.png">
-                <figcaption>In GraphQL, we can run multiple queries within the same request, and the response will
-                    contain one dataset for each query.</figcaption>
-            </figure>
+                    <figure>
+                        <img src="images/web-category-images/02-01.png">
+                        <figcaption>2.1 The orders API exposes seven endpoints structured around four URL paths. Each
+                            endpoint
+                            implements different capabilities, such as placing and cancelling an order.</figcaption>
+                    </figure>
 
-            <article>
-                <p>Consuming GraphQL APIs requires understanding the unique capabilities of GraphQL queries, mutations,
-                    and subscriptions. Unlike REST, where each endpoint provides a specific resource, a GraphQL API
-                    allows clients to request exactly the data they need, reducing the need for multiple requests.</p>
-                <p>Query Structure is key when consuming GraphQL APIs. Each GraphQL query specifies the data fields
-                    required, helping clients avoid over-fetching. This precision enables developers to request just the
-                    necessary information, reducing data transfer and making responses faster and more efficient.</p>
-                <p>One of the benefits of GraphQL for consumers is Batching and Aggregation. Since GraphQL enables
-                    clients to combine multiple data requests into a single query, clients can retrieve related data in
-                    one round-trip, reducing latency and improving the efficiency of the application.</p>
-                <p>Error Management is different in GraphQL compared to REST. Errors are returned in a dedicated
-                    "errors" field within the response, which makes it easier for clients to handle partial successes.
-                    This error-handling structure is particularly useful for complex queries that may succeed in part
-                    while failing in others.</p>
-                <p>Caching can be challenging with GraphQL, as the flexibility of queries makes it harder to cache
-                    responses. Many clients use Apollo Client, which offers in-memory caching and other strategies to
-                    store and reuse data. Caching is essential for enhancing performance, particularly for applications
-                    that make frequent requests to the API.</p>
-                <p>Using GraphQL Subscriptions allows real-time updates through WebSockets. Subscriptions notify clients
-                    about changes, like updates to a data record, in real-time. This feature is especially beneficial
-                    for applications requiring live data, such as collaborative tools, messaging platforms, or
-                    dashboards.</p>
-                <p>To consume a GraphQL API effectively, Documentation is crucial. Many GraphQL APIs use introspection
-                    to generate documentation automatically, helping developers understand available fields, queries,
-                    and mutations. Tools like GraphiQL or GraphQL Playground provide an interactive way for consumers to
-                    explore and test queries.</p>
-                <p>Finally, Security Concerns must be addressed. Since GraphQL APIs provide flexible access, clients
-                    should be mindful of query complexity and potential data exposure. Rate limiting, query depth
-                    restrictions, and authentication help secure interactions with the GraphQL server, especially in
-                    public-facing APIs.</p>
-            </article>
-        </section>
+                    <p>To implement the API, developers frequently use frameworks like Flask for Python, Express for
+                        JavaScript, or FastAPI for high-performance applications. These frameworks provide built-in
+                        tools
+                        and shortcuts for defining routes, handling requests, and generating responses. Using these
+                        frameworks helps developers quickly set up a robust and maintainable API.</p>
+                    <p>In a basic API, data is usually stored in a database, and each API endpoint interacts with this
+                        database. For example, a GET /users endpoint might query the database to retrieve a list of
+                        users,
+                        while a POST /users endpoint might add a new user to the database. This setup ensures that the
+                        API
+                        provides real-time data and accurate information.</p>
+                    <p>Error handling is crucial for a basic API, as it ensures that clients receive informative
+                        messages
+                        when something goes wrong. Standardized HTTP status codes, such as 404 for "Not Found" and 500
+                        for
+                        "Internal Server Error," help the client understand the API’s state and troubleshoot issues
+                        accordingly.</p>
 
-        <section  id="chapter10">
-            <h3>Building GraphQL APIs with Python</h3>
-            <figure>
-                <img src="images/web-category-images/10-02.png">
-                <figcaption>To run the GraphQL server with Ariadne, we produce an executable schema by loading the
-                    GraphQL schema for the API and a collection of resolvers for the queries and mutations. Ariadne uses
-                    the executable schema to validate data the user sent to the server, as well as data sent from the
-                    server to the user.</figcaption>
-            </figure>
+                    <figure>
+                        <img src="images/web-category-images/02-02.png">
+                        <figcaption>2.1 To enforce separation of concerns among the different components of our service,
+                            we
+                            structure our code around three layers: the data layer knows how to interface with the
+                            source of
+                            data; the business layer implements the service’s capabilities; and the interface layer
+                            implements
+                            the service’s API.</figcaption>
+                    </figure>
 
-            <article>
-                <p>Building a GraphQL API with Python is straightforward, thanks to frameworks like Graphene and
-                    Ariadne. These libraries simplify the creation of schemas, resolvers, and the overall structure
-                    required for a functional GraphQL API. With Python, developers can create efficient and scalable
-                    APIs that leverage GraphQL's flexibility.</p>
-                <p><b>Graphene</b> is a popular Python library for GraphQL. It allows developers to define schemas using
-                    Python
-                    classes, making it intuitive for Python developers to create types, queries, and mutations. This
-                    approach ensures that the API structure is both readable and maintainable, aligning with Python's
-                    philosophy of simplicity.</p>
-                <p>Defining Types and Schemas in Python involves creating classes that map to entities like users,
-                    products, or orders. These classes define the fields and data types, and are linked to underlying
-                    data models. Using Python’s object-oriented approach, developers can easily create a modular and
-                    organized schema.</p>
-                <p><b>Resolvers</b> in Graphene handle the actual data retrieval for each query or mutation. They can
-                    connect
-                    to databases, other APIs, or in-memory data stores. Writing efficient resolvers is crucial, as they
-                    determine the speed and performance of the API, especially for complex queries or large datasets.
-                </p>
-                <p>Python's <b>integration with Databases</b> is well-supported, allowing developers to use libraries
-                    like
-                    SQLAlchemy or Django ORM to manage data. By linking resolvers to these data models, developers can
-                    create GraphQL APIs that interact seamlessly with databases, making it easier to manage, query, and
-                    manipulate data.</p>
-                <p><b>Error Handling</b> is straightforward in Python, and Graphene allows developers to define custom
-                    error
-                    messages for specific fields or data validations. This feature helps ensure clients receive
-                    informative responses, making the API easier to use and troubleshoot.</p>
-                <p><b>Testing GraphQL APIs</b> in Python can be done with libraries like Pytest and Requests. Writing
-                    test
-                    cases for each resolver and endpoint ensures that the API functions as expected, improving stability
-                    and reliability. Testing is a vital part of maintaining a functional and reliable GraphQL API.</p>
-                <p>Finally, <b>Securing Python GraphQL APIs</b> involves using authentication middleware, such as JWT
-                    tokens or
-                    OAuth. By adding secure authentication and authorization, developers can control access to sensitive
-                    data, protecting both the API and its users from unauthorized access.</p>
-            </article>
-        </section>
+                    <p>Security is a key consideration in API implementation. Even a basic API should include some form
+                        of
+                        authentication or validation to ensure that only authorized users access the data. This may
+                        involve
+                        token-based authentication or implementing an API key system.</p>
+                    <p>Lastly, API documentation is essential. Good documentation helps other developers understand how
+                        to
+                        use the API, the required parameters, and the expected responses. Many API implementations use
+                        tools
+                        like OpenAPI to generate interactive documentation that simplifies integration for developers.
+                    </p>
+                </article>
+            </section>
 
-        <section  id="chapter11">
-            <h3>API authorization and authentication</h3>
+            <p class="chapter-change">The end of chapter 2</p>
 
-            <figure>
-                <img src="images/web-category-images/11-04.png">
-                <figcaption>In the client credentials flow, a server application exchanges a secret with the
-                    authorization server to obtain an access token.</figcaption>
-            </figure>
+            <section class="content-section" id="chapter3">
+                <h3>3. Designing microservices</h3>
 
-            <figure>
-                <img src="images/web-category-images/11-11.png">
-                <figcaption>When working with SQLite, we use batch operations to make changes to our tables. In a batch
-                    operation, we copy data from the original table to a temporary table; then, we drop the original
-                    table and re-create it with the new fields; and, finally, we copy back data from the temporary
-                    table.</figcaption>
-            </figure>
+                <article>
+                    <p>Designing microservices requires a shift from traditional monolithic architecture to a modular,
+                        distributed system. The primary goal is to create small, focused services that handle specific
+                        business functions independently. This approach enables teams to develop, deploy, and scale each
+                        microservice separately, providing flexibility and efficiency across the application.</p>
+                    <p>One critical aspect of microservice design is defining service boundaries. A microservice should
+                        represent a single responsibility within the application, aligning with the "single
+                        responsibility
+                        principle." When each service focuses on one purpose, teams can update and maintain it without
+                        impacting other parts of the application, reducing the risk of cascading errors.</p>
+                    <p>Communication between microservices is another essential consideration. Most microservices
+                        communicate over HTTP using RESTful APIs, but other protocols like gRPC or message queues can be
+                        more efficient in some cases. Choosing the right communication method depends on factors like
+                        latency, reliability, and the complexity of data transfer.</p>
 
-            <article>
-                <p>Authorization and authentication are essential for securing APIs, ensuring that only authorized users
-                    have access to resources. <b>Authentication</b> verifies the identity of a user, while Authorization
-                    determines what the authenticated user is allowed to do within the API. Together, they protect
-                    sensitive data and help prevent unauthorized access.</p>
-                <p>One common method for API authentication is <b>JWT (JSON Web Tokens)</b>. In this approach, the
-                    server
-                    issues a signed token to an authenticated user, which the client then includes in each request. JWTs
-                    are widely used because they are compact, secure, and can include user data, enabling stateless
-                    authentication that reduces server load.</p>
-                <p><b>OAuth2</b> is another popular framework for API security, especially in scenarios where
-                    third-party
-                    applications need access to user data without sharing passwords. OAuth2 allows users to authorize
-                    applications to access their data with permission scopes, enhancing security while giving users
-                    control. Many major platforms, such as Google and Facebook, use OAuth2 for their APIs.</p>
-                <p>For authorization, <b>Role-Based Access Control (RBAC)</b> is commonly used. RBAC assigns permissions
-                    based
-                    on user roles, which are predefined sets of privileges. By implementing RBAC, developers can manage
-                    access to different API resources, restricting sensitive data to specific roles and providing
-                    general access for less sensitive endpoints.</p>
-                <p><b>Scopes</b> are often used in conjunction with OAuth2 to control the level of access for each user.
-                    Each
-                    scope specifies the actions that an API client can perform. For example, a user with “read” scope
-                    may view data, while a user with “write” scope can modify it. Using scopes provides fine-grained
-                    control over API access.</p>
-                <p>In addition to access control, <b>Rate Limiting</b> is a technique used to prevent abuse of APIs. By
-                    limiting the number of requests a user can make within a specified time frame, rate limiting helps
-                    prevent malicious activity, such as Denial of Service (DoS) attacks, and reduces strain on API
-                    resources.</p>
-                <p><b>Encryption</b> is also crucial for API security. TLS (Transport Layer Security) encrypts data
-                    during
-                    transmission, protecting it from interception. Ensuring all API endpoints require HTTPS provides a
-                    secure communication channel, protecting sensitive data from being exposed in transit.</p>
-                <p>Lastly, <b>Audit Logging</b> is useful for tracking access and actions within the API. By logging key
-                    events, such as login attempts, data access, and resource modifications, developers can monitor
-                    activity, identify suspicious behavior, and maintain an audit trail for compliance and debugging
-                    purposes.</p>
-            </article>
-        </section>
+                    <figure>
+                        <img src="images/web-category-images/03-03.png">
+                        <figcaption>3.1 Using service decomposition by business capability, we reflect the structure of
+                            the
+                            business
+                            in our microservices architecture.</figcaption>
+                    </figure>
 
-        <section id="chapter12">
-            <h3>Testing and validating APIs</h3>
+                    <p>Data management is more complex in microservices. Each service should ideally have its own
+                        database
+                        to maintain isolation and avoid coupling between services. This "database per service" approach
+                        makes it easier to scale and prevents data-related bottlenecks, but it also requires careful
+                        planning for data consistency and transactions across services.</p>
+                    <p>Resilience is a core principle of microservice design. To build resilient services, patterns such
+                        as
+                        circuit breakers, retries, and fallbacks are commonly used. These techniques help manage
+                        failures
+                        and improve the stability of the system, ensuring that one failing service doesn't take down the
+                        entire application.</p>
+                    <p>Scalability is also a key focus in microservices architecture. By designing services that can be
+                        scaled independently, teams can allocate resources more effectively and respond to user demand
+                        dynamically. This agility is especially valuable in cloud environments, where resources can be
+                        adjusted as needed.</p>
+                    <p>Security in microservices is managed at both the service and data level. Since each service can
+                        expose its own API, robust authentication, and authorization mechanisms are crucial to prevent
+                        unauthorized access. Encryption and secure communication channels between services further
+                        protect
+                        data integrity.</p>
+                </article>
+            </section>
 
-            <figure>
-                <img src="images/web-category-images/12-06.png">
-                <figcaption> In property-based testing, we use a framework to generate test cases for our functions, and
-                    we make assertions on the result of running our code on such cases.</figcaption>
-            </figure>
+            <p class="chapter-change">The end of chapter 3</p>
 
-            <figure>
-                <img src="images/web-category-images/12-07.png">
-                <figcaption>We can combine various Hypothesis strategies into one. The resulting strategy will produce a
-                    value from any of the combined strategies at random.</figcaption>
-            </figure>
+            <section class="content-section" id="chapter4">
+                <h3>4. Principles of REST API design</h3>
 
-            <article>
-                <p>Testing and validating APIs is essential to ensure they operate as expected, are reliable, and handle
-                    errors gracefully. <b>Unit Testing</b> is often the first step, where individual functions or
-                    endpoints are
-                    tested to confirm they behave correctly in isolation. Unit tests help catch bugs early in
-                    development, making debugging easier and reducing future errors.</p>
-                <p><b>Integration Testing</b> goes a step further by evaluating how different parts of the API interact
-                    with
-                    each other and with external systems like databases. Integration tests confirm that endpoints work
-                    together as expected and that the API can handle data from real-world sources. These tests are
-                    especially useful for detecting issues caused by dependencies.</p>
-                <p><b>Functional Testing</b> ensures that the API meets specified requirements. It focuses on testing
-                    each
-                    endpoint’s functionality and behavior based on user actions. This type of testing can include
-                    verifying HTTP response codes, checking data returned, and validating how the API handles valid and
-                    invalid inputs, providing confidence that it meets user expectations.</p>
-                <p><b>Load Testing</b> and <b>Performance Testing</b> assess the API's stability and responsiveness
-                    under various
-                    conditions. Load testing simulates a high number of requests to evaluate performance under stress,
-                    while performance testing measures response times and throughput. These tests help identify
-                    bottlenecks, ensuring the API can scale to handle peak traffic.</p>
-                <p><b>Security Testing</b> evaluates the API's vulnerability to potential attacks. This testing can
-                    include
-                    authentication checks, SQL injection tests, and cross-site scripting (XSS) checks. By identifying
-                    security flaws, developers can address weaknesses before they are exploited, protecting the API and
-                    its users from unauthorized access.</p>
-                <p><b>Automated Testing</b> tools like Postman and SoapUI facilitate regular and repeatable testing
-                    processes.
-                    Automated tests can run continuously, often as part of a CI/CD pipeline, ensuring that new code
-                    doesn’t introduce regressions. Automated testing is especially valuable for large APIs with many
-                    endpoints.</p>
-                <p>Lastly, <b>Validation</b> ensures that incoming data meets expected formats, types, and constraints.
-                    By
-                    validating inputs, developers prevent malformed data from causing errors or security
-                    vulnerabilities. Common validation includes checking data types, enforcing required fields, and
-                    using regular expressions for pattern matching, which improves data integrity and API reliability.
-                </p>
-            </article>
-        </section>
+                <article>
+                    <p>REST (Representational State Transfer) APIs are designed based on key principles that ensure
+                        consistency, scalability, and efficiency. One of the fundamental principles is statelessness,
+                        which
+                        means that each request from a client contains all the information the server needs to fulfill
+                        it.
+                        This setup allows servers to handle each request independently, making scaling and caching
+                        easier.
+                    </p>
+                    <p>Another important principle is uniformity. REST APIs should have a standardized structure,
+                        including
+                        predictable URL patterns and consistent methods like GET, POST, PUT, and DELETE for CRUD
+                        operations.
+                        This consistency makes it easier for developers to understand and use the API.</p>
+                    <p>Resource-based design is essential for REST. Resources represent entities, such as users,
+                        products,
+                        or orders, and are typically accessed using specific endpoints. Each resource should be
+                        identifiable
+                        through a unique URL, and requests to the URL should return the current state of the resource,
+                        usually in JSON format.</p>
+                    <p>RESTful APIs use a layered system architecture. The API’s design separates the client, server,
+                        and
+                        any intermediary components, such as load balancers or gateways. This separation allows for
+                        greater
+                        flexibility, enabling each layer to be independently maintained, scaled, or replaced without
+                        affecting other parts of the system.</p>
 
-        <section id="chapter13">
-            <h3>Dockerizing microservice APIs</h3>
+                    <figure>
+                        <img src="images/web-category-images/04-04.png">
+                        <figcaption>4.1 REST’s layered system principle states that the complexity of our backend must
+                            be hidden
+                            from the client. A common solution to this problem is the API gateway pattern, which serves
+                            as
+                            an
+                            entry point to all the services in the platform.</figcaption>
+                    </figure>
 
-            <figure>
-                <img src="images/web-category-images/13-01.png">
-                <figcaption> Docker containers run in isolated processes on top of the host operating system.
-                </figcaption>
-            </figure>
+                    <p>Caching is a key optimization in REST. By marking certain responses as cacheable, REST APIs can
+                        reduce the load on servers and improve response times for clients. Cacheable responses make REST
+                        APIs more efficient, especially for data that doesn’t change frequently.</p>
+                    <p>Self-descriptive messages are a defining feature of REST. Each response should include sufficient
+                        information for clients to interpret it without relying on additional data or calls. This
+                        approach
+                        simplifies API interactions and reduces the need for custom parsing or error handling.</p>
+                    <p>Finally, REST APIs benefit from HATEOAS (Hypermedia as the Engine of Application State), a
+                        principle
+                        where each response includes links to related actions or resources. This guiding structure
+                        improves
+                        navigation within the API and enables clients to discover additional capabilities dynamically.
+                    </p>
+                </article>
+            </section>
 
-            <article>
-                <p>Dockerizing microservice APIs is a popular approach to simplify deployment, improve consistency, and
-                    enhance scalability. Docker containers encapsulate an application and its dependencies, making it
-                    easy to move microservices between development, testing, and production environments without
-                    compatibility issues.</p>
-                <p>One of the primary benefits of Docker is <b>Environment Consistency</b>. Each Docker container
-                    includes all
-                    the necessary dependencies, libraries, and configurations, ensuring that the microservice behaves
-                    the same way in any environment. This eliminates issues where code works on one machine but not
-                    another, which is common in traditional deployments.</p>
-                <p><b>Docker Images</b> are the basis for containers. Developers create Docker images by defining
-                    instructions
-                    in a Dockerfile. Each line in the Dockerfile adds a layer to the image, such as setting up the base
-                    OS, installing dependencies, and copying application code. By specifying each step, Docker ensures
-                    that the image can be rebuilt exactly the same way every time.</p>
-                <p><b>Isolation</b> is a key benefit of Docker. Each microservice runs in its own container, separated
-                    from
-                    other services. This setup prevents resource conflicts and allows developers to run different
-                    versions of dependencies for each service. Isolation improves security and enables microservices to
-                    operate independently without interference.</p>
-                <p><b>Networking in Docker</b> allows containers to communicate with each other, which is crucial for
-                    microservice architectures. Docker provides built-in networking solutions, including bridge
-                    networks, overlay networks, and service discovery, enabling services to find and communicate with
-                    each other seamlessly within a cluster.</p>
-                <p><b>Orchestration</b> with tools like Docker Compose allows developers to define and manage multiple
-                    containers in a single configuration file. Docker Compose makes it easy to start, stop, and scale
-                    services by specifying dependencies, environment variables, and network configurations, simplifying
-                    the management of multi-container microservices.</p>
-                <p><b>Scaling with Docker</b> is straightforward, as containers can be replicated easily. This
-                    scalability is
-                    essential for microservices, as it allows developers to increase or decrease instances based on
-                    demand. With orchestration tools like Kubernetes, scaling can even be automated, ensuring that
-                    resources are allocated efficiently.</p>
-                <p>Finally, <b>Continuous Integration and Continuous Deployment (CI/CD)</b> pipelines often use Docker
-                    for
-                    building, testing, and deploying containers. By integrating Docker into CI/CD, teams can automate
-                    the deployment of updated images to production, enabling faster and more reliable delivery of new
-                    features and fixes.</p>
-            </article>
-        </section>
+            <p class="chapter-change">The end of chapter 4</p>
 
-        <section id="chapter14">
-            <h3>Deploying microservice APIs with Kubernetes</h3>
+            <section class="content-section" id="chapter5">
+                <h3>5. Documenting REST APIs with OpenAPI</h3>
 
-            <figure>
-                <img src="images/web-category-images/14-02.png">
-                <figcaption>AWS Fargate automatically provisions the servers required to operate our Kubernetes cluster.
-                </figcaption>
-            </figure>
+                <article>
+                    <p>OpenAPI is a widely-used standard for documenting REST APIs, providing a clear, structured format
+                        that developers and systems can understand. Documentation is essential in REST APIs because it
+                        helps
+                        developers understand endpoints, parameters, and expected responses, improving ease of
+                        integration
+                        and reducing errors.</p>
+                    <p>One of the key features of OpenAPI is its ability to describe endpoints in detail. Each endpoint
+                        can
+                        include information about its HTTP method, URL path, query parameters, headers, and expected
+                        request
+                        and response bodies. This specificity allows developers to interact with the API accurately and
+                        efficiently.</p>
+                    <p>OpenAPI also supports data validation, making it easier to specify the structure and types of
+                        data
+                        for each request and response. By defining data models, developers can ensure that clients send
+                        valid data, minimizing the risk of errors and improving overall API reliability.</p>
+                    <p>Interactivity is another benefit of OpenAPI. Many documentation tools, like Swagger UI, use
+                        OpenAPI
+                        specifications to create interactive documentation, enabling developers to test API endpoints
+                        directly within the documentation interface. This approach accelerates development and
+                        debugging.
+                    </p>
 
-            <figure>
-                <img src="images/web-category-images/14-04.png">
-                <figcaption>Pods can authenticate with an OIDC provider to assume an IAM role, which gives them access
-                    to the AWS API, and therefore gives them access to AWS services.</figcaption>
-            </figure>
+                    <figure>
+                        <img src="images/web-category-images/05-01.png">
+                        <figcaption>5.1 An OpenAPI specification contains five sections. For example, the paths section
+                            describes
+                            the API endpoints, while the components section contains reusable schemas referenced across
+                            the
+                            document.</figcaption>
+                    </figure>
 
-            <article>
-                <p>Kubernetes (K8s) is an orchestration platform that simplifies the deployment, scaling, and management
-                    of containerized microservices. It provides tools for automating tasks, such as scheduling,
-                    networking, and resource allocation, making it easier to manage large-scale microservice
-                    architectures.</p>
-                <p><b>Kubernetes Pods</b> are the basic units of deployment. A pod is a group of one or more containers
-                    that
-                    share storage, network, and configurations. Pods are ephemeral by nature, meaning they can be
-                    recreated or replaced as needed, ensuring that microservices are resilient and available even if
-                    individual instances fail.</p>
-                <p><b>Services in Kubernetes</b> provide stable IP addresses and DNS names to expose microservices
-                    within the
-                    cluster or externally. Services abstract the underlying pods, allowing clients to communicate with
-                    microservices without worrying about pod-specific details. This abstraction layer also enables load
-                    balancing, ensuring even distribution of traffic across multiple instances.</p>
-                <p><b>Kubernetes Deployments</b> enable developers to define the desired state of an application. A
-                    deployment
-                    specifies the number of pod replicas, container images, and other configurations. Kubernetes
-                    continuously monitors the deployment and automatically restarts or scales pods to match the desired
-                    state, maintaining application availability.</p>
-                <p><b>Scaling with Kubernetes</b> is highly efficient. Developers can scale microservices up or down by
-                    adjusting the replica count in a deployment configuration. Kubernetes automatically manages resource
-                    allocation, ensuring that each microservice receives adequate CPU and memory, making it easy to
-                    handle fluctuating traffic.</p>
-                <p><b>ConfigMaps and Secrets</b> in Kubernetes provide ways to manage configuration data and sensitive
-                    information like API keys and passwords. ConfigMaps store non-sensitive configuration details, while
-                    Secrets store encrypted data. This separation of configuration from code improves security and
-                    flexibility, allowing changes without modifying container images.</p>
-                <p><b>Ingress Controllers</b> enable external access to microservices. By defining ingress rules,
-                    developers
-                    can route incoming HTTP and HTTPS requests to specific services, providing secure access to
-                    microservices. Ingress also supports SSL termination, making it easier to manage secure
-                    communications across the cluster.</p>
-                <p>Finally, <b>Kubernetes Monitoring and Logging</b> are essential for managing microservices at scale.
-                    Tools
-                    like Prometheus and Grafana monitor performance metrics, while centralized logging tools like
-                    Fluentd and Elasticsearch collect and analyze logs. These monitoring solutions help identify
-                    bottlenecks, debug issues, and maintain high availability in production environments.</p>
-            </article>
-        </section>
-    </main>
+                    <p>API versioning is simplified with OpenAPI. By documenting different versions of the API,
+                        developers
+                        can provide backward compatibility, allowing clients to continue using older versions even as
+                        new
+                        functionality is introduced. Versioning reduces the need for sudden, disruptive changes.</p>
+                    <p>OpenAPI documentation is machine-readable, enabling automated tools to generate client libraries,
+                        server stubs, and testing scripts based on the specification. This automation reduces manual
+                        work
+                        and helps maintain consistency between documentation and the actual API implementation.</p>
+                    <p>Security features in OpenAPI allow developers to specify authorization and authentication
+                        methods,
+                        including OAuth, API keys, or JWTs. Clear security documentation helps ensure that clients
+                        understand how to authenticate correctly and safely access the API.</p>
+                    <p>Lastly, OpenAPI supports comprehensive error handling documentation, where developers can specify
+                        different error codes and messages for various failure scenarios. By defining expected errors,
+                        OpenAPI documentation guides users in troubleshooting issues and reduces confusion.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 5</p>
+
+            <section class="content-section" id="chapter6">
+                <h3>6. Building REST APIs with Python</h3>
+
+                <article>
+                    <p>Python is a popular language for building REST APIs due to its simplicity and readability.
+                        Frameworks
+                        like Flask and FastAPI make it easy to define endpoints, handle requests, and return responses,
+                        allowing developers to create efficient APIs with minimal code.</p>
+                    <p>Flask is often used for smaller or lightweight APIs. It provides basic tools for routing and
+                        handling
+                        requests, making it ideal for straightforward APIs. With Flask, developers can set up endpoints
+                        by
+                        defining routes and handling requests directly, using simple decorators to map HTTP methods to
+                        functions.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/06-05.png">
+                        <figcaption>6.1 Architecture of an application built with flask-smorest. Flask-smorest
+                            implements a
+                            typical
+                            Flask blueprint, which allows us to build and configure our API endpoints just as we would
+                            in a
+                            standard Flask application.</figcaption>
+                    </figure>
+
+                    <p>For high-performance APIs, FastAPI is an excellent choice. It uses asynchronous programming to
+                        handle
+                        many requests simultaneously, making it suitable for APIs with high concurrency demands. FastAPI
+                        also integrates with OpenAPI, generating interactive documentation automatically based on code
+                        annotations.</p>
+                    <p>Python REST APIs typically use libraries like SQLAlchemy for database interactions. SQLAlchemy
+                        allows
+                        developers to define models for database tables, making it easier to query and update data.
+                        Combined
+                        with a Python framework, SQLAlchemy helps ensure efficient data management within the API.</p>
+                    <p>JSON is the standard format for REST API responses in Python. Python's json module makes it easy
+                        to
+                        format data as JSON, which is lightweight and compatible with most client applications. Flask
+                        and
+                        FastAPI handle JSON serialization natively, simplifying data exchange between clients and
+                        servers.
+                    </p>
+
+                    <figure>
+                        <img src="images/web-category-images/06-07.png">
+                        <figcaption>6.2 When a URL path exposes only one HTTP method, it’s more convenient to implement
+                            it as a
+                            function-based view.</figcaption>
+                    </figure>
+
+                    <p>Authentication and authorization can be managed with libraries like Flask-JWT-Extended or OAuth2
+                        integrations in FastAPI. These libraries add secure access control to Python APIs, protecting
+                        sensitive data and ensuring only authorized users interact with the API.</p>
+                    <p>Python APIs benefit from clear error handling practices. By defining custom error messages and
+                        HTTP
+                        status codes, developers ensure that clients receive informative feedback on issues, improving
+                        user
+                        experience. Both Flask and FastAPI support structured error handling.</p>
+                    <p>Testing is straightforward with Python APIs. Tools like Pytest and Requests simplify API testing,
+                        allowing developers to write unit tests for individual endpoints. Testing ensures that APIs work
+                        correctly and helps catch issues early in development.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 6</p>
+
+            <section class="content-section" id="chapter7">
+                <h3>7. Service implementation patterns for microservices</h3>
+
+                <article>
+                    <p>When implementing microservices, several patterns are commonly used to ensure they operate
+                        efficiently and maintainably. One essential pattern is the Single Responsibility Principle,
+                        where
+                        each microservice focuses on one specific function or business capability. This separation
+                        simplifies development and minimizes interdependencies, making it easier to manage and update
+                        services independently.</p>
+                    <p>Another critical pattern is the <b>API Gateway</b>. Instead of allowing each client to directly
+                        communicate
+                        with all microservices, an API gateway consolidates requests and routes them to the appropriate
+                        service. This layer adds a degree of separation between the client and services, simplifying the
+                        client architecture and providing additional control over authentication, logging, and rate
+                        limiting.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/07-01.png">
+                        <figcaption>7.1 In hexagonal architecture, we distinguish a core layer in our application, the
+                            business
+                            layer, which implements the service’s capabilities. Other components, such as a web API
+                            interface or
+                            a database, are considered adapters that depend on the business layer.</figcaption>
+                    </figure>
+
+                    <p><b>Database per Service</b> is another pattern frequently used in microservices architecture.
+                        Each
+                        microservice is responsible for its own data, stored independently from other services. This
+                        approach prevents data coupling across services, although it requires careful planning for data
+                        consistency in complex transactions across multiple services.</p>
+                    <p>The <b>Service Registry</b> pattern is also important. In a dynamic environment, microservices
+                        can
+                        change IP
+                        addresses or be redeployed frequently. A service registry maintains a list of available
+                        microservices and their locations, allowing services to find and communicate with each other
+                        automatically, which is particularly useful in distributed systems.</p>
+                    <p><b>Circuit Breaker</b> is a resilience pattern designed to handle failures gracefully. If a
+                        service
+                        is
+                        experiencing issues or is down, the circuit breaker temporarily "breaks" the connection,
+                        preventing
+                        cascading failures across the system. This pattern is particularly useful in maintaining
+                        stability
+                        during peak load or in case of partial service failures.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/07-03.png">
+                        <figcaption>7.2 The orders service consist of three packages: the core business logic, which
+                            implements
+                            the
+                            capabilities of the service; an API layer, which allows clients to interact with the service
+                            over
+                            HTTP; and a data layer, which allows the service to interact with the database. The core
+                            business
+                            logic exposes interfaces against which the API layer and the data layer are implemented.
+                        </figcaption>
+                    </figure>
+
+                    <p><b>Event-Driven Communication</b> is used for asynchronous tasks and long-running processes. By
+                        using
+                        message brokers or event buses, services can communicate indirectly, allowing tasks to be
+                        processed
+                        without blocking other services. This pattern is ideal for microservices that handle high
+                        traffic or
+                        have tasks that don't require an immediate response.</p>
+                    <p>Finally, <b>Bulkhead Isolation</b> separates resources by service to prevent a single service
+                        from
+                        consuming
+                        all available resources in the system. By isolating resource allocation, bulkheads ensure that
+                        other
+                        services remain unaffected by high load or errors in any individual service, thus improving
+                        overall
+                        reliability.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 7</p>
+
+            <section class="content-section" id="chapter8">
+                <h3>8. Designing GraphQL APIs</h3>
+
+                <article>
+                    <p>Designing GraphQL APIs is distinct from REST in that it allows clients to specify exactly what
+                        data
+                        they need, reducing over-fetching and under-fetching issues. A well-designed GraphQL API begins
+                        with
+                        defining a clear schema that specifies types, queries, and mutations, providing the foundation
+                        for
+                        all client-server interactions.</p>
+                    <p>The <b>Schema Definition Language (SDL)</b> is a central feature of GraphQL. It allows developers
+                        to
+                        define
+                        types and their relationships, such as User, Post, or Comment. By using SDL, developers create a
+                        strong, contract-based API that clearly outlines the available data and structure, improving
+                        reliability and developer experience.</p>
+                    <p><b>Queries and Mutations</b> in GraphQL are similar to GET and POST requests in REST. Queries
+                        retrieve data,
+                        while mutations modify or create new data. Defining these actions in the schema enables clients
+                        to
+                        interact with data in a structured and predictable manner. A well-designed schema should balance
+                        flexibility with simplicity, providing clients with the information they need without excessive
+                        complexity.</p>
+                    <p><b>Resolvers</b> are functions that fetch data for each field in the schema. Each resolver
+                        connects a
+                        field
+                        in a query or mutation to the underlying data source, such as a database or another API.
+                        Efficient
+                        resolvers are crucial for minimizing latency and ensuring that data is retrieved quickly.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/08-03.png">
+                        <figcaption>8.1 To interact with the products service, clients use the products API.
+                        </figcaption>
+                    </figure>
+
+                    <p><b>Pagination and Filtering</b> are necessary when dealing with large datasets in GraphQL. Using
+                        parameters
+                        like limit and offset in queries, or adding filtering criteria, reduces the volume of data
+                        transferred and optimizes response times. These features help GraphQL APIs handle large amounts
+                        of
+                        data without overwhelming clients or servers.</p>
+                    <p><b>Error Handling</b> in GraphQL involves providing detailed error messages within the API
+                        response.
+                        Unlike
+                        REST, where errors are often communicated through HTTP status codes, GraphQL uses a structured
+                        error
+                        object, making it easier for clients to understand issues and manage responses appropriately.
+                    </p>
+                    <p>Finally, <b>Authorization and Security</b> are paramount. Developers can implement role-based
+                        access
+                        control, permissions on specific fields, and token-based authentication to restrict access to
+                        sensitive data. Ensuring security within GraphQL is vital since it often grants broad access to
+                        data
+                        in a single query, making it a potential target for exploitation.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 8</p>
+
+            <section class="content-section" id="chapter9">
+                <h3>9. Consuming GraphQL APIs</h3>
+
+                <article>
+                    <p>Consuming GraphQL APIs requires understanding the unique capabilities of GraphQL queries,
+                        mutations,
+                        and subscriptions. Unlike REST, where each endpoint provides a specific resource, a GraphQL API
+                        allows clients to request exactly the data they need, reducing the need for multiple requests.
+                    </p>
+                    <p>Query Structure is key when consuming GraphQL APIs. Each GraphQL query specifies the data fields
+                        required, helping clients avoid over-fetching. This precision enables developers to request just
+                        the
+                        necessary information, reducing data transfer and making responses faster and more efficient.
+                    </p>
+                    <p>One of the benefits of GraphQL for consumers is Batching and Aggregation. Since GraphQL enables
+                        clients to combine multiple data requests into a single query, clients can retrieve related data
+                        in
+                        one round-trip, reducing latency and improving the efficiency of the application.</p>
+                    <p>Error Management is different in GraphQL compared to REST. Errors are returned in a dedicated
+                        "errors" field within the response, which makes it easier for clients to handle partial
+                        successes.
+                        This error-handling structure is particularly useful for complex queries that may succeed in
+                        part
+                        while failing in others.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/09-04.png">
+                        <figcaption>9.1 In GraphQL, we can run multiple queries within the same request, and the
+                            response will
+                            contain one dataset for each query.</figcaption>
+                    </figure>
+                    <p>Caching can be challenging with GraphQL, as the flexibility of queries makes it harder to cache
+                        responses. Many clients use Apollo Client, which offers in-memory caching and other strategies
+                        to
+                        store and reuse data. Caching is essential for enhancing performance, particularly for
+                        applications
+                        that make frequent requests to the API.</p>
+                    <p>Using GraphQL Subscriptions allows real-time updates through WebSockets. Subscriptions notify
+                        clients
+                        about changes, like updates to a data record, in real-time. This feature is especially
+                        beneficial
+                        for applications requiring live data, such as collaborative tools, messaging platforms, or
+                        dashboards.</p>
+                    <p>To consume a GraphQL API effectively, Documentation is crucial. Many GraphQL APIs use
+                        introspection
+                        to generate documentation automatically, helping developers understand available fields,
+                        queries,
+                        and mutations. Tools like GraphiQL or GraphQL Playground provide an interactive way for
+                        consumers to
+                        explore and test queries.</p>
+                    <p>Finally, Security Concerns must be addressed. Since GraphQL APIs provide flexible access, clients
+                        should be mindful of query complexity and potential data exposure. Rate limiting, query depth
+                        restrictions, and authentication help secure interactions with the GraphQL server, especially in
+                        public-facing APIs.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 9</p>
+
+            <section class="content-section" id="chapter10">
+                <h3>10. Building GraphQL APIs with Python</h3>
+
+                <article>
+                    <p>Building a GraphQL API with Python is straightforward, thanks to frameworks like Graphene and
+                        Ariadne. These libraries simplify the creation of schemas, resolvers, and the overall structure
+                        required for a functional GraphQL API. With Python, developers can create efficient and scalable
+                        APIs that leverage GraphQL's flexibility.</p>
+                    <p><b>Graphene</b> is a popular Python library for GraphQL. It allows developers to define schemas
+                        using
+                        Python
+                        classes, making it intuitive for Python developers to create types, queries, and mutations. This
+                        approach ensures that the API structure is both readable and maintainable, aligning with
+                        Python's
+                        philosophy of simplicity.</p>
+                    <p>Defining Types and Schemas in Python involves creating classes that map to entities like users,
+                        products, or orders. These classes define the fields and data types, and are linked to
+                        underlying
+                        data models. Using Python’s object-oriented approach, developers can easily create a modular and
+                        organized schema.</p>
+                    <p><b>Resolvers</b> in Graphene handle the actual data retrieval for each query or mutation. They
+                        can
+                        connect
+                        to databases, other APIs, or in-memory data stores. Writing efficient resolvers is crucial, as
+                        they
+                        determine the speed and performance of the API, especially for complex queries or large
+                        datasets.
+                    </p>
+
+                    <figure>
+                        <img src="images/web-category-images/10-02.png">
+                        <figcaption>10.1 To run the GraphQL server with Ariadne, we produce an executable schema by
+                            loading the
+                            GraphQL schema for the API and a collection of resolvers for the queries and mutations.
+                            Ariadne
+                            uses
+                            the executable schema to validate data the user sent to the server, as well as data sent
+                            from
+                            the
+                            server to the user.</figcaption>
+                    </figure>
+
+                    <p>Python's <b>integration with Databases</b> is well-supported, allowing developers to use
+                        libraries
+                        like
+                        SQLAlchemy or Django ORM to manage data. By linking resolvers to these data models, developers
+                        can
+                        create GraphQL APIs that interact seamlessly with databases, making it easier to manage, query,
+                        and
+                        manipulate data.</p>
+                    <p><b>Error Handling</b> is straightforward in Python, and Graphene allows developers to define
+                        custom
+                        error
+                        messages for specific fields or data validations. This feature helps ensure clients receive
+                        informative responses, making the API easier to use and troubleshoot.</p>
+                    <p><b>Testing GraphQL APIs</b> in Python can be done with libraries like Pytest and Requests.
+                        Writing
+                        test
+                        cases for each resolver and endpoint ensures that the API functions as expected, improving
+                        stability
+                        and reliability. Testing is a vital part of maintaining a functional and reliable GraphQL API.
+                    </p>
+                    <p>Finally, <b>Securing Python GraphQL APIs</b> involves using authentication middleware, such as
+                        JWT
+                        tokens or
+                        OAuth. By adding secure authentication and authorization, developers can control access to
+                        sensitive
+                        data, protecting both the API and its users from unauthorized access.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 10</p>
+
+            <section class="content-section" id="chapter11">
+                <h3>11. API authorization and authentication</h3>
+
+                <article>
+                    <p>Authorization and authentication are essential for securing APIs, ensuring that only authorized
+                        users
+                        have access to resources. <b>Authentication</b> verifies the identity of a user, while
+                        Authorization
+                        determines what the authenticated user is allowed to do within the API. Together, they protect
+                        sensitive data and help prevent unauthorized access.</p>
+                    <p>One common method for API authentication is <b>JWT (JSON Web Tokens)</b>. In this approach, the
+                        server
+                        issues a signed token to an authenticated user, which the client then includes in each request.
+                        JWTs
+                        are widely used because they are compact, secure, and can include user data, enabling stateless
+                        authentication that reduces server load.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/11-04.png">
+                        <figcaption>11.1 In the client credentials flow, a server application exchanges a secret with
+                            the
+                            authorization server to obtain an access token.</figcaption>
+                    </figure>
+
+                    <p><b>OAuth2</b> is another popular framework for API security, especially in scenarios where
+                        third-party
+                        applications need access to user data without sharing passwords. OAuth2 allows users to
+                        authorize
+                        applications to access their data with permission scopes, enhancing security while giving users
+                        control. Many major platforms, such as Google and Facebook, use OAuth2 for their APIs.</p>
+                    <p>For authorization, <b>Role-Based Access Control (RBAC)</b> is commonly used. RBAC assigns
+                        permissions
+                        based
+                        on user roles, which are predefined sets of privileges. By implementing RBAC, developers can
+                        manage
+                        access to different API resources, restricting sensitive data to specific roles and providing
+                        general access for less sensitive endpoints.</p>
+                    <p><b>Scopes</b> are often used in conjunction with OAuth2 to control the level of access for each
+                        user.
+                        Each
+                        scope specifies the actions that an API client can perform. For example, a user with “read”
+                        scope
+                        may view data, while a user with “write” scope can modify it. Using scopes provides fine-grained
+                        control over API access.</p>
+                    <p>In addition to access control, <b>Rate Limiting</b> is a technique used to prevent abuse of APIs.
+                        By
+                        limiting the number of requests a user can make within a specified time frame, rate limiting
+                        helps
+                        prevent malicious activity, such as Denial of Service (DoS) attacks, and reduces strain on API
+                        resources.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/11-11.png">
+                        <figcaption>11.2 When working with SQLite, we use batch operations to make changes to our
+                            tables. In a
+                            batch
+                            operation, we copy data from the original table to a temporary table; then, we drop the
+                            original
+                            table and re-create it with the new fields; and, finally, we copy back data from the
+                            temporary
+                            table.</figcaption>
+                    </figure>
+
+                    <p><b>Encryption</b> is also crucial for API security. TLS (Transport Layer Security) encrypts data
+                        during
+                        transmission, protecting it from interception. Ensuring all API endpoints require HTTPS provides
+                        a
+                        secure communication channel, protecting sensitive data from being exposed in transit.</p>
+                    <p>Lastly, <b>Audit Logging</b> is useful for tracking access and actions within the API. By logging
+                        key
+                        events, such as login attempts, data access, and resource modifications, developers can monitor
+                        activity, identify suspicious behavior, and maintain an audit trail for compliance and debugging
+                        purposes.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 11</p>
+
+            <section class="content-section" id="chapter12">
+                <h3>12. Testing and validating APIs</h3>
+
+                <article>
+                    <p>Testing and validating APIs is essential to ensure they operate as expected, are reliable, and
+                        handle
+                        errors gracefully. <b>Unit Testing</b> is often the first step, where individual functions or
+                        endpoints are
+                        tested to confirm they behave correctly in isolation. Unit tests help catch bugs early in
+                        development, making debugging easier and reducing future errors.</p>
+                    <p><b>Integration Testing</b> goes a step further by evaluating how different parts of the API
+                        interact
+                        with
+                        each other and with external systems like databases. Integration tests confirm that endpoints
+                        work
+                        together as expected and that the API can handle data from real-world sources. These tests are
+                        especially useful for detecting issues caused by dependencies.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/12-06.png">
+                        <figcaption>12.1 In property-based testing, we use a framework to generate test cases for our
+                            functions,
+                            and
+                            we make assertions on the result of running our code on such cases.</figcaption>
+                    </figure>
+
+                    <p><b>Functional Testing</b> ensures that the API meets specified requirements. It focuses on
+                        testing
+                        each
+                        endpoint’s functionality and behavior based on user actions. This type of testing can include
+                        verifying HTTP response codes, checking data returned, and validating how the API handles valid
+                        and
+                        invalid inputs, providing confidence that it meets user expectations.</p>
+                    <p><b>Load Testing</b> and <b>Performance Testing</b> assess the API's stability and responsiveness
+                        under various
+                        conditions. Load testing simulates a high number of requests to evaluate performance under
+                        stress,
+                        while performance testing measures response times and throughput. These tests help identify
+                        bottlenecks, ensuring the API can scale to handle peak traffic.</p>
+                    <p><b>Security Testing</b> evaluates the API's vulnerability to potential attacks. This testing can
+                        include
+                        authentication checks, SQL injection tests, and cross-site scripting (XSS) checks. By
+                        identifying
+                        security flaws, developers can address weaknesses before they are exploited, protecting the API
+                        and
+                        its users from unauthorized access.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/12-07.png">
+                        <figcaption>12.2 We can combine various Hypothesis strategies into one. The resulting strategy
+                            will
+                            produce a
+                            value from any of the combined strategies at random.</figcaption>
+                    </figure>
+
+                    <p><b>Automated Testing</b> tools like Postman and SoapUI facilitate regular and repeatable testing
+                        processes.
+                        Automated tests can run continuously, often as part of a CI/CD pipeline, ensuring that new code
+                        doesn’t introduce regressions. Automated testing is especially valuable for large APIs with many
+                        endpoints.</p>
+                    <p>Lastly, <b>Validation</b> ensures that incoming data meets expected formats, types, and
+                        constraints.
+                        By
+                        validating inputs, developers prevent malformed data from causing errors or security
+                        vulnerabilities. Common validation includes checking data types, enforcing required fields, and
+                        using regular expressions for pattern matching, which improves data integrity and API
+                        reliability.
+                    </p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 12</p>
+
+            <section class="content-section" id="chapter13">
+                <h3>13. Dockerizing microservice APIs</h3>
+
+                <article>
+                    <p>Dockerizing microservice APIs is a popular approach to simplify deployment, improve consistency,
+                        and
+                        enhance scalability. Docker containers encapsulate an application and its dependencies, making
+                        it
+                        easy to move microservices between development, testing, and production environments without
+                        compatibility issues.</p>
+                    <p>One of the primary benefits of Docker is <b>Environment Consistency</b>. Each Docker container
+                        includes all
+                        the necessary dependencies, libraries, and configurations, ensuring that the microservice
+                        behaves
+                        the same way in any environment. This eliminates issues where code works on one machine but not
+                        another, which is common in traditional deployments.</p>
+                    <p><b>Docker Images</b> are the basis for containers. Developers create Docker images by defining
+                        instructions
+                        in a Dockerfile. Each line in the Dockerfile adds a layer to the image, such as setting up the
+                        base
+                        OS, installing dependencies, and copying application code. By specifying each step, Docker
+                        ensures
+                        that the image can be rebuilt exactly the same way every time.</p>
+                    <p><b>Isolation</b> is a key benefit of Docker. Each microservice runs in its own container,
+                        separated
+                        from
+                        other services. This setup prevents resource conflicts and allows developers to run different
+                        versions of dependencies for each service. Isolation improves security and enables microservices
+                        to
+                        operate independently without interference.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/13-01.png">
+                        <figcaption>13.1 Docker containers run in isolated processes on top of the host operating
+                            system.
+                        </figcaption>
+                    </figure>
+
+                    <p><b>Networking in Docker</b> allows containers to communicate with each other, which is crucial
+                        for
+                        microservice architectures. Docker provides built-in networking solutions, including bridge
+                        networks, overlay networks, and service discovery, enabling services to find and communicate
+                        with
+                        each other seamlessly within a cluster.</p>
+                    <p><b>Orchestration</b> with tools like Docker Compose allows developers to define and manage
+                        multiple
+                        containers in a single configuration file. Docker Compose makes it easy to start, stop, and
+                        scale
+                        services by specifying dependencies, environment variables, and network configurations,
+                        simplifying
+                        the management of multi-container microservices.</p>
+                    <p><b>Scaling with Docker</b> is straightforward, as containers can be replicated easily. This
+                        scalability is
+                        essential for microservices, as it allows developers to increase or decrease instances based on
+                        demand. With orchestration tools like Kubernetes, scaling can even be automated, ensuring that
+                        resources are allocated efficiently.</p>
+                    <p>Finally, <b>Continuous Integration and Continuous Deployment (CI/CD)</b> pipelines often use
+                        Docker
+                        for
+                        building, testing, and deploying containers. By integrating Docker into CI/CD, teams can
+                        automate
+                        the deployment of updated images to production, enabling faster and more reliable delivery of
+                        new
+                        features and fixes.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 13</p>
+
+            <section class="content-section" id="chapter14">
+                <h3>14. Deploying microservice APIs with Kubernetes</h3>
+
+                <article>
+                    <p>Kubernetes (K8s) is an orchestration platform that simplifies the deployment, scaling, and
+                        management
+                        of containerized microservices. It provides tools for automating tasks, such as scheduling,
+                        networking, and resource allocation, making it easier to manage large-scale microservice
+                        architectures.</p>
+                    <p><b>Kubernetes Pods</b> are the basic units of deployment. A pod is a group of one or more
+                        containers
+                        that
+                        share storage, network, and configurations. Pods are ephemeral by nature, meaning they can be
+                        recreated or replaced as needed, ensuring that microservices are resilient and available even if
+                        individual instances fail.</p>
+                    <p><b>Services in Kubernetes</b> provide stable IP addresses and DNS names to expose microservices
+                        within the
+                        cluster or externally. Services abstract the underlying pods, allowing clients to communicate
+                        with
+                        microservices without worrying about pod-specific details. This abstraction layer also enables
+                        load
+                        balancing, ensuring even distribution of traffic across multiple instances.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/14-02.png">
+                        <figcaption>14.1 AWS Fargate automatically provisions the servers required to operate our
+                            Kubernetes
+                            cluster.
+                        </figcaption>
+                    </figure>
+
+                    <p><b>Kubernetes Deployments</b> enable developers to define the desired state of an application. A
+                        deployment
+                        specifies the number of pod replicas, container images, and other configurations. Kubernetes
+                        continuously monitors the deployment and automatically restarts or scales pods to match the
+                        desired
+                        state, maintaining application availability.</p>
+                    <p><b>Scaling with Kubernetes</b> is highly efficient. Developers can scale microservices up or down
+                        by
+                        adjusting the replica count in a deployment configuration. Kubernetes automatically manages
+                        resource
+                        allocation, ensuring that each microservice receives adequate CPU and memory, making it easy to
+                        handle fluctuating traffic.</p>
+                    <p><b>ConfigMaps and Secrets</b> in Kubernetes provide ways to manage configuration data and
+                        sensitive
+                        information like API keys and passwords. ConfigMaps store non-sensitive configuration details,
+                        while
+                        Secrets store encrypted data. This separation of configuration from code improves security and
+                        flexibility, allowing changes without modifying container images.</p>
+
+                    <figure>
+                        <img src="images/web-category-images/14-04.png">
+                        <figcaption>14.2 Pods can authenticate with an OIDC provider to assume an IAM role, which gives
+                            them
+                            access
+                            to the AWS API, and therefore gives them access to AWS services.</figcaption>
+                    </figure>
+
+                    <p><b>Ingress Controllers</b> enable external access to microservices. By defining ingress rules,
+                        developers
+                        can route incoming HTTP and HTTPS requests to specific services, providing secure access to
+                        microservices. Ingress also supports SSL termination, making it easier to manage secure
+                        communications across the cluster.</p>
+                    <p>Finally, <b>Kubernetes Monitoring and Logging</b> are essential for managing microservices at
+                        scale.
+                        Tools
+                        like Prometheus and Grafana monitor performance metrics, while centralized logging tools like
+                        Fluentd and Elasticsearch collect and analyze logs. These monitoring solutions help identify
+                        bottlenecks, debug issues, and maintain high availability in production environments.</p>
+                </article>
+            </section>
+
+            <p class="chapter-change">The end of chapter 14</p>
+        </main>
+
+    </div>
 
     <!-- Footer -->
     <footer class="footer-container">
-        <address></address>
+        <section id="contact-info">
+            <h3>Contact Us</h3>
+            <address>
+                <p><i class="fa fa-map-marker" style="font-size:26px;color:#ff312e"></i> 156 Kifissia Avenue, Marousi,
+                    15126</p>
+                <p><i class="fa fa-phone" style="font-size:26px;color:#ff312e"></i><a href="tel:+302101234567">+30 210
+                        123 4567</a></p>
+                <p><i class="fa fa-envelope" style="font-size:26px;color:#ff312e"></i><a
+                        href="mailto:eschool@gmail.com">eschool@gmail.com</a></p>
+            </address>
+        </section>
+
+        <section id="social-media">
+            <h3>Follow Us</h3>
+            <i class="fa fa-facebook-f" style="font-size:36px;color:#ff312e"></i>
+            <i class="fa fa-instagram" style="font-size:36px;color:#ff312e"></i>
+            <i class="fa fa-twitter" style="font-size:36px;color:#ff312e"></i>
+            <i class="fa fa-youtube-play" style="font-size:36px;color:#ff312e"></i>
+            <i class='fa fa-skype' style="font-size:36px;color:#ff312e"></i>
+        </section>
+
+        <section id="terms-privacy">
+            <h3>Information</h3>
+            <p>Terms of Services</p>
+            <p>Privacy Policy</p>
+        </section>
+
         <p>© Copyright 2024-2025</p>
     </footer>
+
 </body>
 
 </html>
