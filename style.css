@@ -318,16 +318,13 @@ main article a {
   text-decoration: none;
 }
 
+/* lecture's videos style */
 .lectures-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 columns */
   gap: 20px; /* gap between columns */
-}
-
-.lectures-list article a {
-  display: grid;
-  grid-template-columns: (2, 1fr);
-  grid-template-rows: (2, 1fr);
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .lectures-list article {
@@ -337,6 +334,11 @@ main article a {
   padding: 5px;
   margin: 5%;
   width: 80%;
+}
+
+.lectures-list article a {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 .lectures-list article img {
@@ -355,8 +357,16 @@ main article a {
   font-size: 0.75rem;
 }
 
+.lectures-list article p strong {
+  color:#515052;
+}
+
 .lectures-list li {
   font-size: 0.75rem;
+}
+
+.lectures-list article a .stars{
+  margin-left: 15px;
 }
 
 /*  --------------- Book style ------------- */
@@ -383,8 +393,13 @@ main article a {
   border: 1px solid #ccc;
 }
 
+.book-details {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
 .book-details p {
-text-align: center;
+  text-align: center;
 }
 
 /* Title of book style */
@@ -496,6 +511,7 @@ hr {
   text-align: right;
   padding: 7px;
   font-size: 0.7rem;
+  height: 10px;
 }
 
 .content-section > article  > figure {
