@@ -581,3 +581,44 @@ hr {
 html {
   scroll-behavior: smooth;
 }
+
+/* --------- about-us.html --------- */
+.about-us {
+  margin-left:200px;
+  margin-right:200px;
+  margin-bottom: 50px;
+  font-size: 0.9rem;
+}
+
+.about-us section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  text-align: justify;
+}
+
+.about-us h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about-us .alexandra img {
+  max-width: 70%; 
+  height: auto;
+}
+
+.about-us .panagiota img {
+  max-width: 50%;
+  padding-left: 40px;
+  height: auto;
+}
+
+.biography {
+  padding-right: 50px;
+}
+
+.line > hr {
+  border: 2px solid black;
+}
+/* --------- !about-us.html --------- */
