@@ -144,6 +144,12 @@ i {
   margin: 2px;
 }
 
+@media (max-width:600px) {
+  .logo {
+    width: 100px;
+    height: 70px;
+  }
+}
 /* Submenu Style */
 .submenu1, .submenu2, .submenu3 {
   display: none;
@@ -178,6 +184,8 @@ li:hover > .submenu1 {
   grid-column: 3;
   margin: 0;
   padding: 0;
+  height: 1000px; /* We fixed height because layout thinks that height is the total 
+                    .dot height's items and it left a lot space above */
 }
 
 .dot {
@@ -620,5 +628,77 @@ html {
 
 .line > hr {
   border: 2px solid black;
+}
+
+@media screen and (max-width: 952px) {
+  body {
+    display: flexbox;
+    flex: 1;
+    font-size: 0.5em;
+    margin: 0;
+    padding: 0;
+  }
+  .about-us {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us h1 {
+    font-size: 1.3 rem;
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us .alexandra, .panagiota {
+    display: flexbox;
+  }
+  .about-us img {
+    display: flexbox;
+    width: 200px;
+    height: 250px;
+    float:left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us .biography {
+    display: flexbox;
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+
+  #contact-info > address > p > i {
+    font-size: 20px !important;
+  }
+
+  #social-media > a > i{
+    font-size: 20px !important;
+  }
+
+  #terms-privacy h3 {
+    margin-bottom: 20px;
+  }
+
+  .footer-container > p {
+    margin-left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+    display: flex;
+    flex: auto;
+    width: 100%;
+  }
 }
 /* --------- !about-us.html --------- */
