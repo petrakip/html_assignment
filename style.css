@@ -57,6 +57,14 @@ header > h1 {
   text-decoration: none;
 }
 
+#contact-info > address > p > a:active {
+  color:#ff312e;
+}
+
+#contact-info > address > p > a:hover {
+  text-decoration: underline;
+}
+
 #social-media {
   text-align: center;
   width:100%;
@@ -89,6 +97,14 @@ header > h1 {
   text-align: center;
   width: 100%;
   margin-top: 20px;
+}
+
+#terms-privacy p a:hover {
+  text-decoration: underline;
+}
+
+#terms-privacy p a:active {
+  color: #ff312e;
 }
 
 .footer-container > p {
@@ -670,6 +686,11 @@ html {
 
 .biography {
   padding-right: 50px;
+}
+
+.biography-email:hover {
+  color:#ff312e;
+  text-decoration: none;
 }
 
 .line > hr {
