@@ -57,6 +57,14 @@ header > h1 {
   text-decoration: none;
 }
 
+#contact-info > address > p > a:active {
+  color:#ff312e;
+}
+
+#contact-info > address > p > a:hover {
+  text-decoration: underline;
+}
+
 #social-media {
   text-align: center;
   width:100%;
@@ -89,6 +97,14 @@ header > h1 {
   text-align: center;
   width: 100%;
   margin-top: 20px;
+}
+
+#terms-privacy p a:hover {
+  text-decoration: underline;
+}
+
+#terms-privacy p a:active {
+  color: #ff312e;
 }
 
 .footer-container > p {
@@ -655,18 +671,26 @@ html {
 }
 
 .about-us .alexandra img {
-  max-width: 70%; 
+  max-width: 50%; 
   height: auto;
+  justify-self: end;
 }
 
 .about-us .panagiota img {
-  max-width: 50%;
+  max-width: 35%;
   padding-left: 40px;
   height: auto;
+  justify-self: end;
+  margin-right: 55px;
 }
 
 .biography {
   padding-right: 50px;
+}
+
+.biography-email:hover {
+  color:#ff312e;
+  text-decoration: none;
 }
 
 .line > hr {
