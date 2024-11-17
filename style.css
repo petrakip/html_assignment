@@ -655,14 +655,17 @@ html {
 }
 
 .about-us .alexandra img {
-  max-width: 70%; 
+  max-width: 50%; 
   height: auto;
+  justify-self: end;
 }
 
 .about-us .panagiota img {
-  max-width: 50%;
+  max-width: 35%;
   padding-left: 40px;
   height: auto;
+  justify-self: end;
+  margin-right: 55px;
 }
 
 .biography {
