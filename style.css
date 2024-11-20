@@ -390,8 +390,7 @@ main article a {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    background-color: #ebe0e0;
-
+    box-shadow: 0 10px 20px rgb(198, 113, 113); /* Add a subtle shadow for emphasis */
 }
 
 .book article a {
@@ -814,10 +813,8 @@ html {
 
 /* --------- !about-us.html --------- */
 
-
-
-
-.content {
+/* --------- categories ------------*/
+.content-cat {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
@@ -833,7 +830,7 @@ html {
     margin: 2% 5% 2%;
 }
 
-.content .text ul {
+.content-cat .text ul {
     color: white;
     list-style: none;/* remove the bullet points*/
     padding: 0;
@@ -915,6 +912,7 @@ ul li a:hover {
     max-width: 100%;
 }
 
+/* --------- !categories ------------*/
 
 
 
