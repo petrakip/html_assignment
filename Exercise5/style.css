@@ -166,6 +166,12 @@ fieldset ol li {
     grid-column: 1;
 }
 
+#charsLeft {
+    text-align: end;
+    font-size: 0.8rem;
+    color: rgb(71, 4, 4);
+}
+
 @media only screen and (max-width: 640px) {
     body {
         display: flex;   

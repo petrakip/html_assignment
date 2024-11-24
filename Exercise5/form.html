@@ -21,7 +21,7 @@
             <summary>*Required Fields</summary>
             <p>The required fields has '*' at the left side of field's name.</p>
         </details>
-        
+
         <form id="myForm" method="post" onsubmit="return(isFormValid())">
 
             <div class="form-content">
@@ -33,11 +33,11 @@
 
                         <label for="name">*Name: </label>
                         <input id="name" type="text" name="name" autofocus required maxlength="30"
-                            placeholder="e.g. Nick"></input><br>
+                            placeholder="e.g. Nick" pattern="[A-Za-z]{3,}"></input><br> <!-- At least 3 letters -->
 
                         <label for="surname">*Surname: </label>
                         <input id="surname" type="text" name="surname" required maxlength="30"
-                            placeholder="e.g. Morris"></input><br>
+                            placeholder="e.g. Morris" pattern="[A-Za-z]{3,}"></input><br>
 
                         <label for="date">*Date of dirth: </label>
                         <input type="date" id="date" name="date"><br>
@@ -61,13 +61,16 @@
                         <input id="address" type="text" maxlength="30" required name="address"
                             placeholder="e.g. Dilou 12"><br>
                         <label for="city">*City:</label>
-                        <input id="city" type="text" maxlength="15" required name="city" placeholder="e.g. Athens"><br>
+                        <input list="cities" name="cities" placeholder="Athens" required>
+                        <datalist id="cities">
+                            <!-- Options will be added dynamically by JavaScript -->
+                        </datalist><br>
                         <label for="postcode">*Postcode:</label>
                         <input id="postcode" type="number" name="postcode" min="10000" max="99999"
                             placeholder="11256"><br>
 
                         <label for="region">*Region:</label>
-                        <input list="regions" name="regions" placeholder="Attiki">
+                        <input list="regions" name="regions" placeholder="Attiki" required>
                         <datalist id="regions">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist>
@@ -238,7 +241,7 @@
                 <div class="opinion">
                     <fieldset>
                         <legend>Your opinion matters!</legend>
-                        <textarea name="aboutMe" id="mytext"
+                        <textarea name="user-opinion" id="mytext"
                             placeholder="Tell us what you think and help us improve. (maximum 500 characters)" rows="10"
                             maxlength="500"></textarea><br>
                         <output id="charsLeft"></output>
