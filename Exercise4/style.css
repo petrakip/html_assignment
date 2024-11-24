@@ -161,6 +161,19 @@ nav ul li a {
     padding-right: 10px;
 }
 
+@media screen and (max-width: 952px) {
+    .register-btn {
+        font-size: 0.9rem;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 600px) {
+    .register-btn {
+        font-size: 0.7rem;
+    }
+}
+
 .register-btn:hover {
     color: #ff312e;
 }
@@ -189,6 +202,28 @@ i {
 
 #logo i {
     font-size: 35px;
+}
+
+@media screen and (max-width: 952px) {
+    #logo {
+        font-size: 1.3em;
+        padding: 15px 5px 5px 5px;
+    }
+
+    #logo i {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    #logo {
+        font-size: 1.1em;
+        padding: 15px 5px 5px 5px;
+    }
+
+    #logo i {
+        font-size: 25px;
+    }
 }
 
 /* Submenu Style */
