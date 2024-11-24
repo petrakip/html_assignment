@@ -1,0 +1,124 @@
+/* --------- about-us.html --------- */
+.about-us {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    font-size: 0.9rem;
+}
+
+.about-us section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    text-align: justify;
+}
+
+.about-us h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-us .alexandra img {
+    max-width: 50%;
+    height: auto;
+    justify-self: end;
+}
+
+.about-us .panagiota img {
+    max-width: 35%;
+    padding-left: 40px;
+    height: auto;
+    justify-self: end;
+    margin-right: 55px;
+}
+
+.biography {
+    padding-right: 50px;
+}
+
+.biography-email:hover {
+    color: #ff312e;
+    text-decoration: none;
+}
+
+.line>hr {
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 952px) {
+    body {
+        display: flexbox;
+        flex: 1;
+        font-size: 0.5em;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us {
+        display: flex;
+        flex: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us h1 {
+        font-size: 1.3rem;
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us .alexandra,
+    .panagiota {
+        display: flexbox;
+    }
+
+    .about-us img {
+        display: flexbox;
+        width: 200px;
+        height: 250px;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    .about-us .biography {
+        display: flexbox;
+        float: right;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-container {
+        width: 100%;
+    }
+
+    #contact-info>address>p>i {
+        font-size: 20px !important;
+    }
+
+    #social-media>a>i {
+        font-size: 20px !important;
+    }
+
+    #terms-privacy h3 {
+        margin-bottom: 20px;
+    }
+
+    .footer-container>p {
+        margin-left: 25%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer-container {
+        display: flex;
+        flex: auto;
+        width: 100%;
+    }
+}
+
+/* --------- !about-us.html --------- */
