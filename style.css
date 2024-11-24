@@ -22,13 +22,7 @@ body {
 }
 
 /* Header's Style */
-.logo {
-    height: auto;
-    width: 15%;
-    border-bottom: 1px solid #999;
-}
-
-header > h1 {
+header>h1 {
     text-align: right;
     float: right;
 }
@@ -52,16 +46,16 @@ header > h1 {
     margin: 20px;
 }
 
-#contact-info > address > p > a {
+#contact-info>address>p>a {
     color: #fffffa;
     text-decoration: none;
 }
 
-#contact-info > address > p > a:active {
+#contact-info>address>p>a:active {
     color: #ff312e;
 }
 
-#contact-info > address > p > a:hover {
+#contact-info>address>p>a:hover {
     text-decoration: underline;
 }
 
@@ -88,8 +82,8 @@ header > h1 {
     color: white;
 }
 
-@media screen  and (max-width: 600px) {
-    #social-media > i {
+@media screen and (max-width: 600px) {
+    #social-media>i {
         display: flex;
     }
 }
@@ -108,13 +102,13 @@ header > h1 {
     color: #ff312e;
 }
 
-.footer-container > p {
+.footer-container>p {
     color: white;
     text-align: center;
     grid-column: 2;
 }
 
-.footer-container > section > h3 {
+.footer-container>section>h3 {
     padding-bottom: 10px;
 }
 
@@ -125,6 +119,7 @@ nav {
     padding: 0px;
     margin-top: 0px;
     width: 100%;
+    display: flex;
 }
 
 
@@ -149,6 +144,19 @@ nav ul li a {
     display: flex;
 }
 
+.register-btn {
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.register-btn:hover {
+    color: #ff312e;
+}
+
 nav ul li a:hover {
     background-color: #515052;
     color: #ff312e;
@@ -158,15 +166,27 @@ i {
     margin: 2px;
 }
 
-@media (max-width: 600px) {
-    .logo {
-        width: 100px;
-        height: 70px;
-    }
+#logo {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 25px 10px 10px 10px;
+    align-items: center;
+    background: rgb(254,252,255);
+    background: linear-gradient(90deg, rgba(254,252,255,1) 0%, /* Gradient effet on the logo */
+                                rgba(255,49,46,1) 25%, rgba(0,0,0,1) 50%, 
+                                rgba(255,49,46,1) 75%, rgba(249,247,244,1) 100%);
+}
+
+#logo i {
+    font-size: 35px;
 }
 
 /* Submenu Style */
-.submenu1, .submenu2, .submenu3 {
+.submenu1,
+.submenu2,
+.submenu3 {
     display: none;
     position: absolute;
     color: white;
@@ -176,20 +196,22 @@ i {
     left: 0;
 }
 
-li:hover > .submenu1 {
+li:hover>.submenu1 {
     display: block;
     margin: 0;
 }
 
-.submenu1 li:hover > .submenu2 {
+.submenu1 li:hover>.submenu2 {
     display: block;
-    left: 100%; /* The third layer should appear on the right */
+    left: 100%;
+    /* The third layer should appear on the right */
     top: 0;
 }
 
-.submenu1 li:hover > .submenu3 {
+.submenu1 li:hover>.submenu3 {
     display: block;
-    left: 100%; /* The third layer should appear on the right */
+    left: 100%;
+    /* The third layer should appear on the right */
     top: 0;
 }
 
@@ -342,7 +364,7 @@ li:hover > .submenu1 {
 }
 
 
-.content > article > p::first-letter {
+.content>article>p::first-letter {
     font-size: 200%;
 }
 
@@ -390,7 +412,8 @@ main article a {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    box-shadow: 0 10px 20px rgb(198, 113, 113); /* Add a subtle shadow for emphasis */
+    box-shadow: 0 10px 20px rgb(198, 113, 113);
+    /* Add a subtle shadow for emphasis */
 }
 
 .book article a {
@@ -458,8 +481,10 @@ main article a {
 /* lecture's videos style */
 .lectures-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 columns */
-    gap: 20px; /* gap between columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 columns */
+    gap: 20px;
+    /* gap between columns */
     margin-left: 12%;
     margin-right: 12%;
     margin-top: 2%;
@@ -516,14 +541,17 @@ main article a {
 /*  --------------- Book style ------------- */
 .pdf-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* 3 columns, 2nd bigger than the others */
-    gap: 20px; /* gap between columns */
+    grid-template-columns: 1fr 3fr 1fr;
+    /* 3 columns, 2nd bigger than the others */
+    gap: 20px;
+    /* gap between columns */
     padding: 20px;
     font-size: 0.9rem;
 }
 
 .pdf-content {
-    grid-column: 2 / 3; /* It places the content in the second column */
+    grid-column: 2 / 3;
+    /* It places the content in the second column */
     background-color: #fffffa;
     border: 1px solid #ccc;
 }
@@ -576,7 +604,8 @@ main article a {
     text-decoration: underline;
 }
 
-.summary p, ol {
+.summary p,
+ol {
     font-size: 0.9rem;
 }
 
@@ -601,7 +630,8 @@ hr {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.8rem;;
+    font-size: 0.8rem;
+    ;
 }
 
 .table-of-contents th {
@@ -658,7 +688,7 @@ hr {
     height: 10px;
 }
 
-.content-section > article > figure {
+.content-section>article>figure {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -666,7 +696,7 @@ hr {
     border: 1px solid #ccc;
 }
 
-.content-section > article > figure > figcaption {
+.content-section>article>figure>figcaption {
     font-size: 0.6rem;
     font-weight: 700;
 }
@@ -733,7 +763,7 @@ html {
     text-decoration: none;
 }
 
-.line > hr {
+.line>hr {
     border: 2px solid black;
 }
 
@@ -761,7 +791,8 @@ html {
         padding: 0;
     }
 
-    .about-us .alexandra, .panagiota {
+    .about-us .alexandra,
+    .panagiota {
         display: flexbox;
     }
 
@@ -785,11 +816,11 @@ html {
         width: 100%;
     }
 
-    #contact-info > address > p > i {
+    #contact-info>address>p>i {
         font-size: 20px !important;
     }
 
-    #social-media > a > i {
+    #social-media>a>i {
         font-size: 20px !important;
     }
 
@@ -797,7 +828,7 @@ html {
         margin-bottom: 20px;
     }
 
-    .footer-container > p {
+    .footer-container>p {
         margin-left: 25%;
     }
 }
@@ -832,10 +863,12 @@ html {
 
 .content-cat .text ul {
     color: white;
-    list-style: none;/* remove the bullet points*/
+    list-style: none;
+    /* remove the bullet points*/
     padding: 0;
     display: flex;
-    gap: 7px; /* Spacing between items */
+    gap: 7px;
+    /* Spacing between items */
     justify-content: center;
     flex-direction: column;
     margin-left: 10%;
@@ -847,14 +880,18 @@ ul.text li {
     margin: 0;
     padding: 0;
 }
+
 ul li a {
     font-size: 1.0rem;
-    color: #000000; /* Set the text color to white */
-    text-decoration: none; /* Remove underline */
+    color: #000000;
+    /* Set the text color to white */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 .text {
-    grid-row: 2; /* Place text in the second row */
+    grid-row: 2;
+    /* Place text in the second row */
     grid-column: 2;
     /*align-self: flex-end;*/
 }
@@ -863,7 +900,8 @@ ul li a {
     background: #fffffa;
     border-radius: 15px;
     display: flex;
-    flex-direction: row; /* Keep the overall card direction horizontal */
+    flex-direction: row;
+    /* Keep the overall card direction horizontal */
     border: 1px solid #9999a1;
     padding: 15px;
     margin-left: auto;
@@ -876,34 +914,45 @@ ul li a {
 
 .card-content {
     display: flex;
-    flex-direction: column; /* Stack the header and image vertically */
-    flex: 1; /* Allow content to grow/shrink as needed */
+    flex-direction: column;
+    /* Stack the header and image vertically */
+    flex: 1;
+    /* Allow content to grow/shrink as needed */
 }
 
 .card h2 {
     color: #000000;
     font-family: Tahoma, sans-serif;
-    grid-row: 1; /* Place header in the first row */
+    grid-row: 1;
+    /* Place header in the first row */
     grid-column: 1 / span 2;
     margin-top: 4px;
     font-size: 1.8rem;
-    text-align: left; /* Optional: Center-align the header */
+    text-align: left;
+    /* Optional: Center-align the header */
 }
+
 .card p {
     grid-column: 1 / span 2;
     font-size: 0.8rem;
     color: #333333;
     text-align: justify;
 }
+
 .card:hover {
-    transform: scale(1.05); /* Scale the card to 105% of its size */
-    box-shadow: 0 10px 20px rgb(198, 113, 113); /* Add a subtle shadow for emphasis */
+    transform: scale(1.05);
+    /* Scale the card to 105% of its size */
+    box-shadow: 0 10px 20px rgb(198, 113, 113);
+    /* Add a subtle shadow for emphasis */
 }
+
 ul li a:hover {
     color: rgba(237, 34, 34, 0.77);
 }
+
 .card img {
-    grid-row: 2; /* Place image in the second row */
+    grid-row: 2;
+    /* Place image in the second row */
     grid-column: 1;
     top: 0;
     left: 0;
@@ -913,8 +962,3 @@ ul li a:hover {
 }
 
 /* --------- !categories ------------*/
-
-
-
-
-
