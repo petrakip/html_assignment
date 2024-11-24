@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <script src="script.js" defer></script>
+    <title>Fill in Form</title>
 </head>
 
 <body>
     <div class="form-container">
-        <div class="form-buttons">
-            <input id="reset" type="reset" value="Clear">
-        </div>
         <h1>Student Registration Form</h1>
-        <form method="post">
+        
+        <div class="form-buttons">
+            <input id="reset" type="reset" value="Clear" onclick="clearInputField()">
+        </div>
+
+        <details class="required-field">
+            <summary>*Required Fields</summary>
+            <p>The required fields has '*' at the left side of field's name.</p>
+        </details>
+        
+        <form id="myForm" method="post" onsubmit="return(isFormValid())">
+
             <div class="form-content">
                 <!-- Personal Information -->
                 <div class="personal-info">
@@ -54,9 +63,14 @@
                         <label for="city">*City:</label>
                         <input id="city" type="text" maxlength="15" required name="city" placeholder="e.g. Athens"><br>
                         <label for="postcode">*Postcode:</label>
-                        <input id="postcode" type="number" name="postcode" min="10000" max="99999"><br>
+                        <input id="postcode" type="number" name="postcode" min="10000" max="99999"
+                            placeholder="11256"><br>
+
                         <label for="region">*Region:</label>
-                        <input list="regions" name="regions" placeholder="e.g. Attiki">
+                        <input list="regions" name="regions" placeholder="Attiki">
+                        <datalist id="regions">
+                            <!-- Options will be added dynamically by JavaScript -->
+                        </datalist>
 
                     </fieldset>
                 </div>
@@ -71,13 +85,13 @@
                         <input id="email" type="email" name="email" required maxlength="40"
                             placeholder="e.g. other@domain.name"></input><br>
 
-                        <label for="phone">*Cell phone: </label>
-                        <input id="phone" type="tel" name="phone" placeholder="690-123-4567"
-                            pattern="69[0-9]{1}-[0-9]{3}-[0-9]{4}" required></input><br>
+                        <label for="phone1">*Cell phone: </label>
+                        <input id="phone1" type="tel" name="phone" placeholder="6901234567"
+                            pattern="69[0-9]{1}[0-9]{3}[0-9]{4}" required></input><br>
 
-                        <label for="phone">Home phone: </label>
-                        <input id="phone" type="tel" name="phone" placeholder="123-4567-890"
-                            pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"></input><br>
+                        <label for="phone2">Home phone: </label>
+                        <input id="phone2" type="tel" name="phone" placeholder="123-4567-890"
+                            pattern="[0-9]{3}[0-9]{4}[0-9]{3}"></input>
 
                     </fieldset>
                 </div>
@@ -89,17 +103,21 @@
                         <legend>User Registration</legend>
 
                         <label for="username">*Username:</label>
-                        <input type="email" id="username" name="username" required placeholder="e.g nick2000"><br>
+                        <input type="text" id="username" name="username" required placeholder="e.g nick2000"><br>
 
                         <label for="pass1">*Password:</label>
-                        <input type="password" id="pass1" name="pass1" required placeholder="password"
-                            pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$"><br>
-                        <!-- password with 6 characters at least (number&letter) -->
-
+                        <div class="tooltip"><input type="password" id="pass1" name="pass1" required
+                                placeholder="password" pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
+                            <!-- password with 6 characters at least (number&letter) -->
+                            <span class="passwordText">The password must be at least 6 characters long and include at
+                                least one number and one letter.</span>
+                        </div><br>
                         <label for="pass2">*Confirm password:</label>
-                        <input type="password" id="pass2" name="pass2" required placeholder="repeat password"
+                        <div class="tooltip"><input type="password" id="pass2" name="pass2" required placeholder="repeat password"
                             pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
-
+                            <span class="passwordText">[REPEAT PASSWORD:] at least 6 characters long and include at
+                                least one number and one letter.</span>
+                        </div>
                     </fieldset>
                 </div>
 
@@ -252,18 +270,18 @@
                 <div class="rules">
                     <fieldset>
                         <legend>Rules' acceptance</legend>
-                        <input type="checkbox" id="terms_choice" name="terms_choice" value="terms and conditions">
+                        <input type="checkbox" id="terms_choice" name="terms_choice" value="terms and conditions" required>
                         <label for="terms_choice">I accept the terms and conditions.</label>
                         <details>
-                            <summary>Terms and Conditions</p>
+                            <summary>*Terms and Conditions</p>
                             </summary>
                             <p>Read the terms and conditions <a href="">here</a>
                         </details>
 
-                        <input type="checkbox" id="updates_choice" name="updates_choice" value="updates">
+                        <input type="checkbox" id="updates_choice" name="updates_choice" value="updates" required>
                         <label for="updates_choice">I accept the terms and conditions.</label>
                         <details>
-                            <summary>I agree to receive updates.</summary>
+                            <summary>*I agree to receive updates.</summary>
                             <p>You agree to receive information about the latest news and updates through your
                                 registered
                                 email and
@@ -275,6 +293,7 @@
 
             <div class="form-buttons">
                 <input id="submit" type="submit" value="Submit">
+                <p id="validation_message"></p>
             </div>
         </form>
     </div>

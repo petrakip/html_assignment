@@ -12,6 +12,13 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
 }
 
+.required-field {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 fieldset input:focus{
     border: 3px solid red; 
 }
@@ -45,6 +52,10 @@ form {
     margin: 10px;
 }
 
+.user-contact-info {
+    grid-column: 1;
+}
+
 .user-contact-info label {
     grid-column: 1;
 }
@@ -53,9 +64,6 @@ form {
     grid-column: 1;
 }
 
-.user-registry fieldset {
-    padding-bottom: 39px;
-}
 .user-registry label {
     grid-column: 1;
 }
@@ -78,8 +86,9 @@ form {
     grid-column: span 2;
 }
 
-.user-contact-info {
-    grid-column: 1;
+.questionnaire li {
+    text-wrap: nowrap;
+    font-weight: 700;
 }
 
 .questionnaire, .opinion {
@@ -88,7 +97,14 @@ form {
 
 .rules fieldset {
     display: inline-block;
-    padding-right: 243px;
+    grid-column: 2;
+    padding-right: 200px;
+}
+
+.rules > fieldset {
+    text-wrap: nowrap;
+    padding-top: 25px;
+    padding-bottom: 47px;
 }
 
 .form-buttons #reset,
@@ -146,8 +162,8 @@ fieldset ol li {
 
 .contact-way fieldset {
     display: inline;
-    padding-right: 210px;
-    padding-bottom: 26px;
+    padding-right: 200px;
+    grid-column: 1;
 }
 
 @media only screen and (max-width: 640px) {
@@ -160,7 +176,7 @@ fieldset ol li {
         padding: 5px;
         border-radius: 5px;
     }
-    
+ 
     .form-container {
         width: 100%;
         background: rgb(180, 173, 173);
@@ -177,4 +193,53 @@ fieldset ol li {
 
 }
 
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: flex;    
+    margin: 0px !important;
+  }
+  
+.tooltip > input {
+    width: 100%;
+}
 
+/* Tooltip text */
+.tooltip .passwordText {
+visibility: hidden;
+width: 200px;
+background-color: #c2c0c0;
+color: red;
+text-align: center;
+padding: 5px 0;
+border-radius: 6px;
+
+/* Position the tooltip text */
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -60px;
+
+/* Fade in tooltip */
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .passwordText::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .passwordText {
+visibility: visible;
+opacity: 1;
+  }
