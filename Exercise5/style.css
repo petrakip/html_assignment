@@ -53,10 +53,10 @@ form {
     grid-column: 1;
 }
 
-.user-refistry fieldset {
-    padding-bottom: 38px;
+.user-registry fieldset {
+    padding-bottom: 39px;
 }
-.user-refistry label {
+.user-registry label {
     grid-column: 1;
 }
 
@@ -147,7 +147,7 @@ fieldset ol li {
 .contact-way fieldset {
     display: inline;
     padding-right: 210px;
-    padding-bottom: 27px;
+    padding-bottom: 26px;
 }
 
 @media only screen and (max-width: 640px) {
