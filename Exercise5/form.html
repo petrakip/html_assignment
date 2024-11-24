@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-buttons">
+            <input id="reset" type="reset" value="Clear">
+        </div>
+        <h1>Student Registration Form</h1>
+        <form method="post">
+            <div class="form-content">
+                <!-- Personal Information -->
+                <div class="personal-info">
+                    <fieldset>
+
+                        <legend>Personal Information</legend>
+
+                        <label for="name">*Name: </label>
+                        <input id="name" type="text" name="name" autofocus required maxlength="30"
+                            placeholder="e.g. Nick"></input><br>
+
+                        <label for="surname">*Surname: </label>
+                        <input id="surname" type="text" name="surname" required maxlength="30"
+                            placeholder="e.g. Morris"></input><br>
+
+                        <label for="date">*Date of dirth: </label>
+                        <input type="date" id="date" name="date"><br>
+
+                        <div class="gender-container">
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" value="female" name="gender">
+
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" value="male" name="gender">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Residence -->
+                <div class="residence">
+                    <fieldset>
+
+                        <legend>Residence</legend>
+                        <label for="address">*Address:</label>
+                        <input id="address" type="text" maxlength="30" required name="address"
+                            placeholder="e.g. Dilou 12"><br>
+                        <label for="city">*City:</label>
+                        <input id="city" type="text" maxlength="15" required name="city" placeholder="e.g. Athens"><br>
+                        <label for="postcode">*Postcode:</label>
+                        <input id="postcode" type="number" name="postcode" min="10000" max="99999"><br>
+                        <label for="region">*Region:</label>
+                        <input list="regions" name="regions" placeholder="e.g. Attiki">
+
+                    </fieldset>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="user-contact-info">
+                    <fieldset>
+
+                        <legend>Contact Information</legend>
+
+                        <label for="email">*E-mail: </label>
+                        <input id="email" type="email" name="email" required maxlength="40"
+                            placeholder="e.g. other@domain.name"></input><br>
+
+                        <label for="phone">*Cell phone: </label>
+                        <input id="phone" type="tel" name="phone" placeholder="690-123-4567"
+                            pattern="69[0-9]{1}-[0-9]{3}-[0-9]{4}" required></input><br>
+
+                        <label for="phone">Home phone: </label>
+                        <input id="phone" type="tel" name="phone" placeholder="123-4567-890"
+                            pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}"></input><br>
+
+                    </fieldset>
+                </div>
+
+                <!-- User Registration -->
+                <div class="user-refistry">
+                    <fieldset>
+
+                        <legend>User Registration</legend>
+
+                        <label for="username">*Username:</label>
+                        <input type="email" id="username" name="username" required placeholder="e.g nick2000"><br>
+
+                        <label for="pass1">*Password:</label>
+                        <input type="password" id="pass1" name="pass1" required placeholder="password"
+                            pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$"><br>
+                        <!-- password with 6 characters at least (number&letter) -->
+
+                        <label for="pass2">*Confirm password:</label>
+                        <input type="password" id="pass2" name="pass2" required placeholder="repeat password"
+                            pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
+
+                    </fieldset>
+                </div>
+
+                <!-- Questionnaire -->
+                <div class="questionnaire">
+                    <fieldset>
+                        <legend>Questionnaire</legend>
+
+                        <ol>
+                            <li>What is the highest level of education you have completed?</li>
+                            <input type="radio" id="choice1-1" value="High School Diploma" name="question1">
+                            <label for="choice1-1">High School Diploma</label><br>
+
+                            <input type="radio" id="choice1-2" value="Associate Degree" name="question1">
+                            <label for="choice1-2">Associate Degree</label><br>
+
+                            <input type="radio" id="choice1-3" value="Associate Degree" name="question1">
+                            <label for="choice1-3">Associate Degree</label><br>
+
+                            <input type="radio" id="choice1-4" value="Associate Degree" name="question1">
+                            <label for="choice1-4">Associate Degree</label><br>
+
+                            <input type="radio" id="choice1-5" value="Doctorate (PhD)" name="question1">
+                            <label for="choice1-5">Doctorate (PhD)</label><br>
+
+                            <input type="radio" id="choice1-6" value="Other" name="question1">
+                            <label for="choice1-6">Other</label><br>
+
+                            <li>What is your current occupation or professional role?</li>
+                            <input type="radio" id="choice2-1" value="Student" name="question2">
+                            <label for="choice2-1">Student</label><br>
+
+                            <input type="radio" id="choice2-2" value="Entry-Level Professional" name="question2">
+                            <label for="choice2-2">Entry-Level Professional</label><br>
+
+                            <input type="radio" id="choice2-3" value="Mid-Level Professional" name="question2">
+                            <label for="choice2-3">Mid-Level Professional</label><br>
+
+                            <input type="radio" id="choice2-4" value="Senior-Level Professional" name="question2">
+                            <label for="choice2-4">Senior-Level Professional</label><br>
+
+                            <input type="radio" id="choice2-5" value="Manager/Director" name="question2">
+                            <label for="choice2-5">Manager/Director</label><br>
+
+                            <input type="radio" id="choice2-6" value="Executive (CEO, CFO, etc.)" name="question2">
+                            <label for="choice2-6">Executive (CEO, CFO, etc.)</label><br>
+
+                            <input type="radio" id="choice2-7" value="Self-Employed" name="question2">
+                            <label for="choice2-7">Self-Employed</label><br>
+
+                            <input type="radio" id="choice2-8" value="Unemployed" name="question2">
+                            <label for="choice2-8">Unemployed</label><br>
+
+                            <input type="radio" id="choice2-9" value="Other" name="question2">
+                            <label for="choice2-9">Other</label><br>
+
+
+                            <li>How many years of professional experience do you have in your field?</li>
+                            <input type="radio" id="choice3-1" value="less 1" name="question3">
+                            <label for="choice3-1">Less than 1 year</label><br>
+
+                            <input type="radio" id="choice3-2" value="1-3" name="question3">
+                            <label for="choice3-2">1-3 years</label><br>
+
+                            <input type="radio" id="choice3-3" value="4-6" name="question3">
+                            <label for="choice3-3">4-6 years</label><br>
+
+                            <input type="radio" id="choice3-4" value="7-10" name="question3">
+                            <label for="choice3-4">7-10 years</label><br>
+
+                            <input type="radio" id="choice3-5" value="more 10" name="question3">
+                            <label for="choice3-5">More than 10 years</label><br>
+
+                            <li>What industry or sector do you work in?</li>
+                            <input type="radio" id="choice4-1" value="Technology/IT" name="question4">
+                            <label for="choice4-1">Technology/IT</label><br>
+
+                            <input type="radio" id="choice4-2" value="Healthcare/Medical" name="question4">
+                            <label for="choice4-2">Healthcare/Medical</label><br>
+
+                            <input type="radio" id="choice4-3" value="Education" name="question4">
+                            <label for="choice4-3">Education</label><br>
+
+                            <input type="radio" id="choice4-4" value="Finance/Banking" name="question4">
+                            <label for="choice4-4">Finance/Banking</label><br>
+
+                            <input type="radio" id="choice4-5" value="Retail/Commerce" name="question4">
+                            <label for="choice4-5">Retail/Commerce</label><br>
+
+                            <input type="radio" id="choice4-6" value="Manufacturing" name="question4">
+                            <label for="choice4-6">Manufacturing</label><br>
+
+                            <input type="radio" id="choice4-7" value="Government/Public Sector" name="question4">
+                            <label for="choice4-7">Government/Public Sector</label><br>
+
+                            <input type="radio" id="choice4-8" value="Hospitality/Tourism" name="question4">
+                            <label for="choice4-8">Hospitality/Tourism</label><br>
+
+                            <input type="radio" id="choice4-9" value="Other" name="question4">
+                            <label for="choice4-9">Other</label><br>
+
+                            <li>Do you have any additional qualifications or certifications relevant to your profession?
+                            </li>
+                            <input type="radio" id="choice5-1" value="Yes" name="question5">
+                            <label for="choice5-1">Yes, I have additional qualifications or certifications</label><br>
+
+                            <input type="radio" id="choice5-2" value="No" name="question5">
+                            <label for="choice5-2">No, I do not have any additional qualifications or
+                                certifications</label><br>
+
+                            <input type="radio" id="choice5-3" value="Not applicable" name="question5">
+                            <label for="choice5-3">Not applicable</label><br>
+                        </ol>
+                    </fieldset>
+                </div>
+
+                <!-- Opinion statement -->
+                <div class="opinion">
+                    <fieldset>
+                        <legend>Your opinion matters!</legend>
+                        <textarea name="aboutMe" id="mytext"
+                            placeholder="Tell us what you think and help us improve. (maximum 500 characters)" rows="10"
+                            maxlength="500"></textarea><br>
+                        <output id="charsLeft"></output>
+                    </fieldset>
+                </div>
+
+                <!-- Communication Preferences -->
+                <div class="contact-way">
+                    <fieldset>
+                        <legend>Communication Preferences</legend>
+                        <input type="checkbox" id="sms" name="sms" value="sms">
+                        <label for="sms">SMS</label><br>
+
+                        <input type="checkbox" id="viber" name="viber" value="viber">
+                        <label for="viber">Viber</label><br>
+
+                        <input type="checkbox" id="whatapp" name="whatapp" value="whatapp">
+                        <label for="whatapp">WhatApp</label><br>
+
+                        <input type="checkbox" id="email-c" name="email-c" value="email-c">
+                        <label for="email-c">E-mail</label><br>
+
+                        <input type="checkbox" id="telephone" name="telephone" value="telephone">
+                        <label for="telephone">Telephone</label>
+                    </fieldset>
+                </div>
+
+                <!-- Rules' acceptance -->
+                <div class="rules">
+                    <fieldset>
+                        <legend>Rules' acceptance</legend>
+                        <input type="checkbox" id="terms_choice" name="terms_choice" value="terms and conditions">
+                        <label for="terms_choice">I accept the terms and conditions.</label>
+                        <details>
+                            <summary>Terms and Conditions</p>
+                            </summary>
+                            <p>Read the terms and conditions <a href="">here</a>
+                        </details>
+
+                        <input type="checkbox" id="updates_choice" name="updates_choice" value="updates">
+                        <label for="updates_choice">I accept the terms and conditions.</label>
+                        <details>
+                            <summary>I agree to receive updates.</summary>
+                            <p>You agree to receive information about the latest news and updates through your
+                                registered
+                                email and
+                                any other contact methods you have shared with us.</p>
+                        </details>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
