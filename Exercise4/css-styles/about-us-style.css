@@ -8,7 +8,7 @@
 
 .about-us section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     text-align: justify;
 }
@@ -34,8 +34,8 @@
 }
 
 .biography {
-    padding-right: 50px;
-    grid-column: 2 / 4;
+    padding-right: 80px;
+    grid-column: 2 / 5;
 }
 
 .biography-email:hover {
@@ -89,26 +89,24 @@
 
 @media screen and (max-width: 600px) {
     .about-us {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    .about-us section{
+        display: block;
         font-size: 0.7rem;
     }
 
     .about-us h1 {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         text-decoration: underline;
-    }
-    .about-us section {
-        display: flex;
-        flex: 1;
-        gap: 0px;
     }
 
     .alexandra > img {
         width: 165px;
         height: 165px !important;
-
+        padding: 8px !important;
     }
 
     .panagiota > img {
@@ -118,8 +116,18 @@
         padding: 8px !important;
     }
 
+    .about-us img {
+        float: left;
+    }
+
     .biography {
-        padding-right: 25px;
+        padding: 0px 30px 30px 30px;
+    }
+
+    .biography h2, h3 {
+        margin: 20px 0px;
+        font-size: medium;
+        font-size: 1rem !important;
     }
 }
 

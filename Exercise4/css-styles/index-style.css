@@ -103,6 +103,38 @@
     font-size: 0.8rem;
     font-style: italic;
 }
+
+@media screen and (max-width: 600px) {
+    .container, .bg-img, .content {
+        display: block !important; 
+    }
+
+    .container {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+
+    .bg-img {
+        background:transparent !important;
+    }
+
+    .content > article > h1 {
+        margin:30px;
+        padding-bottom: 0px !important;
+    }
+
+    .content article {
+        margin: 20px !important;
+    }
+
+    #signature {
+        padding: 20px 0px !important;;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
 /* -----------------!index.html sidebar--------------- */
 
 .content {
