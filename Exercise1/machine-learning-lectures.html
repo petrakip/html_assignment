@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Java Tutorial</title>
+</head>
+
+<body>
+<!-- Header -->
+<header>
+    <p> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i
+                class="fa fa-sign-in"></i>Sign In/Sign Up</a></p>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
+                <ul>
+
+                    <li><a href="machine-learning.html">Machine Learning</a>
+                        <ul>
+                            <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
+                            <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="web.html">Web</a>
+                        <ul>
+                            <li><a href="web-book.html">Microservice APIs</a></li>
+                            <li><a href="web-lectures.html">Java Tutorial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="about-us.html"><i class="fa fa-info-circle"></i>About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--Main-->
+<main>
+    <ul>
+        <li><a href="#part1">What is Machine Learning? </a></li>
+        <li><a href="#part2">Machine Learning in Action </a></li>
+        <li><a href="#part3">Libraries and Tools</a></li>
+        <li><a href="#part4">Importing a Data Set</a></li>
+        <li><a href="#part5">Jupyter Shortcuts</a></li>
+        <li><a href="#part6">A Real Machine Learning Problem </a></li>
+        <li><a href="#part7">Preparing the Data</a></li>
+        <li><a href="#part8">Learning and Predicting</a></li>
+        <li><a href="#part9">Calculating the Accuracy</a></li>
+        <li><a href="#part10">Persisting Models</a></li>
+        <li><a href="#part11">Visualizing a Decision Tree</a></li>
+    </ul>
+    <!--    <section class="lectures-list">-->
+    <!--        <h3>Lectures</h3>-->
+    <!--        <article>-->
+    <!--            <img src="images/ml-category-images/python.png">-->
+    <!--            <h4>Python Machine Learning Tutorial </h4>-->
+    <!--            <p><strong>Video Creator:</strong>Mosh</p>-->
+    <!--            <p><strong>Duration:</strong>49:42</p>-->
+    <!--            <p><strong>Rating:</strong> (4.4/5) - 77 Reviews</p>-->
+    <!--            <p><strong>Description:</strong>In this tutorial, you’ll learn foundational machine learning concepts, how-->
+    <!--                to apply algorithms using Python, and gain practical experience with real-world data. It’s ideal if-->
+    <!--                you’re curious about AI and machine learning, have basic Python knowledge, and are looking for a-->
+    <!--                hands-on learning experience.-->
+    <!--            </p>-->
+    <!--            <p><strong><a href="https://www.youtube.com/watch?v=7eh4d6sabA0">Watch Now</a></strong>-->
+    <!--        </article>-->
+    <section>
+        <h2>Python Machine Learning Tutorial</h2>
+        <p><strong>Video Creator:</strong>Mosh Hamedani</p>
+        <p><strong>Year:</strong>2020</p>
+        <p><strong>Rating:</strong> (4.8/5) - 181 Reviews</p>
+
+        <p><strong>Description:</strong>In this tutorial, you’ll learn foundational machine learning concepts, how
+            to apply algorithms using Python, and gain practical experience with real-world data. It’s ideal if
+            you’re curious about AI and machine learning, have basic Python knowledge, and are looking for a
+            hands-on learning experience.
+        </p>
+
+    </section>
+
+    <section id="part1">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=Wk5inpprhUA8u_U1&amp;start=60"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>What is Machine Learning?</h3>
+
+        <p> This section introduces machine learning, a subset of artificial intelligence (AI) that focuses on solving
+            complex problems through data-driven models rather than traditional programming. It highlights the
+            limitations of rule-based programming for tasks like identifying animals in images and explains how machine
+            learning enables models to learn patterns from vast amounts of data. Applications of machine learning are
+            briefly explored, including image recognition, self-driving cars, robotics, natural language processing, and
+            forecasting. This foundational understanding sets the stage for exploring machine learning in action.</p>
+
+    </section>
+
+    <section id="part2">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=eQFFxSEufizqWyve&amp;start=178"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Machine Learning in Action</h3>
+
+        <p> This section explains the main stages of a machine learning project. The process begins with importing data,
+            usually stored in CSV files, and then preparing it by cleaning—removing duplicates, irrelevant, or
+            incomplete entries—and converting text-based data into numerical formats if necessary. The cleaned dataset
+            is divided into training and testing subsets, typically with an 80/20 split. A model is then created by
+            choosing an appropriate algorithm, such as decision trees or neural networks, often using libraries like
+            scikit-learn. The model is trained on the data to recognize patterns, and its predictions are evaluated for
+            accuracy. If the results are unsatisfactory, the model is refined by adjusting its parameters or selecting a
+            different algorithm. This framework ensures a systematic approach to developing machine learning
+            solutions.</p>
+    </section>
+
+    <section id="part3">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=BGRTINQSPckNjw3o&amp;start=345"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Libraries and Tools</h3>
+
+        <p> This section introduces essential Python libraries for machine learning projects, including NumPy for
+            handling multi-dimensional arrays, Pandas for data analysis with its DataFrame structure, Matplotlib for
+            creating plots, and Scikit-learn for implementing machine learning algorithms. The lecture emphasizes using
+            Jupyter Notebook as the ideal environment for machine learning due to its ease of data inspection and
+            visualization, compared to traditional code editors like VS Code. It also covers the installation of Jupyter
+            via Anaconda, a platform that simplifies the setup by including these libraries. Finally, it demonstrates
+            creating and running a Python notebook, highlighting its advantages for executing and visualizing code step
+            by step.</p>
+    </section>
+
+    <section id="part4">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=9g_EdULNhR-sjolA&amp;start=640"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Importing a Data Set</h3>
+
+        <p> This section demonstrates how to download and explore a dataset using Pandas in Jupyter Notebook. The
+            dataset, "Video Game Sales," is sourced from Kaggle and contains over 16,000 records and 11 columns. After
+            downloading and placing the CSV file in the same directory as the Jupyter Notebook, the Pandas library is
+            used to load the dataset into a DataFrame. Key attributes and methods of the DataFrame, such as .shape for
+            the dataset dimensions and .describe for basic statistics, are introduced. These tools help identify missing
+            data and understand the dataset's structure and summary statistics, providing a foundation for cleaning and
+            analyzing data. The tutorial highlights Jupyter's ability to execute and visualize code outputs efficiently,
+            making it ideal for data exploration.</p>
+    </section>
+
+    <section id="part5">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=zDspqBRNpuN32r3F&amp;start=1021"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Jupyter Shortcuts</h3>
+
+        <p>This section introduces some of the most useful shortcuts and features in Jupyter Notebook to streamline
+            coding. It explains the two modes for a cell: edit mode (green) for writing code and command mode (blue) for
+            executing commands. Key shortcuts are demonstrated, such as pressing A to insert a cell above, B to insert
+            below, and D (twice) to delete a cell. The lecture also covers running individual cells, running all cells,
+            and Jupyter's ability to save outputs for efficiency. Features like autocompletion, IntelliSense, and inline
+            tooltips for methods and parameters are highlighted, along with commands for commenting and uncommenting
+            code. These tools make Jupyter an efficient environment for coding, debugging, and working with data. The
+            section concludes with a mention of additional Python courses available online.</p>
+    </section>
+
+    <section id="part6">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=AuxlbIRhr8XvdqYM&amp;start=1373"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>A Real Machine Learning Problem </h3>
+
+        <p> This section introduces a real-world machine learning project where the goal is to build a model that
+            predicts users' music preferences based on their age and gender. The project simulates an online music store
+            recommending music genres to increase sales. The lecture outlines the machine learning workflow: importing
+            data, cleaning it, selecting an algorithm, training the model, making predictions, and evaluating accuracy.
+            A sample dataset, music.csv, is provided, containing columns for age, gender, and genre with hypothetical
+            patterns linking user profiles to music preferences. The CSV file is loaded into a Pandas DataFrame for
+            inspection, setting the stage for data preparation in the next lecture.</p>
+    </section>
+
+    <section id="part7">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=EFtu99hDsFupM43y&amp;start=1569"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Preparing the Data</h3>
+
+        <p>This section focuses on the second step of a machine learning project: preparing the data. Although the
+            dataset is clean with no duplicates or missing values, it needs to be divided into two parts: the input set
+            (X), which includes the first two columns (age and gender), and the output set (y), which contains the last
+            column (genre). The input set provides the data for training the model, while the output set represents the
+            predictions. Using Pandas, the lecture explains how to split the dataset, creating a foundation for building
+            and training the machine learning model in the next step.
+        </p>
+    </section>
+
+    <section id="part8">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=AMjPQsETT6Vkrz72&amp;start=1755"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Learning and Predicting</h3>
+
+        <p>This section explains how to build and train a machine learning model using the Decision Tree algorithm,
+            implemented in the Scikit-learn library. The lecture demonstrates importing the DecisionTreeClassifier
+            class, creating a model instance, and training it using the .fit() method with input (X) and output (y)
+            datasets. The model is then used to make predictions, such as determining music preferences for a
+            21-year-old male and a 22-year-old female, based on the provided patterns in the dataset. The predictions
+            are successful, but the lecture emphasizes the importance of evaluating model accuracy and making
+            adjustments if needed, which will be covered in the next lecture.</p>
+    </section>
+
+    <section id="part9">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=5_7yX8y1io4M7xMc&amp;start=2000"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Calculating the Accuracy</h3>
+
+        <p>This section focuses on evaluating the accuracy of a machine learning model by splitting the dataset into
+            training and testing sets using Scikit-learn's train_test_split function. Typically, 70–80% of the data is
+            used for training, and 20–30% is reserved for testing. The model is trained with the training set and tested
+            using the testing set. The accuracy_score function from Scikit-learn is used to compare predictions against
+            actual values, producing a score between 0 and 1. The lecture demonstrates how insufficient training data or
+            unclean datasets can negatively impact accuracy and emphasizes the importance of providing ample,
+            high-quality data for optimal model performance. The variability in results due to random data splitting is
+            also highlighted.</p>
+    </section>
+
+    <section id="part10">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=7iWq1ZmLe9lCF_uk&amp;start=2381"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Persisting Models</h3>
+
+        <p>This section introduces the concept of model persistence, which allows trained models to be saved and reused
+            without retraining. Training a model every time predictions are needed can be time-consuming, especially
+            with large datasets. Using Scikit-learn's joblib module, the trained model is saved to a file with the dump
+            method. The saved model can later be loaded using the load method to make predictions without retraining.
+            This approach is efficient and practical for real-world applications, where training models on large
+            datasets might take significant time. The lecture provides a step-by-step demonstration of saving and
+            loading a model, emphasizing the importance of persistence in machine learning workflows.</p>
+    </section>
+    <section id="part11">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/7eh4d6sabA0?si=iSnZdxfVuVsugOcI&amp;start=2575"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <h3>Persisting Models</h3>
+
+        <p>This section demonstrates how to visualize a trained Decision Tree model to understand its decision-making
+            process. Using Scikit-learn's tree.export_graphviz method, the trained model is exported to a .dot file, a
+            graph description format. The visualization is achieved through a VS Code extension that renders the
+            decision tree as a binary tree with conditions at each node. Each condition splits the data, guiding
+            predictions based on user features like age and gender. The lecture explains key parameters, such as
+            feature_names for displaying feature rules, class_names for labeling classes, and formatting options like
+            filled and rounded. This visualization provides a clear view of how the model classifies data and makes
+            predictions.</p>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+    <section>
+        <h3>Contact Us</h3>
+        <address>
+            <p><i class="fa fa-map-marker"></i><a href="address:156 Kifissia Avenue, Marousi,
+                15126">156 Kifissia Avenue, Marousi,
+                    15126</a></p>
+            <p><i class="fa fa-phone"></i><a href="tel:+302101234567">+30 210
+                    123 4567</a></p>
+            <p><i class="fa fa-envelope"></i><a href="mailto:learnsphere@gmail.com">learnsphere@gmail.com</a></p>
+        </address>
+    </section>
+
+    <section>
+        <h3>Follow Us</h3>
+        <a href=""><i class="fa fa-facebook-f"></i></a>
+        <a href=""><i class="fa fa-instagram"></i></a>
+        <a href=""><i class="fa fa-twitter"></i></a>
+        <a href=""><i class="fa fa-youtube-play"></i></a>
+        <a href=""><i class='fa fa-skype'></i></a>
+    </section>
+
+    <section>
+        <h3>Information</h3>
+        <p><a href="">Terms of Services</a></p>
+        <p><a href="">Privacy Policy</a></p>
+    </section>
+
+    <p>© Copyright 2024-2025</p>
+</footer>
+</body>
+
+</html>
