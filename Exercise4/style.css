@@ -131,7 +131,21 @@ header>h1 {
 
 /* Tablet's style */
 @media (min-width: 768px) {
+    .footer-container {
+        font-size: 1rem;
+    }
 
+    .footer-container > section > h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .footer-container > section > a > i {
+        font-size: 28px;
+    }
+
+    .footer-container > section > address > p > i {
+        font-size: 24px;
+    }
 }
 
 /* Desktop */
@@ -172,11 +186,11 @@ header>h1 {
     }
 
     .footer-container > section > a > i {
-        font-size: 36px !important;
+        font-size: 36px;
     }
 
     .footer-container > section > address > p > i {
-        font-size: 26px !important;
+        font-size: 26px;
     }
 }
 /* ---------------- !Site's Footer ------------------- */
