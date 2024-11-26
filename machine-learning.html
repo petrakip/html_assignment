@@ -8,229 +8,374 @@
     <title>Document</title>
 </head>
 <body>
-<!--test change-->
 <!--    standard header-->
 <header class="header">
-    <img class="logo" src="images/logo.png">
-    <h1>e-School</h1>
 
-    <nav class="menu">
+    <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="about-us.html">About Us</a></li>
+            <img class="logo" src="images/logo.png">
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
+                <ul class="submenu1">
+
+                    <li><a href="machine-learning.html">Machine Learning</a>
+                        <ul class="submenu2">
+                            <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
+                            <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="web.html">Web</a>
+                        <ul class="submenu3">
+                            <li><a href="web-book.html">Microservice APIs</a></li>
+                            <li><a href="web-lectures.html">Java Tutorial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="about-us.html"><i class="	fa fa-info-circle"></i>About Us</a></li>
         </ul>
     </nav>
 </header>
 <!--main content of a document-->
 <main>
     <!--    books section-->
-    <section class="books-list">
-        <h1> Machine Learning </h1>
-        <article>
-            <p> Discover our selection of books and lectures for Machine Learning </p>
-        </article>
-        <article>
-            <img src="images/ml-category-images/Lane-2ed-MEAP-HI.png" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Natural Language Processing in Action</h3>
-            <h4>by Hobson Lane and Maria Dyshel </h4>
-            <p>
-                Natural Language Processing in Action, Second Edition is your guide to building software that can read
-                and
-                interpret human language. This new edition is updated to include the latest Python packages and comes
-                with
-                full coverage of cutting-edge models like BERT, GPT-J and HuggingFace transformers.
-                In it, you’ll learn to create fun and useful NLP applications such as semantic search engines that are
-                even
-                better than Google, chatbots that can help you write a book, and a multilingual translation program.
-                Soon,
-                you’ll be ready to start tackling real-world problems with NLP.
-            </p>
-            <p>
-                675 pages (estimated)
-            </p>
-            <p>
-                Rating: (4/5) - 16 Reviews
-            </p>
-            <p>
-                <strong><a href="machine-learning-book.html">Read Here</a></strong>
-            </p>
-        </article>
-        <article>
-            <img src="images/ml-category-images/Smolyakov-HI.png" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Machine Learning Algorithms in Depth</h3>
-            <h4>by Vadim Smolyakov </h4>
-            <p>
-                Machine Learning Algorithms in Depth dissects and explains dozens of algorithms across a variety of
-                applications, including finance, computer vision, and NLP. Each algorithm is mathematically derived,
-                followed by its hands-on Python implementation along with insightful code annotations and informative
-                graphics. You’ll especially appreciate author Vadim Smolyakov’s clear interpretations of Bayesian
-                algorithms for Monte Carlo and Markov models.
-            </p>
-            <p>
-                328 pages
-            </p>
-            <p>
-                Rating: (5/5) - 2 Reviews
-            </p>
-            <p>
-                <strong><a href="https://livebook.manning.com/book/machine-learning-algorithms-in-depth/chapter-1">Read
-                    Here</a></strong>
-            </p>
-        </article>
-        <article>
-            <img src="images/ml-category-images/Nguyen-HI.png" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Bayesian Optimization in Action</h3>
-            <h4>by Quan Nguyen </h4>
-            <p>
-                Bayesian Optimization in Action teaches you how to create efficient machine learning processes using a
-                Bayesian approach. In it, you’ll explore practical techniques for training large datasets,
-                hyperparameter tuning, and navigating complex search spaces. This interesting book includes engaging
-                illustrations and fun examples like perfecting coffee sweetness, predicting weather, and even debunking
-                psychic claims. You’ll learn how to navigate multi-objective scenarios, account for decision costs, and
-                tackle pairwise comparisons.
-            </p>
-            <p>
-                424 pages
-            </p>
-            <p>
-                Rating: (5/5) - 1 Reviews
-            </p>
-            <p>
-                <strong><a href="https://livebook.manning.com/book/bayesian-optimization-in-action/chapter-1/4">Read
-                    Here</a></strong>
-            </p>
-        </article>
-        <article>
-            <img src="images/ml-category-images/MNLS202229_Cover_MathforMachineLearning.jpg" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Math for Machine Learning</h3>
-            <h4>by Nicole Königstein</h4>
-            <p>
-                In this series of liveProjects, you’ll work with Finative, an analytics firm focused on environmental,
-                social, and governance (ESG) metrics that gauge companies' sustainability. You’ll apply machine learning
-                (ML) and deep learning (DL) techniques—such as Bayes' theorem, PCA, cosine similarity, latent semantic
-                analysis, and backpropagation—to enhance Finative’s sustainability efforts.
+    <h3> Machine Learning </h3>
+    <p> Discover our selection of books and lectures for Machine Learning </p>
+    <section class="book">
+        <article><a href="machine-learning-book.html">
+            <img src="images/ml-category-images/Lane-2ed-MEAP-HI.png" alt="Book Cover">
+            <div class="details">
+                <h4>Natural Language Processing in Action</h4>
+                <p><strong>Author:</strong>Hobson Lane, Maria Dyshel</p>
+                <p><strong>Pages:</strong>675</p>
 
-                Projects will include reducing ML model runtime, optimizing storage by identifying key document
-                keywords, classifying sustainability reports using pre-trained language models, and analyzing tweet
-                sentiment to detect greenwashing. By the end, you’ll gain a solid understanding of ML fundamentals, data
-                science skills, and sustainability-focused analytics.
-            </p>
-            <p>
-                424 pages
-            </p>
-            <p>
-                Rating: (5/5) - 10 Reviews
-            </p>
-            <p>
-                <strong><a href="https://www.manning.com/liveprojectseries/math-for-machine-learning-ser">Read
-                    Here</a></strong>
-            </p>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star-half-full" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(150 Reviews)</p>
+            </div>
+
+            <div class=" description">
+                <p><strong>Description:</strong>
+                    Natural Language Processing in Action, Second Edition is your guide to building software that can
+                    read
+                    and
+                    interpret human language. This new edition is updated to include the latest Python packages and
+                    comes
+                    with
+                    full coverage of cutting-edge models like BERT, GPT-J and HuggingFace transformers.
+                    In it, you’ll learn to create fun and useful NLP applications such as semantic search engines that
+                    are
+                    even
+                    better than Google, chatbots that can help you write a book, and a multilingual translation program.
+                    Soon,
+                    you’ll be ready to start tackling real-world problems with NLP.
+                </p>
+            </div>
+        </a>
         </article>
-        <article>
-            <img src="images/ml-category-images/Grigorev-MLB-HI.png" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Machine Learning Bookcamp</h3>
-            <h4>by Alexey Grigorev </h4>
-            <p>
-                Machine Learning Bookcamp presents realistic, practical machine learning scenarios, along with
-                crystal-clear coverage of key concepts. In it, you’ll complete engaging projects, such as creating a car
-                price predictor using linear regression and deploying a churn prediction service. You’ll go beyond the
-                algorithms and explore important techniques like deploying ML applications on serverless systems and
-                serving models with Kubernetes and Kubeflow. Dig in, get your hands dirty, and have fun building your ML
-                skills!
-            </p>
-            <p>
-                472 pages
-            </p>
-            <p>
-                Rating: (5/5) - 14 Reviews
-            </p>
-            <p>
-                <strong><a href="https://livebook.manning.com/book/machine-learning-bookcamp/chapter-1">Read
-                    Here</a></strong>
-            </p>
+        <article><a href="https://livebook.manning.com/book/machine-learning-algorithms-in-depth/chapter-1">
+
+            <img src="images/ml-category-images/Smolyakov-HI.png" alt="Book Cover">
+
+            <div class="details">
+                <h4>Machine Learning Algorithms in Depth</h4>
+                <p><strong>Authors:</strong>Vadim Smolyakov</p>
+                <p><strong>Pages:</strong>328</p>
+
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(2 Reviews)</p>
+            </div>
+            <div class="description">
+
+                <p><strong>Description:</strong>
+                    Machine Learning Algorithms in Depth dissects and explains dozens of algorithms across a variety of
+                    applications, including finance, computer vision, and NLP. Each algorithm is mathematically derived,
+                    followed by its hands-on Python implementation along with insightful code annotations and
+                    informative
+                    graphics. You’ll especially appreciate author Vadim Smolyakov’s clear interpretations of Bayesian
+                    algorithms for Monte Carlo and Markov models.
+                </p>
+            </div>
+        </a>
         </article>
-        <article>
-            <img src="images/ml-category-images/Kunapuli-HI.png" alt="Book Cover"
-                 style="width: 200px; height: auto; margin-right: 20px;">
-            <h3>Ensemble Methods for Machine Learning</h3>
-            <h4>by Gautam Kunapuli </h4>
-            <p>
-                Ensemble Methods for Machine Learning teaches you practical techniques for applying multiple ML
-                approaches simultaneously. Each chapter contains a unique case study that demonstrates a fully
-                functional ensemble method, with examples including medical diagnosis, sentiment analysis, handwriting
-                classification, and more. There’s no complex math or theory—you’ll learn in a visuals-first manner, with
-                ample code for easy experimentation!
-            </p>
-            <p>
-                352 pages
-            </p>
-            <p>
-                Rating: (4.5/5) - 3 Reviews
-            </p>
-            <p>
-                <strong><a href="https://www.manning.com/books/ensemble-methods-for-machine-learning">Read
-                    Here</a></strong>
-            </p>
+        <article><a href="https://livebook.manning.com/book/bayesian-optimization-in-action/chapter-1/4">
+            <img src="images/ml-category-images/Nguyen-HI.png" alt="Book Cover">
+            <div class="details">
+                <h4>Bayesian Optimization in Action</h4>
+                <p><strong>Authors:</strong> Quan Nguyen</p>
+                <p><strong>Pages:</strong>424</p>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(1 Review)</p>
+            </div>
+            <div class="description">
+
+                <p><strong>Description:</strong>
+                    Bayesian Optimization in Action teaches you how to create efficient machine learning processes using
+                    a
+                    Bayesian approach. In it, you’ll explore practical techniques for training large datasets,
+                    hyperparameter tuning, and navigating complex search spaces. This interesting book includes engaging
+                    illustrations and fun examples like perfecting coffee sweetness, predicting weather, and even
+                    debunking
+                    psychic claims. You’ll learn how to navigate multi-objective scenarios, account for decision costs,
+                    and
+                    tackle pairwise comparisons.
+                </p>
+            </div>
+        </a>
+        </article>
+
+        <article><a href="https://www.manning.com/liveprojectseries/math-for-machine-learning-ser">
+
+            <img src="images/ml-category-images/MNLS202229_Cover_MathforMachineLearning.jpg" alt="Book Cover">
+
+            <div class="details">
+
+                <h4>Math for Machine Learning</h4>
+                <p><strong>Authors:</strong>Nicole Königstein</p>
+                <p><strong>Pages:</strong>312</p>
+
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(10 Reviews)</p>
+            </div>
+
+
+            <div class="description">
+                <p><strong>Description:</strong>
+                    In this series of liveProjects, you’ll work with Finative, an analytics firm focused on
+                    environmental,
+                    social, and governance (ESG) metrics that gauge companies' sustainability. You’ll apply machine
+                    learning
+                    (ML) and deep learning (DL) techniques—such as Bayes' theorem, PCA, cosine similarity, latent
+                    semantic
+                    analysis, and backpropagation—to enhance Finative’s sustainability efforts.
+
+                    Projects will include reducing ML model runtime, optimizing storage by identifying key document
+                    keywords, classifying sustainability reports using pre-trained language models, and analyzing tweet
+                    sentiment to detect greenwashing. By the end, you’ll gain a solid understanding of ML fundamentals,
+                    data
+                    science skills, and sustainability-focused analytics.
+                </p>
+            </div>
+        </a>
+        </article>
+        <article><a href="https://livebook.manning.com/book/machine-learning-bookcamp/chapter-1">
+            <img src="images/ml-category-images/Grigorev-MLB-HI.png" alt="Book Cover">
+            <div class="details">
+                <h4>Machine Learning Bookcamp</h4>
+                <p><strong>Authors:</strong>Alexey Grigorev</p>
+                <p><strong>Pages:</strong>472</p>
+
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(14 Reviews)</p>
+            </div>
+
+            <div class="description">
+
+                <p><strong>Description:</strong>
+                    Machine Learning Bookcamp presents realistic, practical machine learning scenarios, along with
+                    crystal-clear coverage of key concepts. In it, you’ll complete engaging projects, such as creating a
+                    car
+                    price predictor using linear regression and deploying a churn prediction service. You’ll go beyond
+                    the
+                    algorithms and explore important techniques like deploying ML applications on serverless systems and
+                    serving models with Kubernetes and Kubeflow. Dig in, get your hands dirty, and have fun building
+                    your ML
+                    skills!
+                </p>
+            </div>
+        </a>
+        </article>
+        <article><a href="https://www.manning.com/books/ensemble-methods-for-machine-learning">
+            <img src="images/ml-category-images/Kunapuli-HI.png" alt="Book">
+            <div class="details">
+                <h4>Ensemble Methods for Machine Learning</h4>
+                <p><strong>Authors:</strong>Gautam Kunapuli</p>
+                <p><strong>Pages:</strong>352</p>
+
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                <i class="fa fa-star-half-full" style="font-size:16px;color:#ff312e"></i>
+
+                <p>(3 Reviews)</p>
+            </div>
+
+            <div class="description">
+                <p><strong>Description:</strong>
+                    Ensemble Methods for Machine Learning teaches you practical techniques for applying multiple ML
+                    approaches simultaneously. Each chapter contains a unique case study that demonstrates a fully
+                    functional ensemble method, with examples including medical diagnosis, sentiment analysis,
+                    handwriting
+                    classification, and more. There’s no complex math or theory—you’ll learn in a visuals-first manner,
+                    with
+                    ample code for easy experimentation!
+                </p>
+            </div>
+        </a>
         </article>
     </section>
+
+    <h3>Recommended Lectures about Machine Learning:</h3>
     <section class="lectures-list">
-        <h3>Lectures</h3>
-        <article>
+        <article><a href="https://www.youtube.com/watch?v=7eh4d6sabA0">
             <img src="images/ml-category-images/python.png">
-            <h4>Python Machine Learning Tutorial </h4>
-            <p><strong>Video Creator:</strong>Mosh</p>
-            <p><strong>Duration:</strong>49:42</p>
-            <p><strong>Rating:</strong> (4.4/5) - 77 Reviews</p>
-            <p><strong>Description:</strong>In this tutorial, you’ll learn foundational machine learning concepts, how
-                to apply algorithms using Python, and gain practical experience with real-world data. It’s ideal if
-                you’re curious about AI and machine learning, have basic Python knowledge, and are looking for a
-                hands-on learning experience.
-            </p>
-            <p><strong><a href="https://www.youtube.com/watch?v=7eh4d6sabA0">Watch Now</a></strong>
+            <div class="details">
+                <h4>Python Machine Learning Tutorial</h4>
+                <p><strong>Video Creator:</strong>Mosh Hamedani</p>
+                <p><strong>Duration:</strong>49:42</p>
+
+                <span class="stars">
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                        </span>
+                <p>(67 Reviews)</p>
+            </div>
+
+            <div class="description">
+
+                <p><strong>Description:</strong>In this tutorial, you’ll learn foundational machine learning concepts,
+                    how
+                    to apply algorithms using Python, and gain practical experience with real-world data. It’s ideal if
+                    you’re curious about AI and machine learning, have basic Python knowledge, and are looking for a
+                    hands-on learning experience.
+                </p>
+            </div>
+        </a>
         </article>
 
-        <article>
+        <article><a href="https://youtu.be/VyWAvY2CF9c?si=KxzjoCEESFMmH0--">
             <img src="images/ml-category-images/deep learning.png">
-            <h4>Deep Learning Crash Course for Beginners</h4>
-            <p><strong>Video Creator:</strong>freeCodeCamp</p>
-            <p><strong>Duration:</strong>1:25:38</p>
-            <p><strong>Rating:</strong> (4.5/5) - 162 Reviews</p>
-            <p><strong>Description:</strong>Learn the fundamental concepts and terminology of Deep Learning, a
-                sub-branch of Machine Learning. This course is designed for absolute beginners with no experience in
-                programming. You will learn the key ideas behind deep learning without any code.
-                You'll learn about Neural Networks, Machine Learning constructs like Supervised, Unsupervised and
-                Reinforcement Learning, the various types of Neural Network architectures, and more.</p>
-            <p><strong><a href="https://www.youtube.com/watch?v=VyWAvY2CF9c">Watch Now</a></strong>
+
+            <div class="details">
+                <h4>Deep Learning Crash Course for Beginners</h4>
+                <p><strong>Video Creator:</strong>freeCodeCamp</p>
+                <p><strong>Duration:</strong>1:25:38</p>
+
+                <span class="stars">
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star-half-full" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star-o" style="font-size:16px;color:#ff312e"></i>
+                        </span>
+
+                <p>(19 Reviews)</p>
+
+            </div>
+
+            <div class="description">
+                <p><strong>Description:</strong>Learn the fundamental concepts and terminology of Deep Learning, a
+                    sub-branch of Machine Learning. This course is designed for absolute beginners with no experience in
+                    programming. You will learn the key ideas behind deep learning without any code.
+                    You'll learn about Neural Networks, Machine Learning constructs like Supervised, Unsupervised and
+                    Reinforcement Learning, the various types of Neural Network architectures, and more.</p>
+            </div>
+        </a>
         </article>
-        <article>
+
+        <article><a href="https://www.youtube.com/watch?v=Up6KLx3m2ww">
             <img src="images/ml-category-images/algorithms.png">
-            <h4>Machine Learning Algorithms</h4>
-            <p><strong>Video Creator:</strong>edureka!</p>
-            <p><strong>Duration:</strong>45:15</p>
-            <p><strong>Rating:</strong> (4.5/5) - 162 Reviews</p>
-            <p><strong>Description:</strong>This Machine Learning Algorithms Tutorial shall teach you what machine
-                learning is, and the various ways in which you can use machine learning to solve a problem! Towards the
-                end, you will learn how to prepare a data-set for model creation and validation and how you can create a
-                model using any machine learning algorithm! In this Machine Learning Algorithms Tutorial video you will
-                understand:
-            <ol>
-                <li>What is an Algorithm?</li>
-                <li>What is Machine Learning?</li>
-                <li>How is a problem solved using Machine Learning?</li>
-                <li>Types of Machine Learning</li>
-                <li>Machine Learning Algorithms</li>
-                <li>Demo</li>
-            </ol>
-            <p><strong><a href="https://www.youtube.com/watch?v=Up6KLx3m2ww">Watch Now</a></strong>
+
+            <div class="details">
+
+                <h4>Machine Learning Algorithms</h4>
+                <p><strong>Video Creator:</strong>edureka!</p>
+                <p><strong>Duration:</strong>45:15</p>
+
+                <span class="stars">
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star-half-full" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star-o" style="font-size:16px;color:#ff312e"></i>
+                        </span>
+
+                <p>(56 Reviews)</p>
+
+            </div>
+
+            <div class="description">
+
+                <p><strong>Description:</strong>This Machine Learning Algorithms Tutorial shall teach you what machine
+                    learning is, and the various ways in which you can use machine learning to solve a problem! Towards
+                    the
+                    end, you will learn how to prepare a data-set for model creation and validation and how you can
+                    create a
+                    model using any machine learning algorithm!</p>
+                <!--            <ol>-->
+                <!--                <li>What is an Algorithm?</li>-->
+                <!--                <li>What is Machine Learning?</li>-->
+                <!--                <li>How is a problem solved using Machine Learning?</li>-->
+                <!--                <li>Types of Machine Learning</li>-->
+                <!--                <li>Machine Learning Algorithms</li>-->
+                <!--                <li>Demo</li>-->
+                <!--            </ol>-->
+            </div>
+        </a>
+        </article>
+        <article><a href="https://youtu.be/dIUTsFT2MeQ?si=szwQIDE3kilmLOvP">
+            <img src="images/ml-category-images/algorithms.png">
+
+            <div class="details">
+
+                <h4>Natural Language Processing with spaCy & Python</h4>
+                <p><strong>Video Creator:</strong>freeCodeCamp</p>
+                <p><strong>Duration:</strong>3:02:32</p>
+
+                <span class="stars">
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                            <i class="fa fa-star" style="font-size:16px;color:#ff312e"></i>
+                        </span>
+
+                <p>(10 Reviews)</p>
+
+            </div>
+
+            <div class="description">
+
+                <p><strong>Description:</strong>In this comprehensive spaCy tutorial, you will dive deep into the world
+                    of natural language processing (NLP) and learn how to tackle real-world problems effectively using
+                    the powerful Python spaCy library. The tutorial is structured to guide you through essential NLP
+                    concepts and demonstrate practical applications step-by-step. This tutorial is designed to transform
+                    your understanding of NLP and equip you with hands-on skills to build efficient and robust text
+                    processing solutions. Whether you're a beginner or an experienced developer, this guide will help
+                    you unlock the full potential of spaCy.</p>
+            </div>
+        </a>
         </article>
     </section>
-
 </main>
 <!-- Footer -->
 <footer class="footer-container">
@@ -238,10 +383,10 @@
         <h3>Contact Us</h3>
         <address>
             <p><i class="fa fa-map-marker" style="font-size:26px;color:#ff312e"></i><a href="address:156 Kifissia Avenue, Marousi,
-                15126">156 Kifissia Avenue, Marousi,
+                    15126">156 Kifissia Avenue, Marousi,
                 15126</a></p>
             <p><i class="fa fa-phone" style="font-size:26px;color:#ff312e"></i><a href="tel:+302101234567">+30 210
-                    123 4567</a></p>
+                123 4567</a></p>
             <p><i class="fa fa-envelope" style="font-size:26px;color:#ff312e"></i><a
                     href="mailto:eschool@gmail.com">eschool@gmail.com</a></p>
         </address>
