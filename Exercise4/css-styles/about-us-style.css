@@ -1,0 +1,134 @@
+/* --------- about-us.html --------- */
+.about-us {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    font-size: 0.9rem;
+}
+
+.about-us section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: justify;
+}
+
+.about-us h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-us .alexandra img {
+    max-width: 160px;
+    height: auto;
+    justify-self: end;
+}
+
+.about-us .panagiota img {
+    max-width: 150px;
+    padding-left: 40px;
+    height: auto;
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.biography {
+    padding-right: 80px;
+    grid-column: 2 / 5;
+}
+
+.biography-email:hover {
+    color: #ff312e;
+    text-decoration: none;
+}
+
+.line>hr {
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 952px) {
+   .about-us {
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .about-us h1 {
+        grid-column: span 2;
+        font-size: 1.5rem;
+    }
+
+   .about-us section {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+   }
+
+    .about-us img {
+        grid-column: 1 / 2;
+    }
+
+    .about-us .biography {
+        grid-column: 2 / 3;
+    }
+
+    .about-us .biography h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-us .biography h3 {
+        font-size: 1rem;
+    }
+
+    .line {
+        grid-column: span 2;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .about-us {
+        display: block;
+    }
+
+    .about-us section{
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    .about-us h1 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        text-decoration: underline;
+    }
+
+    .alexandra > img {
+        width: 165px;
+        height: 165px !important;
+        padding: 8px !important;
+    }
+
+    .panagiota > img {
+        width: 150px;
+        height: 150px !important;
+        margin: 0px !important;
+        padding: 8px !important;
+    }
+
+    .about-us img {
+        float: left;
+    }
+
+    .biography {
+        padding: 0px 30px 30px 30px;
+    }
+
+    .biography h2, h3 {
+        margin: 20px 0px;
+        font-size: medium;
+        font-size: 1rem !important;
+    }
+}
+
+/* --------- !about-us.html --------- */

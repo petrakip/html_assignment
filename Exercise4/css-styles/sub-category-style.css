@@ -1,0 +1,153 @@
+/* ---------- sub-category style -----------*/
+.web h3 {
+    display: inline-block;
+    margin: 15px;
+}
+
+/* -- book's layout */
+.book {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 15%;
+}
+
+.book article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px;
+    width: 80%;
+    transition: .3s;
+}
+
+.web article {
+    border-radius: 5%;
+}
+
+.web article:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    box-shadow: 0 10px 20px rgb(198, 113, 113);
+    /* Add a subtle shadow for emphasis */
+}
+
+.book article a {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.book article img {
+    width: 100%;
+    height: auto;
+    grid-column: 1;
+    border: 1px solid #515052;
+}
+
+.details {
+    width: 100%;
+    grid-column: 2;
+    padding: 0px 10px;
+}
+
+.book article .details h4 {
+    margin-bottom: 15px;
+}
+
+.book .details p {
+    padding-bottom: 10px;
+}
+
+.book article h4 {
+    display: flex;
+    font-size: 0.80rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.book article a p {
+    display: grid;
+    grid-column: 2;
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 0.75rem;
+}
+
+.book article p strong {
+    color: #515052;
+}
+
+.description {
+    display: flex;
+    grid-column: span 2;
+    text-align: justify;
+    margin-top: 10px;
+    text-wrap: wrap;
+}
+
+.book .description {
+    margin-top: 15px;
+}
+
+.description p strong {
+    text-decoration: none;
+}
+
+/* lecture's videos style */
+.lectures-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 3 columns */
+    gap: 20px;
+    /* gap between columns */
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.lectures-list article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.lectures-list article a {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.lectures-list article img {
+    width: 100%;
+    height: auto;
+    margin: 15px;
+}
+
+.lectures-list .details {
+    margin-top: 10px;
+}
+
+.lectures-list article h4 {
+    margin: 15px;
+    font-size: 0.80rem;
+}
+
+.lectures-list article p {
+    margin: 15px;
+    font-size: 0.75rem;
+}
+
+.lectures-list article p strong {
+    color: #515052;
+}
+
+.lectures-list li {
+    font-size: 0.75rem;
+}
+
+.lectures-list article a .stars {
+    margin-left: 15px;
+}

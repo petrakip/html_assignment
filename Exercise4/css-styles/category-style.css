@@ -1,0 +1,118 @@
+/* --------- categories ------------*/
+.content-cat {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.cat-content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(2, 2fr);
+    gap: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    margin: 2% 5% 2%;
+}
+
+.content-cat .text ul {
+    color: white;
+    list-style: none;
+    /* remove the bullet points*/
+    padding: 0;
+    display: flex;
+    gap: 7px;
+    /* Spacing between items */
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+ul.text li {
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    font-size: 1.0rem;
+    color: #000000;
+    /* Set the text color to white */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.text {
+    grid-row: 2;
+    /* Place text in the second row */
+    grid-column: 2;
+    /*align-self: flex-end;*/
+}
+
+.card {
+    background: #fffffa;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    /* Keep the overall card direction horizontal */
+    border: 1px solid #9999a1;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    grid-column: span 2;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack the header and image vertically */
+    flex: 1;
+    /* Allow content to grow/shrink as needed */
+}
+
+.card h2 {
+    color: #000000;
+    font-family: Tahoma, sans-serif;
+    grid-row: 1;
+    /* Place header in the first row */
+    grid-column: 1 / span 2;
+    margin-top: 4px;
+    font-size: 1.8rem;
+    text-align: left;
+    /* Optional: Center-align the header */
+}
+
+.card p {
+    grid-column: 1 / span 2;
+    font-size: 0.8rem;
+    color: #333333;
+    text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Scale the card to 105% of its size */
+    box-shadow: 0 10px 20px rgb(198, 113, 113);
+    /* Add a subtle shadow for emphasis */
+}
+
+ul li a:hover {
+    color: rgba(237, 34, 34, 0.77);
+}
+
+.card img {
+    grid-row: 2;
+    /* Place image in the second row */
+    grid-column: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* --------- !categories ------------*/
