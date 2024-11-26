@@ -195,38 +195,7 @@ header>h1 {
 }
 /* ---------------- !Site's Footer ------------------- */
 
-/* -------- Navigation bar style -------------*/
-nav {
-    grid-column: 1 / 3;
-    background-color: #000103;
-    padding: 0px;
-    margin-top: 0px;
-    width: 100%;
-    display: flex;
-}
-
-
-/*Horizontal Menu*/
-nav ul {
-
-    background-color: #000103;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: white;
-    padding: 23px;
-    text-decoration: none;
-    display: flex;
-}
-
+/*----------------- Site' Logo style -----------------*/
 .register-btn {
     font-size: 0.7rem;
     color: black;
@@ -237,15 +206,6 @@ nav ul li a {
 
 .register-btn:hover {
     color: #ff312e;
-}
-
-nav ul li a:hover {
-    background-color: #515052;
-    color: #ff312e;
-}
-
-i {
-    margin: 2px;
 }
 
 #logo {
@@ -297,6 +257,46 @@ i {
         font-size: 1rem;
         padding-right: 10px;
     }
+}
+/*----------------- !Site' Logo style -----------------*/
+
+/* -------- Navigation bar style -------------*/
+nav {
+    display: flex;
+    background-color: #000103;
+    padding: 0px;
+    margin-top: 0px;
+    width: 100%;
+}
+
+
+/*Horizontal Menu*/
+nav ul {
+    background-color: #000103;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    padding: 23px;
+    text-decoration: none;
+    display: flex;
+}
+
+nav ul li a:hover {
+    background-color: #515052;
+    color: #ff312e;
+}
+
+i {
+    margin: 2px;
 }
 
 /* Submenu Style */
