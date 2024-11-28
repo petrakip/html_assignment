@@ -4,38 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
     <title>Categories</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <p id="logo"> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i class="fa fa-sign-in"
-                    style="font-size:18px"></i>Sign In/Sign Up</a></p>
+        <div class="desktop-logo">
+            <p id="logo"> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i class="fa fa-sign-in" style="font-size:18px"></i>Sign In/Sign Up</a></p>
+        </div>
+        <div class="mobile-logo">
+            <p> LEARN <i class="fa fa-globe"></i> SPHERE</p>
+        </div>
+        <div class="menuToggle"></div>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
-                    <ul class="submenu1">
-
-                        <li><a href="machine-learning.html">Machine Learning</a>
-                            <ul class="submenu2">
+                <li><a href="index.html" class="ihome"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a></li>
+                <li><a href="categories.html">Categories<b>▼</b></a>
+                    <ul>
+                        <li><a href="machine-learning.html">Machine Learning<b>+</b></a>
+                            <ul>
                                 <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
                                 <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
                             </ul>
                         </li>
-
-                        <li><a href="web.html">Web</a>
-                            <ul class="submenu3">
+                        <li><a href="web.html">Web<b>+</b></a>
+                            <ul>
                                 <li><a href="web-book.html">Microservice APIs</a></li>
                                 <li><a href="web-lectures.html">Java Tutorial</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="about-us.html"><i class="	fa fa-info-circle"></i>About Us</a></li>
+                <li><a href="about-us.html" class="iabout"><i class="fa fa-info-circle">&nbsp;</i>About Us</a></li>
+                <li><a href="" class="iregister"><i class="fa fa-sign-in" style="font-size:18px">&nbsp;</i>Sign In/Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -163,5 +169,4 @@
         <p>© Copyright 2024-2025</p>
     </footer>
 </body>
-
 </html>

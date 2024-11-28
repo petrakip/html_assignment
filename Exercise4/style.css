@@ -5,17 +5,17 @@
 @import "css-styles/category-style.css";
 
 /* --------- almost common styles ----------*/
-header {
-    top: 0;
-    margin: 0px;
-    padding-bottom: 0px;
+/* header {
     position: sticky;
+    top: 0;
+    margin: 0;
     z-index: 1000;
-}
+} */
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #fffffa;
+    min-height: 100vh;
     font-size: 1em;
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
 }
 
 /* Header's Style */
-header>h1 {
+header > h1 {
     text-align: right;
     float: right;
 }
@@ -195,13 +195,42 @@ header>h1 {
 }
 /* ---------------- !Site's Footer ------------------- */
 
-/*----------------- Site' Logo style -----------------*/
+/* -------- Navigation bar style -------------*/
+header {
+    /* position: absolute; */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 66 px;
+    background: black;
+    align-items: center;
+ }
+
+ header nav ul {
+    margin: 0;
+    padding: 0
+    ;
+ }
+ header .mobile-logo {
+    display: none;
+ }
+
+ header .desktop-logo {
+    display: initial;
+    width: 100%;
+}
+
 .register-btn {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    padding-right: 10px;
     color: black;
     text-decoration: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
+}
+
+.register-btn i {
+    margin: 2px;
 }
 
 .register-btn:hover {
@@ -211,126 +240,192 @@ header>h1 {
 #logo {
     color: white;
     text-align: center;
-    font-size: 1rem;
-    padding: 15px 5px 5px 5px;
+    font-size: 1.5em;
+    padding: 25px 10px 10px 10px;
     margin: 0px;
     align-items: center;
-    background: rgb(254,252,255);
-    background: linear-gradient(90deg, rgba(254,252,255,1) 0%, /* Gradient effet on the logo */
-                                rgba(255,49,46,1) 25%, rgba(0,0,0,1) 50%, 
-                                rgba(255,49,46,1) 75%, rgba(249,247,244,1) 100%);
+    background: rgb(254, 252, 255);
+    background: linear-gradient(90deg, rgba(254, 252, 255, 1) 0%,
+            /* Gradient effet on the logo */
+            rgba(255, 49, 46, 1) 25%, rgba(0, 0, 0, 1) 50%,
+            rgba(255, 49, 46, 1) 75%, rgba(249, 247, 244, 1) 100%);
 }
 
 #logo i {
-    font-size: 22px;
+    font-size: 35px;
 }
 
-/* Tablet's style */
-@media (min-width: 768px) {
-    #logo {
-        font-size: 1.3em;
-        padding: 15px 5px 5px 5px;
-    }
-
-    #logo i {
-        font-size: 30px;
-    }
-
-    .register-btn {
-        font-size: 0.9rem;
-        padding-right: 0px;
-    }
-}
-
-/* Desktops' style */
-@media (min-width: 1024px) {
-    #logo {
-        font-size: 1.5em;
-        padding: 25px 10px 10px 10px;
-    }
-
-    #logo i {
-        font-size: 35px;
-    }   
-
-    .register-btn {
-        font-size: 1rem;
-        padding-right: 10px;
-    }
-}
-/*----------------- !Site' Logo style -----------------*/
-
-/* -------- Navigation bar style -------------*/
-nav {
-    display: flex;
-    background-color: #000103;
-    padding: 0px;
-    margin-top: 0px;
-    width: 100%;
-}
-
-
-/*Horizontal Menu*/
-nav ul {
-    background-color: #000103;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+header nav {
     display: flex;
 }
 
-nav ul li {
+header ul {
     position: relative;
 }
 
-nav ul li a {
-    color: white;
-    padding: 23px;
-    text-decoration: none;
-    display: flex;
+header ul li {
+    position: relative;
+    list-style: none; 
+    float: left;
 }
 
-nav ul li a:hover {
-    background-color: #515052;
+header ul li a {
+    color: white;
+    font-size: 1.1em;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li a:hover {
+    background-color: rgb(19, 18, 18);
     color: #ff312e;
 }
 
-i {
-    margin: 2px;
-}
-
-/* Submenu Style */
-.submenu1,
-.submenu2,
-.submenu3 {
-    display: none;
+header ul li ul {
     position: absolute;
-    color: white;
-    background-color: black;
-    min-width: 150px;
-    top: 100%;
     left: 0;
+    width: 200px;
+    background: rgb(53, 53, 53);
+    display: none;
 }
 
-li:hover>.submenu1 {
+header ul li:hover > ul{
     display: block;
-    margin: 0;
 }
 
-.submenu1 li:hover>.submenu2 {
-    display: block;
-    left: 100%;
-    /* The third layer should appear on the right */
-    top: 0;
+header ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.submenu1 li:hover>.submenu3 {
-    display: block;
-    left: 100%;
-    /* The third layer should appear on the right */
-    top: 0;
+header ul li ul li ul {
+    top:0;
+    left: 200px;
 }
 
+.iregister {
+    display: none;
+}
+
+/* Responsive menu */
+@media (max-width: 900px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    header .desktop-logo {
+        display: none;
+    }
+
+    header .mobile-logo {
+        display: initial;
+    }
+
+    header .mobile-logo p {
+        color: white;
+        font-size: 1.3em;
+        font-weight: 600;
+        float: left;
+    }
+
+    header .mobile-logo i {
+        font-size: 1.4em;
+    }
+
+    header nav ul li .ihome, .iabout, .iregister {
+        float:left;
+    }
+
+    .iregister {
+        display: initial;
+        width: 100%;
+    } 
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background: rgb(0, 0, 0);
+        display: none;
+    }
+
+    header.active nav {
+        display: initial;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    header nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    header nav ul li ul li ul {
+        top:0;
+        left: 0;
+    }
+
+    header nav ul li:hover ul li {
+        background: #555758;
+    }
+
+    header nav ul li ul li:hover ul li {
+        background: #808181;
+    }
+
+    .menuToggle {
+        position: relative;
+        width:40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(-12px);
+        box-shadow: 0 12px #fff;
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(12px);
+    }
+
+    header.active .menuToggle::before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 #fff;
+
+    }
+
+    header.active .menuToggle::after {
+        transform: rotate(315deg);
+    }
+}
 /* -------- !Navigation bar style -------------*/
 
 /* Background Image in home page*/
