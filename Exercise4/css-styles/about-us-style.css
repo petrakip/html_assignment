@@ -1,15 +1,5 @@
 /* --------- about-us.html --------- */
-.about-us {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 50px;
-    font-size: 0.9rem;
-}
-
 .about-us section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
     text-align: justify;
 }
 
@@ -17,25 +7,35 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 1.3rem;
 }
 
 .about-us .alexandra img {
-    max-width: 160px;
-    height: auto;
+
     justify-self: end;
 }
 
 .about-us .panagiota img {
-    max-width: 150px;
-    padding-left: 40px;
-    height: auto;
+
     justify-self: end;
     margin-right: 25px;
 }
 
+.alexandra>img {
+    width: 165px;
+    height: 165px;
+    padding: 8px;
+}
+
+.panagiota>img {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    padding: 8px;
+}
+
 .biography {
     padding-right: 80px;
-    grid-column: 2 / 5;
 }
 
 .biography-email:hover {
@@ -45,10 +45,43 @@
 
 .line>hr {
     border: 2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-@media screen and (max-width: 952px) {
-   .about-us {
+.about-us {
+    display: block;
+}
+
+.about-us section {
+    display: block;
+    font-size: 0.7rem;
+}
+
+.about-us h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.about-us img {
+    float: left;
+}
+
+.biography {
+    padding: 0px 30px 30px 30px;
+}
+
+.biography h2,
+h3 {
+    margin: 20px 0px;
+    font-size: medium;
+    font-size: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .about-us {
         margin: 0px;
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -59,11 +92,11 @@
         font-size: 1.5rem;
     }
 
-   .about-us section {
+    .about-us section {
         grid-column: span 2;
         display: grid;
         grid-template-columns: 1fr 2fr;
-   }
+    }
 
     .about-us img {
         grid-column: 1 / 2;
@@ -71,63 +104,70 @@
 
     .about-us .biography {
         grid-column: 2 / 3;
+        font-size: 0.9rem;
     }
 
     .about-us .biography h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .about-us .biography h3 {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .line {
         grid-column: span 2;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-
-@media screen and (max-width: 600px) {
+/* Desktop */
+@media (min-width: 1024px) {
     .about-us {
-        display: block;
-    }
-
-    .about-us section{
-        display: block;
-        font-size: 0.7rem;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .about-us h1 {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        text-decoration: underline;
+        grid-column: span 3;
     }
 
-    .alexandra > img {
-        width: 165px;
-        height: 165px !important;
-        padding: 8px !important;
+    .about-us section {
+        grid-column: span 3;
+        gap: 10px;
+        
     }
 
-    .panagiota > img {
-        width: 150px;
-        height: 150px !important;
-        margin: 0px !important;
-        padding: 8px !important;
-    }
-
-    .about-us img {
-        float: left;
+    .about-us section img {
+        grid-column: 1;
     }
 
     .biography {
-        padding: 0px 30px 30px 30px;
+        grid-column: 2 / 4;
+        font-size: 1.1rem;
     }
 
-    .biography h2, h3 {
-        margin: 20px 0px;
-        font-size: medium;
-        font-size: 1rem !important;
+    .line {
+        grid-column: 1 / 4;
+    }
+
+    .about-us .alexandra img {
+        max-width: 160px;
+        height: auto;
+        justify-self: end;
+    }
+    
+    .about-us .panagiota img {
+        max-width: 150px;
+        padding-left: 40px;
+        height: auto;
+        justify-self: end;
+        margin-right: 25px;
     }
 }
 
