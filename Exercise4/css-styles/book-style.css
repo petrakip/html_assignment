@@ -55,9 +55,6 @@
 }
 
 /* Title of book style */
-.pdf-container h1 {
-}
-
 .summary h4 {
     text-align: center;
     margin-top: 50px;
@@ -157,6 +154,10 @@ hr {
     border: 1px solid #ccc;
 }
 
+.content-section>article>figure>img {
+    max-width: 600px;
+}
+
 .content-section>article>figure>figcaption {
     font-size: 0.6rem;
     font-weight: 700;
@@ -166,7 +167,7 @@ hr {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 30px;
+    right: 50px;
     z-index: 99;
     border: none;
     border-radius: 50%;
@@ -179,6 +180,7 @@ hr {
   
   #top-Btn:hover {
     background-color: #555;
+    color: #ff312e;
   }
 
 html {
