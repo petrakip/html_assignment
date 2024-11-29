@@ -189,13 +189,13 @@ header>h1 {
 
 /* -------- Navigation bar style -------------*/
 header {
-    /* position: absolute; */
     position: sticky;
     top: 0;
     width: 100%;
     min-height: 66 px;
     background: black;
     align-items: center;
+    z-index: 30;
 }
 
 header nav ul {
