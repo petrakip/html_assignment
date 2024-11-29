@@ -1,5 +1,5 @@
 /* ---------- sub-category style -----------*/
-.web h3 {
+.general-subcategory h3 {
     display: inline-block;
     margin: 15px;
 }
@@ -19,11 +19,11 @@
     transition: .3s;
 }
 
-.web article {
+.general-subcategory article {
     border-radius: 5%;
 }
 
-.web article:hover {
+.general-subcategory article:hover {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
