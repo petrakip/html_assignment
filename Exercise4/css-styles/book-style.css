@@ -161,18 +161,6 @@ hr {
     font-weight: 700;
 }
 
-/* .top-btn {
-    display: block;
-    top: 85vh;
-    right: 100%;
-    text-align: end;
-    position: sticky;
-}
-
-.top-btn img {
-    max-width: 70px;
-} */
-
 #top-Btn {
     display: none;
     position: fixed;
