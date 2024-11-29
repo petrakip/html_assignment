@@ -5,32 +5,20 @@
 @import "css-styles/category-style.css";
 
 /* --------- almost common styles ----------*/
-/* header {
-    position: sticky;
-    top: 0;
-    margin: 0;
-    z-index: 1000;
-} */
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #fffffa;
     min-height: 100vh;
     font-size: 1em;
-    margin: 0;
-    padding: 0;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+body, .container {
     margin: 0;
     padding: 0;
 }
 
 /* Header's Style */
-header > h1 {
+header>h1 {
     text-align: right;
     float: right;
 }
@@ -54,20 +42,20 @@ header > h1 {
     margin-right: 30px;
 }
 
-#contact-info > h3 {
+#contact-info>h3 {
     margin-bottom: 0px;
 }
 
-#contact-info > address > p > a {
+#contact-info>address>p>a {
     color: #fffffa;
     text-decoration: none;
 }
 
-#contact-info > address > p > a:active {
+#contact-info>address>p>a:active {
     color: #ff312e;
 }
 
-#contact-info > address > p > a:hover {
+#contact-info>address>p>a:hover {
     text-decoration: underline;
 }
 
@@ -88,14 +76,15 @@ header > h1 {
     font-size: 1.1em;
 }
 
-.footer-container > section > a > i {
+.footer-container>section>a>i {
     font-size: 22px;
     color: #ff312e;
 }
 
-.footer-container > section > address > p > i {
+.footer-container>section>address>p>i {
     font-size: 22px;
     color: #ff312e;
+    padding-right: 5px;
 }
 
 #terms-privacy p a {
@@ -117,15 +106,15 @@ header > h1 {
     color: #ff312e;
 }
 
-.footer-container > p {
+.footer-container>p {
     color: rgb(128, 124, 124);
     margin-bottom: 0px;
     padding: 20px;
 }
 
-.footer-container > section > h3 {
+.footer-container>section>h3 {
     font-size: 0.8em;
-    color:rgb(228, 228, 196);
+    color: rgb(228, 228, 196);
     padding-bottom: 10px;
 }
 
@@ -135,15 +124,15 @@ header > h1 {
         font-size: 1rem;
     }
 
-    .footer-container > section > h3 {
+    .footer-container>section>h3 {
         font-size: 1.1rem !important;
     }
 
-    .footer-container > section > a > i {
+    .footer-container>section>a>i {
         font-size: 28px;
     }
 
-    .footer-container > section > address > p > i {
+    .footer-container>section>address>p>i {
         font-size: 24px;
     }
 }
@@ -156,7 +145,7 @@ header > h1 {
         font-size: 1.1rem;
     }
 
-    .footer-container > section > h3 {
+    .footer-container>section>h3 {
         padding-bottom: 10px;
         font-size: 1.3rem !important;
         color: white;
@@ -167,55 +156,58 @@ header > h1 {
         border-bottom: none;
         margin-left: 0px;
         margin-right: 0px;
-    }  
-    
+    }
+
     #contact-info {
         border-right: 1px solid #000000;
         border-bottom: none;
         margin-left: 0px;
         margin-right: 0px;
     }
-    
+
     #terms-privacy {
         margin-top: 20px !important;
     }
-    
-    .footer-container > p {
+
+    /* Copyright is center to footer */
+    .footer-container>p {
         padding-bottom: 20px;
         grid-column: 2;
+        color: white;
     }
 
-    .footer-container > section > a > i {
+    .footer-container>section>a>i {
         font-size: 36px;
     }
 
-    .footer-container > section > address > p > i {
+    .footer-container>section>address>p>i {
         font-size: 26px;
     }
 }
+
 /* ---------------- !Site's Footer ------------------- */
 
 /* -------- Navigation bar style -------------*/
 header {
-    /* position: absolute; */
     position: sticky;
     top: 0;
     width: 100%;
     min-height: 66 px;
     background: black;
     align-items: center;
- }
+    z-index: 30;
+}
 
- header nav ul {
+header nav ul {
     margin: 0;
-    padding: 0
-    ;
- }
- header .mobile-logo {
-    display: none;
- }
+    padding: 0;
+}
 
- header .desktop-logo {
+header .mobile-logo {
+    display: none;
+}
+
+header .desktop-logo {
     display: initial;
     width: 100%;
 }
@@ -226,7 +218,7 @@ header {
     color: black;
     text-decoration: none;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 .register-btn i {
@@ -265,7 +257,7 @@ header ul {
 
 header ul li {
     position: relative;
-    list-style: none; 
+    list-style: none;
     float: left;
 }
 
@@ -291,7 +283,7 @@ header ul li ul {
     display: none;
 }
 
-header ul li:hover > ul{
+header ul li:hover>ul {
     display: block;
 }
 
@@ -302,7 +294,7 @@ header ul li ul li {
 }
 
 header ul li ul li ul {
-    top:0;
+    top: 0;
     left: 200px;
 }
 
@@ -317,6 +309,7 @@ header ul li ul li ul {
         padding: 0;
         box-sizing: border-box;
     }
+
     header {
         display: flex;
         justify-content: space-between;
@@ -342,14 +335,16 @@ header ul li ul li ul {
         font-size: 1.4em;
     }
 
-    header nav ul li .ihome, .iabout, .iregister {
-        float:left;
+    header nav ul li .ihome,
+    .iabout,
+    .iregister {
+        float: left;
     }
 
     .iregister {
         display: initial;
         width: 100%;
-    } 
+    }
 
     header nav {
         position: absolute;
@@ -375,7 +370,7 @@ header ul li ul li ul {
     }
 
     header nav ul li ul li ul {
-        top:0;
+        top: 0;
         left: 0;
     }
 
@@ -389,7 +384,7 @@ header ul li ul li ul {
 
     .menuToggle {
         position: relative;
-        width:40px;
+        width: 40px;
         height: 50px;
         cursor: pointer;
         display: flex;
@@ -426,22 +421,45 @@ header ul li ul li ul {
         transform: rotate(315deg);
     }
 }
+
 /* -------- !Navigation bar style -------------*/
 
 /* Background Image in home page*/
-.bg-img {
-    /* The image used */
-    background-image: url("images/home_back.jpg");
-    min-height: 380px;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -10;
+@media (min-width: 1024px) {
+    .bg-img {
+        /* The image used */
+        background-image: url("images/home_back_2.jpg");
 
-    display: flex;
-    grid-column: span 3;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 100vh;
+        z-index: -10;
 
+        display: flex;
+        grid-column: span 3;
+
+    }
 }
 
+/* Background Image in home page*/
+
+@media (min-width: 1350px) {
+    .bg-img {
+        /* The image used */
+        background-image: url("images/home_back.jpg");
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        min-height: 100vh;
+        z-index: -10;
+
+        display: flex;
+        grid-column: span 3;
+
+    }
+}
