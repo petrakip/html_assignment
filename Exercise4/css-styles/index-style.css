@@ -1,157 +1,48 @@
-/* ------------------index.html sidebar--------------- */
-.sidebar {
-    grid-column: span 1;
-    margin: 80px 0 80px 0;
-    padding: 0;
-    height: 1000px;
-    /* We fixed height because layout thinks that height is the total
-                       .dot height's items and it left a lot space above */
-}
-
-.dot {
-    height: 200px;
-    width: 200px;
-    background-color: #bbb;
-    border-radius: 50%;
+/* Mobile and Small Tablet */
+.content {
     display: block;
-    position: relative;
-    left: 100px;
-    box-shadow: 3px 10px 10px 2px #000;
-}
-
-.dot:nth-child(even) {
-    z-index: -50;
-    background-color: #666;
-    color: #fff;
-}
-
-.dot:nth-child(odd) {
-    margin-left: 120px;
-    z-index: -100;
-}
-
-.dot#quote1 {
-    top: 0px;
-}
-
-.dot#quote1 blockquote {
-    top: 45px;
-}
-
-.dot#quote2 {
-    top: -70px;
-}
-
-.dot#quote3 {
-    top: -140px;
-}
-
-.dot#quote3 blockquote {
-    top: 50px;
-}
-
-.dot#quote4 {
-    top: -210px;
-}
-
-.dot#quote4 blockquote {
-    top: 60px;
-}
-
-.dot#quote5 {
-    top: -280px;
-}
-
-.dot#quote5 blockquote {
-    top: 40px;
-}
-
-.dot#quote6 {
-    top: -350px;
-}
-
-.dot#quote6 blockquote {
-    top: 65px;
-}
-
-.dot blockquote p {
     font-size: 0.8rem;
-    text-align: center;
 }
 
-.dot blockquote {
-    border-radius: 50%;
-    position: relative;
-    top: 30px;
+.container {
+    display: flex;
 }
 
-.dot blockquote footer {
-    font-size: .8em;
-    border-radius: 0%;
+.container {
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.bg-img {
     background: transparent;
 }
 
-.dot blockquote footer:before {
-    content: "- ";
-}
-
-.sidebar footer {
-    background-color: #bbb;
-    border-radius: 50%;
-    text-align: right;
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-@media screen and (max-width: 600px) {
-    .container, .bg-img, .content {
-        display: block !important; 
-    }
-
-    .container {
-        font-size: 0.8rem;
-        text-align: justify;
-    }
-
-    .bg-img {
-        background:transparent !important;
-    }
-
-    .content > article > h1 {
-        margin:30px;
-        padding-bottom: 0px !important;
-    }
-
-    .content article {
-        margin: 20px !important;
-    }
-
-    #signature {
-        padding: 20px 0px !important;;
-    }
-
-    .sidebar {
-        display: none;
-    }
-}
-/* -----------------!index.html sidebar--------------- */
-
-.content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-
+.content>article>h1 {
+    text-align: center;
+    margin: 30px;
+    padding-bottom: 0px;
 }
 
 .content article {
-    grid-column: 1 / 3;
-    margin: 145px;
-    padding-left: 15px;
+    margin: 20px;
 }
 
-.content article h1 {
+#signature {
+    padding: 20px 0px;
+    ;
+}
+
+.sidebar {
+    display: none;
+}
+
+.mob-tab-img {
     text-align: center;
-    padding-bottom: 30px;
+}
+
+.mob-tab-img>img {
+    width: 80%;
+    padding-top: 20px;
 }
 
 .content article p {
@@ -176,4 +67,228 @@
 main article a {
     text-decoration: none;
     color: #000000;
+}
+
+/* Tablet (mostly large) */
+@media (min-width: 900px) { 
+    .bg-img {
+        background: transparent;
+        display: grid;
+        grid-column: 2fr 2fr;
+    }
+
+    .mob-tab-img {
+        grid-column: 2;
+    }
+
+    .content {
+        padding-right: 50px;
+    }
+
+    .sidebar {
+        padding: 0 100px 0 0;
+    }
+
+    .sidebar {
+        display: initial;
+        grid-column: 1 / 2;
+        margin: 60px 0 60px 0;
+        padding: 0 80px 0 0;
+        height: 800px;
+        /* We fixed height because layout thinks that height is the total
+                       .dot height's items and it left a lot space above */
+    }
+
+    .content {
+        grid-column: 2 / 3;
+    }
+
+    .dot {
+        height: 200px;
+        width: 200px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        left: 50px;
+        box-shadow: 3px 10px 10px 2px #000;
+    }
+
+    .dot:nth-child(even) {
+        z-index: -50;
+        background-color: #666;
+        color: #fff;
+    }
+
+    .dot:nth-child(odd) {
+        margin-left: 120px;
+        z-index: -100;
+    }
+
+    .dot:nth-child(odd) blockquote {
+        padding: 10px 0 0 10px;
+    }
+
+    .dot#quote1 {
+        top: 0px;
+    }
+
+    .dot#quote1 blockquote {
+        top: 45px;
+    }
+
+    .dot#quote2 {
+        top: -70px;
+    }
+
+    .dot#quote3 {
+        top: -140px;
+    }
+
+    .dot#quote3 blockquote {
+        top: 50px;
+    }
+
+    .dot#quote4 {
+        top: -210px;
+    }
+
+    .dot#quote4 blockquote {
+        top: 60px;
+    }
+
+    .dot#quote5 {
+        top: -280px;
+    }
+
+    .dot#quote5 blockquote {
+        top: 40px;
+    }
+
+    .dot#quote6 {
+        top: -350px;
+    }
+
+    .dot#quote6 blockquote {
+        top: 65px;
+    }
+
+    .dot blockquote p {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+
+    .dot blockquote {
+        border-radius: 50%;
+        position: relative;
+        top: 65px;
+        right: 10px;
+    }
+
+    .dot blockquote footer {
+        font-size: .6rem;
+        border-radius: 0%;
+        background: transparent;
+    }
+
+    .dot blockquote footer:before {
+        content: "- ";
+    }
+
+    .sidebar footer {
+        background-color: #bbb;
+        border-radius: 50%;
+        text-align: right;
+        font-size: 0.5rem;
+        font-style: italic;
+    }
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 1rem;
+    }
+
+    /* Main article for deskop until (min-width: 1024px), 
+because dimension of bg-img are changing  */
+    .content article {
+        grid-column: 1 / 4;
+        margin: 145px;
+        padding-left: 15px;
+        margin-right: 200px;
+    }
+
+    .content article h1 {
+        padding-bottom: 30px;
+    }
+
+    /* ------------------index.html sidebar--------------- */
+    .sidebar {
+        display: initial;
+        grid-column: span 1;
+        margin: 80px 0 80px 0;
+        padding: 0;
+        height: 1000px;
+        /* We fixed height because layout thinks that height is the total
+                       .dot height's items and it left a lot space above */
+    }
+
+    .dot {
+        height: 200px;
+        width: 200px;
+        left: 100px;
+    }
+
+    .dot:nth-child(odd) {
+        margin-left: 120px;
+    }
+
+    .dot:nth-child(odd) blockquote {
+        padding: 0;
+    }
+
+    .dot blockquote p {
+        font-size: 0.7rem;
+    }
+
+    .dot blockquote {
+        top: 30px;
+        right: 0;
+    }
+
+    .dot blockquote footer {
+        font-size: .8em;
+    }
+
+    .sidebar footer {
+        font-size: 0.8rem;
+    }
+
+    .mob-tab-img {
+        display: none;
+    }
+}
+
+/*  Main article for deskop until (min-width: 1350px) */
+@media (min-width: 1350px) {
+    .content article {
+        grid-column: 1 / 3;
+        margin: 145px;
+        padding-left: 15px;
+    }
+
+    .dot blockquote p {
+        font-size: 0.8rem;
+    }
+
 }
