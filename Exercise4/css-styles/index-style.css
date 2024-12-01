@@ -6,15 +6,12 @@
 
 .container {
     display: flex;
+    flex-direction: column;
 }
 
 .container {
     font-size: 0.8rem;
     text-align: justify;
-}
-
-.bg-img {
-    background: transparent;
 }
 
 .content>article>h1 {
@@ -69,16 +66,72 @@ main article a {
     color: #000000;
 }
 
+/* ---- sidebar with ads ---- */
+.ad {
+    margin: auto;
+    font-size: 0.7rem;
+}
+
+.ad>section {
+    display: flex;
+    border: 1px solid #600;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+.ad > a {
+    text-decoration: none;
+} 
+
+.ad img {
+    width: 140px;
+    /* center image in ads*/
+    margin: auto;
+}
+
+.ad-details {
+    text-transform: uppercase;
+    /* this does uppercase letters inside ad frame*/
+    text-wrap: wrap;
+    text-align: left;
+    float: right;
+}
+
+.ad-details h4 {
+    font-size: 0.7rem;
+    margin: 5px;
+}
+
+.ad-details ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.ad-details .diamond-list {
+    padding-right: 5px;
+    font-size: 1.1rem;
+    color: #600;
+}
+
+
+
 /* Tablet (mostly large) */
-@media (min-width: 900px) { 
-    .bg-img {
-        background: transparent;
+@media (min-width: 900px) {
+    .container {
         display: grid;
-        grid-column: 2fr 2fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .mob-tab-img {
-        grid-column: 2;
+        grid-column: 2;   
+    }
+
+    .mob-tab-img > img { 
+        width: 90%;
     }
 
     .content {
@@ -203,35 +256,39 @@ main article a {
         font-style: italic;
     }
 
+    .ad {
+        display: none;
+    }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
 
     .content {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-column: 2/4;
         font-size: 1rem;
     }
 
-    /* Main article for deskop until (min-width: 1024px), 
-because dimension of bg-img are changing  */
+
     .content article {
         grid-column: 1 / 4;
-        margin: 100px 150px 100px 120px;
-        padding-left: 15px;
+        margin: 150px 0 100px 120px;
     }
 
     .content article h1 {
         padding-bottom: 30px;
+        background: linear-gradient(90deg, rgba(241, 12, 9, 1) 0%,
+                             rgba(65, 65, 65, 1) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
     }
 
-    /* ------------------index.html sidebar--------------- */
+    /* ------------------index.html sidebar with quotes--------------- */
     .sidebar {
         display: initial;
         grid-column: span 1;
@@ -276,18 +333,85 @@ because dimension of bg-img are changing  */
     .mob-tab-img {
         display: none;
     }
-}
-
-/*  Main article for deskop until (min-width: 1350px) */
-@media (min-width: 1350px) {
-    .content article {
-        grid-column: 1 / 3;
-        margin: 145px 100px;
-        padding-left: 15px;
-    }
 
     .dot blockquote p {
         font-size: 0.8rem;
     }
 
+    /* ---- sidebar with ads ---- */
+    .ad {
+        display: initial;
+        grid-column: 4 / 5;
+        margin: auto;
+        font-size: 0.7rem;
+    }
+
+    .ad>section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid #600;
+        padding: 5px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 5px;
+        margin-bottom: 30px;
+    }
+
+    .ad>section:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        box-shadow: 0 10px 20px rgb(198, 113, 113);
+        z-index: 10;
+    }
+
+    .ad > a {
+        text-decoration: none;
+    } 
+
+    .ad img {
+        width: 140px;
+        grid-column: 1;
+        /* center image in ads*/
+        margin: auto;
+    }
+
+    .ad-details {
+        grid-column: 2;
+        text-transform: uppercase;
+        /* this does uppercase letters inside ad frame*/
+        text-wrap: wrap;
+        text-align: left;
+    }
+
+    .ad-details h4 {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    .ad-details ul {
+        padding-left: 10px;
+        list-style-type: none;
+    }
+
+    .ad-details .diamond-list {
+        padding-right: 5px;
+        font-size: 1.1rem;
+        color: #600;
+    }
+}
+
+@media (min-width: 1400px) {
+    .ad>section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .ad>section {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
