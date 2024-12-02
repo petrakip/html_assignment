@@ -91,6 +91,7 @@ main article a {
     width: 140px;
     /* center image in ads*/
     margin: auto;
+    padding-top: 2px;
 }
 
 .ad-details {
@@ -301,7 +302,7 @@ main article a {
 
     .content article {
         grid-column: 1 / 4;
-        margin: 150px 0 100px 120px;
+        margin: 150px 0 100px 100px;
     }
 
     .content article h1 {
@@ -448,14 +449,7 @@ main article a {
 
 @media (min-width: 1400px) {
     .ad>section {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-@media (min-width: 1700px) {
-    .ad>section {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 }
