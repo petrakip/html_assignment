@@ -226,16 +226,39 @@ main article a {
         top: 65px;
     }
 
+    #quote2 blockquote {
+        padding-top: 5px;
+     }
+ 
+    #quote4 blockquote {
+       padding-top: 20px;
+    }
+
+    #quote6 blockquote {
+        padding-top: 10px;
+     }
+
+    #quote1, blockquote{
+        padding-top: 20px;
+    }
+
+    #quote3  blockquote{
+        padding-top: 20px;
+    }
+
+    #quote5  blockquote{
+        padding-top: 40px;
+    }
+
     .dot blockquote p {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         text-align: center;
     }
 
     .dot blockquote {
         border-radius: 50%;
         position: relative;
-        top: 65px;
-        right: 10px;
+        top: 75px;
     }
 
     .dot blockquote footer {
@@ -252,6 +275,7 @@ main article a {
         background-color: #bbb;
         border-radius: 50%;
         text-align: right;
+        padding-right: 10px;
         font-size: 0.5rem;
         font-style: italic;
     }
@@ -302,7 +326,6 @@ main article a {
     .dot {
         height: 200px;
         width: 200px;
-        left: 100px;
     }
 
     .dot:nth-child(odd) {
@@ -314,20 +337,41 @@ main article a {
     }
 
     .dot blockquote p {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     .dot blockquote {
         top: 30px;
         right: 0;
+        margin: 10px;
+    }
+
+    #quote2 blockquote {
+        padding-top: 13px;
+     }
+ 
+    #quote4 blockquote {
+       padding-top: 0;
+    }
+
+    #quote6 blockquote {
+        padding-top: 0px;
+     }
+
+    #quote1, blockquote{
+        padding-top: 10px;
+    }
+
+    #quote3  blockquote{
+        padding-top: 10px;
+    }
+
+    #quote5  blockquote{
+        padding-top: 20px;
     }
 
     .dot blockquote footer {
-        font-size: .8em;
-    }
-
-    .sidebar footer {
-        font-size: 0.8rem;
+        font-size: .9em;
     }
 
     .mob-tab-img {
