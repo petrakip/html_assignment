@@ -1,157 +1,45 @@
-/* ------------------index.html sidebar--------------- */
-.sidebar {
-    grid-column: span 1;
-    margin: 80px 0 80px 0;
-    padding: 0;
-    height: 1000px;
-    /* We fixed height because layout thinks that height is the total
-                       .dot height's items and it left a lot space above */
-}
-
-.dot {
-    height: 200px;
-    width: 200px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: block;
-    position: relative;
-    left: 100px;
-    box-shadow: 3px 10px 10px 2px #000;
-}
-
-.dot:nth-child(even) {
-    z-index: -50;
-    background-color: #666;
-    color: #fff;
-}
-
-.dot:nth-child(odd) {
-    margin-left: 120px;
-    z-index: -100;
-}
-
-.dot#quote1 {
-    top: 0px;
-}
-
-.dot#quote1 blockquote {
-    top: 45px;
-}
-
-.dot#quote2 {
-    top: -70px;
-}
-
-.dot#quote3 {
-    top: -140px;
-}
-
-.dot#quote3 blockquote {
-    top: 50px;
-}
-
-.dot#quote4 {
-    top: -210px;
-}
-
-.dot#quote4 blockquote {
-    top: 60px;
-}
-
-.dot#quote5 {
-    top: -280px;
-}
-
-.dot#quote5 blockquote {
-    top: 40px;
-}
-
-.dot#quote6 {
-    top: -350px;
-}
-
-.dot#quote6 blockquote {
-    top: 65px;
-}
-
-.dot blockquote p {
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.dot blockquote {
-    border-radius: 50%;
-    position: relative;
-    top: 30px;
-}
-
-.dot blockquote footer {
-    font-size: .8em;
-    border-radius: 0%;
-    background: transparent;
-}
-
-.dot blockquote footer:before {
-    content: "- ";
-}
-
-.sidebar footer {
-    background-color: #bbb;
-    border-radius: 50%;
-    text-align: right;
-    font-size: 0.8rem;
-    font-style: italic;
-}
-
-@media screen and (max-width: 600px) {
-    .container, .bg-img, .content {
-        display: block !important; 
-    }
-
-    .container {
-        font-size: 0.8rem;
-        text-align: justify;
-    }
-
-    .bg-img {
-        background:transparent !important;
-    }
-
-    .content > article > h1 {
-        margin:30px;
-        padding-bottom: 0px !important;
-    }
-
-    .content article {
-        margin: 20px !important;
-    }
-
-    #signature {
-        padding: 20px 0px !important;;
-    }
-
-    .sidebar {
-        display: none;
-    }
-}
-/* -----------------!index.html sidebar--------------- */
-
+/* Mobile and Small Tablet */
 .content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
+    display: block;
+    font-size: 0.8rem;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.content>article>h1 {
+    text-align: center;
+    margin: 30px;
+    padding-bottom: 0px;
 }
 
 .content article {
-    grid-column: 1 / 3;
-    margin: 145px;
-    padding-left: 15px;
+    margin: 20px;
 }
 
-.content article h1 {
+#signature {
+    padding: 20px 0px;
+    ;
+}
+
+.sidebar {
+    display: none;
+}
+
+.mob-tab-img {
     text-align: center;
-    padding-bottom: 30px;
+}
+
+.mob-tab-img>img {
+    width: 80%;
+    padding-top: 20px;
 }
 
 .content article p {
@@ -176,4 +64,392 @@
 main article a {
     text-decoration: none;
     color: #000000;
+}
+
+/* ---- sidebar with ads ---- */
+.ad {
+    margin: auto;
+    font-size: 0.7rem;
+}
+
+.ad>section {
+    display: flex;
+    border: 1px solid #600;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-bottom: 30px;
+}
+
+.ad > a {
+    text-decoration: none;
+} 
+
+.ad img {
+    width: 140px;
+    /* center image in ads*/
+    margin: auto;
+    padding-top: 2px;
+}
+
+.ad-details {
+    text-transform: uppercase;
+    /* this does uppercase letters inside ad frame*/
+    text-wrap: wrap;
+    text-align: left;
+    float: right;
+}
+
+.ad-details h4 {
+    font-size: 0.7rem;
+    margin: 5px;
+}
+
+.ad-details ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.ad-details .diamond-list {
+    padding-right: 5px;
+    font-size: 1.1rem;
+    color: #600;
+}
+
+
+
+/* Tablet (mostly large) */
+@media (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mob-tab-img {
+        grid-column: 2;   
+    }
+
+    .mob-tab-img > img { 
+        width: 90%;
+    }
+
+    .content {
+        padding-right: 50px;
+    }
+
+    .sidebar {
+        padding: 0 100px 0 0;
+    }
+
+    .sidebar {
+        display: initial;
+        grid-column: 1 / 2;
+        margin: 60px 0 60px 0;
+        padding: 0 80px 0 0;
+        height: 800px;
+        /* We fixed height because layout thinks that height is the total
+                       .dot height's items and it left a lot space above */
+    }
+
+    .content {
+        grid-column: 2 / 3;
+    }
+
+    .dot {
+        height: 200px;
+        width: 200px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        left: 50px;
+        box-shadow: 3px 10px 10px 2px #000;
+    }
+
+    .dot:nth-child(even) {
+        z-index: -50;
+        background-color: #666;
+        color: #fff;
+    }
+
+    .dot:nth-child(odd) {
+        margin-left: 120px;
+        z-index: -100;
+    }
+
+    .dot:nth-child(odd) blockquote {
+        padding: 10px 0 0 10px;
+    }
+
+    .dot#quote1 {
+        top: 0px;
+    }
+
+    .dot#quote1 blockquote {
+        top: 45px;
+    }
+
+    .dot#quote2 {
+        top: -70px;
+    }
+
+    .dot#quote3 {
+        top: -140px;
+    }
+
+    .dot#quote3 blockquote {
+        top: 50px;
+    }
+
+    .dot#quote4 {
+        top: -210px;
+    }
+
+    .dot#quote4 blockquote {
+        top: 60px;
+    }
+
+    .dot#quote5 {
+        top: -280px;
+    }
+
+    .dot#quote5 blockquote {
+        top: 40px;
+    }
+
+    .dot#quote6 {
+        top: -350px;
+    }
+
+    .dot#quote6 blockquote {
+        top: 65px;
+    }
+
+    #quote2 blockquote {
+        padding-top: 5px;
+     }
+ 
+    #quote4 blockquote {
+       padding-top: 20px;
+    }
+
+    #quote6 blockquote {
+        padding-top: 10px;
+     }
+
+    #quote1, blockquote{
+        padding-top: 20px;
+    }
+
+    #quote3  blockquote{
+        padding-top: 20px;
+    }
+
+    #quote5  blockquote{
+        padding-top: 40px;
+    }
+
+    .dot blockquote p {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .dot blockquote {
+        border-radius: 50%;
+        position: relative;
+        top: 75px;
+    }
+
+    .dot blockquote footer {
+        font-size: .6rem;
+        border-radius: 0%;
+        background: transparent;
+    }
+
+    .dot blockquote footer:before {
+        content: "- ";
+    }
+
+    .sidebar footer {
+        background-color: #bbb;
+        border-radius: 50%;
+        text-align: right;
+        padding-right: 10px;
+        font-size: 0.5rem;
+        font-style: italic;
+    }
+
+    .ad {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .content {
+        grid-column: 2/4;
+        font-size: 1rem;
+    }
+
+
+    .content article {
+        grid-column: 1 / 4;
+        margin: 150px 0 100px 100px;
+    }
+
+    .content article h1 {
+        padding-bottom: 30px;
+        background: linear-gradient(90deg, rgba(241, 12, 9, 1) 0%,
+                             rgba(65, 65, 65, 1) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    /* ------------------index.html sidebar with quotes--------------- */
+    .sidebar {
+        display: initial;
+        grid-column: span 1;
+        margin: 80px 0 80px 0;
+        padding: 0;
+        height: 1000px;
+        /* We fixed height because layout thinks that height is the total
+                       .dot height's items and it left a lot space above */
+    }
+
+    .dot {
+        height: 200px;
+        width: 200px;
+    }
+
+    .dot:nth-child(odd) {
+        margin-left: 120px;
+    }
+
+    .dot:nth-child(odd) blockquote {
+        padding: 0;
+    }
+
+    .dot blockquote p {
+        font-size: 0.6rem;
+    }
+
+    .dot blockquote {
+        top: 30px;
+        right: 0;
+        margin: 10px;
+    }
+
+    #quote2 blockquote {
+        padding-top: 13px;
+     }
+ 
+    #quote4 blockquote {
+       padding-top: 0;
+    }
+
+    #quote6 blockquote {
+        padding-top: 0px;
+     }
+
+    #quote1, blockquote{
+        padding-top: 10px;
+    }
+
+    #quote3  blockquote{
+        padding-top: 10px;
+    }
+
+    #quote5  blockquote{
+        padding-top: 20px;
+    }
+
+    .dot blockquote footer {
+        font-size: .9em;
+    }
+
+    .mob-tab-img {
+        display: none;
+    }
+
+    .dot blockquote p {
+        font-size: 0.8rem;
+    }
+
+    /* ---- sidebar with ads ---- */
+    .ad {
+        display: initial;
+        grid-column: 4 / 5;
+        margin: auto;
+        font-size: 0.7rem;
+    }
+
+    .ad>section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 1px solid #600;
+        padding: 5px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 5px;
+        margin-bottom: 30px;
+    }
+
+    .ad>section:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        box-shadow: 0 10px 20px rgb(198, 113, 113);
+        z-index: 10;
+    }
+
+    .ad > a {
+        text-decoration: none;
+    } 
+
+    .ad img {
+        width: 140px;
+        grid-column: 1;
+        /* center image in ads*/
+        margin: auto;
+    }
+
+    .ad-details {
+        grid-column: 2;
+        text-transform: uppercase;
+        /* this does uppercase letters inside ad frame*/
+        text-wrap: wrap;
+        text-align: left;
+    }
+
+    .ad-details h4 {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    .ad-details ul {
+        padding-left: 10px;
+        list-style-type: none;
+    }
+
+    .ad-details .diamond-list {
+        padding-right: 5px;
+        font-size: 1.1rem;
+        color: #600;
+    }
+}
+
+@media (min-width: 1400px) {
+    .ad>section {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
 }

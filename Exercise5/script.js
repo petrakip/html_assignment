@@ -82,8 +82,14 @@ function clearInputField() {
 }
 
 //--------- Textarea: characters left  --------------
-const chars = document.querySelector("#mytext");
-const charsleft = document.querySelector("#charsLeft");
+ // characters left
+ const chars = document.querySelector("#mytext");
+ const charsleft = document.querySelector("#charsLeft");
+
+ chars.addEventListener("input", (e)=>{
+     charsleft.value = chars.maxLength-chars.value.length + ' have left';
+ })
+
 
 //--------------- Date Validation -------------------
  // Take the current date

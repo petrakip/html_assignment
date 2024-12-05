@@ -3,46 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
     <title>LearnSphere</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <p id="logo"> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i class="fa fa-sign-in" style="font-size:18px"></i>Sign In/Sign Up</a></p>
+        <div class="desktop-logo">
+            <p id="logo"> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i
+                        class="fa fa-sign-in" style="font-size:18px"></i>Sign In/Sign Up</a></p>
+        </div>
+        <div class="mobile-logo">
+            <p> LEARN <i class="fa fa-globe"></i> SPHERE</p>
+        </div>
+        <div class="menuToggle"></div>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
-                    <ul class="submenu1">
-
-                        <li><a href="machine-learning.html">Machine Learning</a>
-                            <ul class="submenu2">
-                                <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
-                                <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
+                <li><a href="index.html" class="ihome"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a></li>
+                <li><a href="categories.html">Categories<b>▼</b></a>
+                    <ul>
+                        <li><a href="machine-learning.html">Machine Learning<b>+</b></a>
+                            <ul>
+                                <li><a href="machine-learning-book.html">Natural Language Processing in Action</a></li>
+                                <li><a href="machine-learning-lectures.html">Python Machine Learning</a></li>
                             </ul>
                         </li>
-
-                        <li><a href="web.html">Web</a>
-                            <ul class="submenu3">
+                        <li><a href="web.html">Web<b>+</b></a>
+                            <ul>
                                 <li><a href="web-book.html">Microservice APIs</a></li>
                                 <li><a href="web-lectures.html">Java Tutorial</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="about-us.html"><i class="	fa fa-info-circle"></i>About Us</a></li>
+                <li><a href="about-us.html" class="iabout"><i class="fa fa-info-circle">&nbsp;</i>About Us</a></li>
+                <li><a href="" class="iregister"><i class="fa fa-sign-in" style="font-size:18px">&nbsp;</i>Sign In/Sign
+                        Up</a></li>
             </ul>
         </nav>
     </header>
 
     <!--Main-->
     <div class="container">
-        <div class="bg-img">
-                  <!-- Sidebar -->
+        <!-- Sidebar -->
         <aside class="sidebar">
             <span class="dot" id="quote1">
                 <blockquote>
@@ -75,20 +83,23 @@
 
             <span class="dot" id="quote5">
                 <blockquote>
-                    <p>"The function of education is to teach one to think intensively and to think critically."</p>
-                    <footer>Martin Luther King Jr.</footer>
+                    <p>"Education is a second sun for humans."</p>
+                    <footer>Plutarch</footer>
                 </blockquote>
             </span>
 
             <span class="dot" id="quote6">
                 <blockquote>
-                    <p>"Education is a second sun for humans."</p>
-                    <footer>Plutarch</footer>
+                    <p>"The function of education is to teach one to think intensively and to think critically."</p>
+                    <footer>Martin Luther King Jr.</footer>
                 </blockquote>
             </span>
         </aside>
 
         <main class="content">
+            <div class="mob-tab-img">
+                <img src="images/mobile-table-home-page.jpg" alt="main image">
+            </div>
             <article>
                 <h1>Your Gateway to Future Skills</h1>
                 <p>Welcome to a world of endless learning opportunities, where every question sparks curiosity, and each
@@ -112,8 +123,69 @@
                 <p id="signature">Keep learning and growing! Warmly, LearnSphere team!</p>
             </article>
         </main>
+
+        <aside class="ad">
+            <section>
+                <a href="#"><img src="images/ads/ad1.png"></a>
+                <span class="ad-details">
+                    <h4>WE TesT.ATHeNS</h4>
+                    <ul>
+                        <li><span class="diamond-list">&#9830;</span>software tetsing conference</li>
+                        <li><span class="diamond-list">&#9830;</span>20 may 2025</li>
+                        <li><span class="diamond-list">&#9830;</span>20 speakers</li>
+                    </ul>
+                </span>
+            </section>
+
+            <section>
+            <a href="#"><img src="images/ads/ad2.jpg"></a>
+                <span class="ad-details">
+                    <h4>Devoxx Greece</h4>
+                    <ul>
+                        <li><span class="diamond-list">&#9830;</span>explore the latest technology advancements</li>
+                        <li><span class="diamond-list">&#9830;</span>10-12 April 2025</li>
+                        <li><span class="diamond-list">&#9830;</span>60+ speakers</li>
+                    </ul>
+                </span>
+            </section>
+
+            <section>
+                <a href="#"><img src="images/ads/ad3.png"></a>
+                <span class="ad-details">
+                    <h4>Programming with Python</h4>
+                    <ul>
+                        <li><span class="diamond-list">&#9830;</span>Advanced topics in python</li>
+                        <li><span class="diamond-list">&#9830;</span>18 february 2025</li>
+                        <li><span class="diamond-list">&#9830;</span>3 months</li>
+                    </ul>
+                </span>
+            </section>
+
+            <section>
+                <a href="#"><img src="images/ads/ad4.jpg"></a>
+                <span class="ad-details">
+                    <h4>AI Summit</h4>
+                    <ul>
+                        <li><span class="diamond-list">&#9830;</span>how AI is transforming the radio and audio
+                            industries</li>
+                        <li><span class="diamond-list">&#9830;</span>9 March 2025</li>
+                        <li><span class="diamond-list">&#9830;</span>Time: 11.00-16.30</li>
+                    </ul>
+                </span>
+            </section>
+            <section>
+                <a href="#"><img src="images/ads/ad5.png"></a>
+                <span class="ad-details">
+                    <h4>Developers:Day</h4>
+                    <ul>
+                        <li><span class="diamond-list">&#9830;</span>join.learn.get hired</li>
+                        <li><span class="diamond-list">&#9830;</span>24 December 2024</li>
+                        <li><span class="diamond-list">&#9830;</span>8 hours</li>
+                    </ul>
+                </span>
+            </section>
+        </aside>
     </div>
-</div>
 
 
     <!-- Footer -->
@@ -121,23 +193,22 @@
         <section id="contact-info">
             <h3>Contact Us</h3>
             <address>
-                <p><i class="fa fa-map-marker" style="font-size:26px;color:#ff312e"></i><a href="address:156 Kifissia Avenue, Marousi,
+                <p><i class="fa fa-map-marker"></i><a href="address:156 Kifissia Avenue, Marousi,
                     15126">156 Kifissia Avenue, Marousi,
-                    15126</a></p>
-                <p><i class="fa fa-phone" style="font-size:26px;color:#ff312e"></i><a href="tel:+302101234567">+30 210
+                        15126</a></p>
+                <p><i class="fa fa-phone"></i><a href="tel:+302101234567">+30 210
                         123 4567</a></p>
-                <p><i class="fa fa-envelope" style="font-size:26px;color:#ff312e"></i><a
-                        href="mailto:eschool@gmail.com">eschool@gmail.com</a></p>
+                <p><i class="fa fa-envelope"></i><a href="mailto:eschool@gmail.com">learnspere@gmail.com</a></p>
             </address>
         </section>
 
         <section id="social-media">
             <h3>Follow Us</h3>
-            <a href=""><i class="fa fa-facebook-f" style="font-size:36px;color:#ff312e"></i></a>
-            <a href=""><i class="fa fa-instagram" style="font-size:36px;color:#ff312e"></i></a>
-            <a href=""><i class="fa fa-twitter" style="font-size:36px;color:#ff312e"></i></a>
-            <a href=""><i class="fa fa-youtube-play" style="font-size:36px;color:#ff312e"></i></a>
-            <a href=""><i class='fa fa-skype' style="font-size:36px;color:#ff312e"></i></a>
+            <a href=""><i class="fa fa-facebook-f"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-youtube-play"></i></a>
+            <a href=""><i class='fa fa-skype'></i></a>
         </section>
 
         <section id="terms-privacy">
@@ -148,7 +219,6 @@
 
         <p>© Copyright 2024-2025</p>
     </footer>
-
 </body>
 
 </html>
