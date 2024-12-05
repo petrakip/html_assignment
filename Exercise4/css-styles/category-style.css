@@ -122,7 +122,6 @@
         display: grid;
         grid-template-columns: 1fr 2fr 2fr 1fr;
         grid-template-rows: repeat(2, 2fr);
-        gap: 10px;
     }
 
     .content-cat {
