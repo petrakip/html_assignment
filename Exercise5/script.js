@@ -86,46 +86,49 @@ function clearInputField() {
  // Set the max attribute of inputdate in current date
  document.getElementById('date').setAttribute('max', today);
 
-//---------- Password Validation -------------
-document.querySelector('#submit').onclick = function() {
-  var password = document.querySelector('#password').value;
-  var confirmPassword = document.querySelector('#confirmPassword').value;
 
-  //--- if password is empty
-  if(password == "") {
-    alert("Password field cannot be empty.");
-  }
-  //--- if passwords do not match
-  else if(password != confirmPassword) {
-    alert("Password do not match try again.");
-    return false;
-  } 
-  //--- if passwords match
-  else if(password == confirmPassword) {
-    return true;
-  }
-}
-
-//---------- Mail Validation -------------
+//--------- Mail Validation in real time ---------
 function validateEmail(email) {
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // mail's pattern
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailPattern.test(email);
 }
 
 const emailInput = document.getElementById('email');
-const messageElement = document.getElementById('message');
+const emailMessageElement = document.getElementById('emailMessage');
 
 emailInput.addEventListener('input', function() {
   const emailValue = emailInput.value;
 
   if (emailValue === "") {
-      messageElement.textContent = ""; // Clear Message
-      messageElement.className = "message";
+      emailMessageElement.textContent = ""; // Clear message
+      emailMessageElement.className = "message";
   } else if (validateEmail(emailValue)) {
-      messageElement.textContent = "Valid email!";
-      messageElement.className = "message success";
+      emailMessageElement.textContent = "Valid email!";
+      emailMessageElement.className = "message success";
   } else {
-      messageElement.textContent = "Invalid email.";
-      messageElement.className = "message error";
+      emailMessageElement.textContent = "Invalid email.";
+      emailMessageElement.className = "message error";
+  }
+});
+
+
+//--------- Password Validation in real time ---------
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+const passwordMessageElement = document.getElementById('passwordMessage');
+
+confirmPasswordInput.addEventListener('input', function() {
+  const passwordValue = passwordInput.value;
+  const confirmPasswordValue = confirmPasswordInput.value;
+
+  if (confirmPasswordValue === "") {
+      passwordMessageElement.textContent = ""; // Clear message
+      passwordMessageElement.className = "message";
+  } else if (passwordValue === confirmPasswordValue) {
+      passwordMessageElement.textContent = "Passwords match!";
+      passwordMessageElement.className = "message success";
+  } else {
+      passwordMessageElement.textContent = "Passwords do not match.";
+      passwordMessageElement.className = "message error";
   }
 });
