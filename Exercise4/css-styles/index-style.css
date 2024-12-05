@@ -1,3 +1,13 @@
+@font-face {
+    font-family: FontdinerSwanky;
+    src: url(../fonts/FontdinerSwanky-Regular.ttf);
+}
+
+@font-face {
+    font-family: DeliusSwashCaps;
+    src: url(../fonts/DeliusSwashCaps-Regular.ttf);
+}
+
 /* Mobile and Small Tablet */
 .content {
     display: block;
@@ -48,7 +58,8 @@
 
 
 .content>article>p::first-letter {
-    font-size: 200%;
+    font-size: 250%;
+    font-family: FontdinerSwanky;
 }
 
 #signature {
@@ -166,6 +177,7 @@ main article a {
         position: relative;
         left: 50px;
         box-shadow: 3px 10px 10px 2px #000;
+        font-family: DeliusSwashCaps;
     }
 
     .dot:nth-child(even) {

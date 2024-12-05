@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>Fill in Form</title>
 </head>
@@ -22,7 +23,7 @@
             <p>The required fields has '*' at the left side of field's name.</p>
         </details>
 
-        <form id="myForm" method="post" onsubmit="return(isFormValid())">
+        <form id="myForm" method="post">
 
             <div class="form-content">
                 <!-- Personal Information -->
@@ -33,11 +34,11 @@
 
                         <label for="name">*Name: </label>
                         <input id="name" type="text" name="name" autofocus required maxlength="30"
-                            placeholder="e.g. Nick" pattern="[A-Za-z]{3,}"></input><br> <!-- At least 3 letters -->
+                            placeholder="e.g. Nick" pattern="[A-Za-zΑ-Ωα-ω]{3,}"></input><br> <!-- At least 3 letters -->
 
                         <label for="surname">*Surname: </label>
                         <input id="surname" type="text" name="surname" required maxlength="30"
-                            placeholder="e.g. Morris" pattern="[A-Za-z]{3,}"></input><br>
+                            placeholder="e.g. Morris" pattern="[A-Za-zΑ-Ωα-ω]{3,}"></input><br>
 
                         <label for="date">*Date of dirth: </label>
                         <input type="date" id="date" name="date"><br>
@@ -62,18 +63,18 @@
                         <legend>Residence</legend>
                         <label for="address">*Address:</label>
                         <input id="address" type="text" maxlength="30" required name="address"
-                            placeholder="e.g. Dilou 12"><br>
+                            placeholder="e.g. Dilou 12" required><br>
                         <label for="city">*City:</label>
-                        <input list="cities" name="cities" placeholder="Athens" required>
+                        <input list="cities" name="cities" placeholder="--Select--" required>
                         <datalist id="cities">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist><br>
-                        <label for="postcode">*Postcode:</label>
+                        <label for="postcode">Postcode:</label>
                         <input id="postcode" type="number" name="postcode" min="10000" max="99999"
                             placeholder="11256"><br>
 
                         <label for="region">*Region:</label>
-                        <input list="regions" name="regions" placeholder="Attiki" required>
+                        <input list="regions" name="regions" placeholder="--Select--" required>
                         <datalist id="regions">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist>
@@ -90,6 +91,8 @@
                         <label for="email">*E-mail: </label>
                         <input id="email" type="email" name="email" required maxlength="40"
                             placeholder="e.g. other@domain.name"></input><br>
+                            
+                            
 
                         <label for="phone1">*Cell phone: </label>
                         <input id="phone1" type="tel" name="phone" placeholder="6901234567"
@@ -109,17 +112,17 @@
                         <legend>User Registration</legend>
 
                         <label for="username">*Username:</label>
-                        <input type="text" id="username" name="username" required placeholder="e.g nick2000"><br>
+                        <input type="text" id="username" name="username" required placeholder="e.g nick2000" maxlength="20"><br>
 
                         <label for="pass1">*Password:</label>
-                        <div class="tooltip"><input type="password" id="pass1" name="pass1" required
+                        <div class="tooltip"><input type="password" id="password" name="password" required
                                 placeholder="password" pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
                             <!-- password with 6 characters at least (number&letter) -->
                             <span class="passwordText">The password must be at least 6 characters long and include at
                                 least one number and one letter.</span>
                         </div><br>
                         <label for="pass2">*Confirm password:</label>
-                        <div class="tooltip"><input type="password" id="pass2" name="pass2" required placeholder="repeat password"
+                        <div class="tooltip"><input type="password" id="confirmPassword" name="confirmPassword" required placeholder="repeat password"
                             pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
                             <span class="passwordText">[REPEAT PASSWORD:] at least 6 characters long and include at
                                 least one number and one letter.</span>
@@ -131,6 +134,11 @@
                 <div class="questionnaire">
                     <fieldset>
                         <legend>Questionnaire</legend>
+
+                        <details class="question-field">
+                            <summary>Optional</summary>
+                            <p>This questionnaire is not mandatory!</p>
+                        </details>
 
                         <ol>
                             <li>What is the highest level of education you have completed?</li>
@@ -281,7 +289,7 @@
                         <details>
                             <summary>*Terms and Conditions</p>
                             </summary>
-                            <p>Read the terms and conditions <a href="">here</a>
+                            <p>Read the terms and conditions <a href="#">here.</a>
                         </details>
 
                         <input type="checkbox" id="updates_choice" name="updates_choice" value="updates" required>
@@ -299,7 +307,6 @@
 
             <div class="form-buttons">
                 <input id="submit" type="submit" value="Submit">
-                <p id="validation_message"></p>
             </div>
         </form>
     </div>
