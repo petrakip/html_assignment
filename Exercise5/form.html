@@ -90,10 +90,9 @@
 
                         <label for="email">*E-mail: </label>
                         <input id="email" type="email" name="email" required maxlength="40"
-                            placeholder="e.g. other@domain.name"></input><br>
+                            placeholder="e.g. other@domain.name"></input>
+                            <p id="emailMessage" class="message"></p><br>
                             
-                            
-
                         <label for="phone1">*Cell phone: </label>
                         <input id="phone1" type="tel" name="phone" placeholder="6901234567"
                             pattern="69[0-9]{1}[0-9]{3}[0-9]{4}" required></input><br>
@@ -127,6 +126,7 @@
                             <span class="passwordText">[REPEAT PASSWORD:] at least 6 characters long and include at
                                 least one number and one letter.</span>
                         </div>
+                        <p id="passwordMessage" class="message"></p>
                     </fieldset>
                 </div>
 
