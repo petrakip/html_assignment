@@ -3,6 +3,7 @@
 @import "css-styles/index-style.css";
 @import "css-styles/sub-category-style.css";
 @import "css-styles/category-style.css";
+@import "css-styles/lectures.css";
 
 /* --------- almost common styles ----------*/
 header {
@@ -30,7 +31,7 @@ body {
 }
 
 /* Header's Style */
-header>h1 {
+header > h1 {
     text-align: right;
     float: right;
 }
@@ -54,16 +55,16 @@ header>h1 {
     margin: 20px;
 }
 
-#contact-info>address>p>a {
+#contact-info > address > p > a {
     color: #fffffa;
     text-decoration: none;
 }
 
-#contact-info>address>p>a:active {
+#contact-info > address > p > a:active {
     color: #ff312e;
 }
 
-#contact-info>address>p>a:hover {
+#contact-info > address > p > a:hover {
     text-decoration: underline;
 }
 
@@ -91,7 +92,7 @@ header>h1 {
 }
 
 @media screen and (max-width: 600px) {
-    #social-media>i {
+    #social-media > i {
         display: flex;
     }
 }
@@ -110,13 +111,13 @@ header>h1 {
     color: #ff312e;
 }
 
-.footer-container>p {
+.footer-container > p {
     color: white;
     text-align: center;
     grid-column: 2;
 }
 
-.footer-container>section>h3 {
+.footer-container > section > h3 {
     padding-bottom: 10px;
 }
 
@@ -239,19 +240,19 @@ i {
     left: 0;
 }
 
-li:hover>.submenu1 {
+li:hover > .submenu1 {
     display: block;
     margin: 0;
 }
 
-.submenu1 li:hover>.submenu2 {
+.submenu1 li:hover > .submenu2 {
     display: block;
     left: 100%;
     /* The third layer should appear on the right */
     top: 0;
 }
 
-.submenu1 li:hover>.submenu3 {
+.submenu1 li:hover > .submenu3 {
     display: block;
     left: 100%;
     /* The third layer should appear on the right */
