@@ -63,25 +63,13 @@ greekCities.forEach(city => {
     citySelect.appendChild(option);
 });
 
-//--------------- Form Validation -------------------
-function isFormValid() {
-    const inpObj = document.getElementById("submit");
-    if (!inpObj.checkValidity()) {
-      document.getElementById("validation_message").innerHTML = inpObj.validationMessage;
-      return false;
-    } else {
-      document.getElementById("validation_message").innerHTML = "The form has sumbitted!";
-      return true;
-    } 
-  } 
-
 //--------------- Form reset -----------------------
 // Clear all fields in form
 function clearInputField() {
   document.getElementById('myForm').reset();
 }
 
-//--------- Textarea: characters left  --------------
+//--------- Textarea: characters left Validation --------------
  // characters left
  const chars = document.querySelector("#mytext");
  const charsleft = document.querySelector("#charsLeft");
@@ -98,24 +86,22 @@ function clearInputField() {
  // Set the max attribute of inputdate in current date
  document.getElementById('date').setAttribute('max', today);
 
-//---------- Check if password are the same -------------
-  document.getElementById('passwordForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Cancel the form if don't pass check
-  
-  const password = document.getElementById('password').value;
-  const confirmPassword = document.getElementById('confirmPassword').value;
-  const messageElement = document.getElementById('message');
-  
-  // Compare two password
-  if (password !== confirmPassword) {
-    messageElement.style.display = 'block';
-    messageElement.textContent = 'Passwords do not match!';
-  } else if (password.length < 6) {
-    messageElement.style.display = 'block';
-    messageElement.textContent = 'The password must have 6 length at least.';
-  } else {
-    messageElement.style.display = 'block';
-    messageElement.textContent = 'The form was submitted successfully!';
-    messageElement.className = 'success';
+//---------- Password Validation -------------
+document.querySelector('#submit').onclick = function() {
+  var password = document.querySelector('#password').value;
+  var confirmPassword = document.querySelector('#confirmPassword').value;
+
+  //--- if password is empty
+  if(password == "") {
+    alert("Password field cannot be empty.");
   }
-});
+  //--- if passwords do not match
+  else if(password != confirmPassword) {
+    alert("Password do not match try again.");
+    return false;
+  } 
+  //--- if passwords match
+  else if(password == confirmPassword) {
+    return true;
+  }
+}

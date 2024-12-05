@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
     <title>Fill in Form</title>
 </head>
@@ -22,7 +23,7 @@
             <p>The required fields has '*' at the left side of field's name.</p>
         </details>
 
-        <form id="myForm" method="post" onsubmit="return(isFormValid())">
+        <form id="myForm" method="post">
 
             <div class="form-content">
                 <!-- Personal Information -->
@@ -62,13 +63,13 @@
                         <legend>Residence</legend>
                         <label for="address">*Address:</label>
                         <input id="address" type="text" maxlength="30" required name="address"
-                            placeholder="e.g. Dilou 12"><br>
+                            placeholder="e.g. Dilou 12" required><br>
                         <label for="city">*City:</label>
                         <input list="cities" name="cities" placeholder="--Select--" required>
                         <datalist id="cities">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist><br>
-                        <label for="postcode">*Postcode:</label>
+                        <label for="postcode">Postcode:</label>
                         <input id="postcode" type="number" name="postcode" min="10000" max="99999"
                             placeholder="11256"><br>
 
@@ -90,6 +91,8 @@
                         <label for="email">*E-mail: </label>
                         <input id="email" type="email" name="email" required maxlength="40"
                             placeholder="e.g. other@domain.name"></input><br>
+                            
+                            
 
                         <label for="phone1">*Cell phone: </label>
                         <input id="phone1" type="tel" name="phone" placeholder="6901234567"
@@ -109,7 +112,7 @@
                         <legend>User Registration</legend>
 
                         <label for="username">*Username:</label>
-                        <input type="text" id="username" name="username" required placeholder="e.g nick2000"><br>
+                        <input type="text" id="username" name="username" required placeholder="e.g nick2000" maxlength="20"><br>
 
                         <label for="pass1">*Password:</label>
                         <div class="tooltip"><input type="password" id="password" name="password" required
@@ -131,6 +134,11 @@
                 <div class="questionnaire">
                     <fieldset>
                         <legend>Questionnaire</legend>
+
+                        <details class="question-field">
+                            <summary>Optional</summary>
+                            <p>This questionnaire is not mandatory!</p>
+                        </details>
 
                         <ol>
                             <li>What is the highest level of education you have completed?</li>
@@ -281,7 +289,7 @@
                         <details>
                             <summary>*Terms and Conditions</p>
                             </summary>
-                            <p>Read the terms and conditions <a href="">here</a>
+                            <p>Read the terms and conditions <a href="#">here.</a>
                         </details>
 
                         <input type="checkbox" id="updates_choice" name="updates_choice" value="updates" required>
@@ -299,7 +307,6 @@
 
             <div class="form-buttons">
                 <input id="submit" type="submit" value="Submit">
-                <p id="validation_message"></p>
             </div>
         </form>
     </div>
