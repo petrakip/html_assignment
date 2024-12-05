@@ -217,6 +217,21 @@ visibility: visible;
 opacity: 1;
 }
 
+.message {
+    display: none;
+    text-align: end;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.error {
+    display: initial;
+    color: red;
+}
+.success {
+    display: initial;
+    color: green;
+}
+
 @media (min-width: 900px) {
     body {
         display: grid;
@@ -330,5 +345,9 @@ opacity: 1;
     /* Tooltip container for password' message */
 .tooltip { 
     font-size: 1em; 
+ }
+
+ .message {
+    grid-column: 2;
  }
 }

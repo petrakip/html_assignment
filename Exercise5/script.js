@@ -105,3 +105,27 @@ document.querySelector('#submit').onclick = function() {
     return true;
   }
 }
+
+//---------- Mail Validation -------------
+function validateEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // mail's pattern
+  return emailPattern.test(email);
+}
+
+const emailInput = document.getElementById('email');
+const messageElement = document.getElementById('message');
+
+emailInput.addEventListener('input', function() {
+  const emailValue = emailInput.value;
+
+  if (emailValue === "") {
+      messageElement.textContent = ""; // Clear Message
+      messageElement.className = "message";
+  } else if (validateEmail(emailValue)) {
+      messageElement.textContent = "Valid email!";
+      messageElement.className = "message success";
+  } else {
+      messageElement.textContent = "Invalid email.";
+      messageElement.className = "message error";
+  }
+});
