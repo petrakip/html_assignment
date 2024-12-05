@@ -12,6 +12,7 @@
 }
 
 .tutorial-video {
+    max-width: 100%;
     object-fit: cover;
     position: relative;
     transition: 0.5s;
