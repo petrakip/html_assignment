@@ -97,3 +97,25 @@ function clearInputField() {
         
  // Set the max attribute of inputdate in current date
  document.getElementById('date').setAttribute('max', today);
+
+//---------- Check if password are the same -------------
+  document.getElementById('passwordForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Cancel the form if don't pass check
+  
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
+  const messageElement = document.getElementById('message');
+  
+  // Compare two password
+  if (password !== confirmPassword) {
+    messageElement.style.display = 'block';
+    messageElement.textContent = 'Passwords do not match!';
+  } else if (password.length < 6) {
+    messageElement.style.display = 'block';
+    messageElement.textContent = 'The password must have 6 length at least.';
+  } else {
+    messageElement.style.display = 'block';
+    messageElement.textContent = 'The form was submitted successfully!';
+    messageElement.className = 'success';
+  }
+});

@@ -33,11 +33,11 @@
 
                         <label for="name">*Name: </label>
                         <input id="name" type="text" name="name" autofocus required maxlength="30"
-                            placeholder="e.g. Nick" pattern="[A-Za-z]{3,}"></input><br> <!-- At least 3 letters -->
+                            placeholder="e.g. Nick" pattern="[A-Za-zΑ-Ωα-ω]{3,}"></input><br> <!-- At least 3 letters -->
 
                         <label for="surname">*Surname: </label>
                         <input id="surname" type="text" name="surname" required maxlength="30"
-                            placeholder="e.g. Morris" pattern="[A-Za-z]{3,}"></input><br>
+                            placeholder="e.g. Morris" pattern="[A-Za-zΑ-Ωα-ω]{3,}"></input><br>
 
                         <label for="date">*Date of dirth: </label>
                         <input type="date" id="date" name="date"><br>
@@ -64,7 +64,7 @@
                         <input id="address" type="text" maxlength="30" required name="address"
                             placeholder="e.g. Dilou 12"><br>
                         <label for="city">*City:</label>
-                        <input list="cities" name="cities" placeholder="Athens" required>
+                        <input list="cities" name="cities" placeholder="--Select--" required>
                         <datalist id="cities">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist><br>
@@ -73,7 +73,7 @@
                             placeholder="11256"><br>
 
                         <label for="region">*Region:</label>
-                        <input list="regions" name="regions" placeholder="Attiki" required>
+                        <input list="regions" name="regions" placeholder="--Select--" required>
                         <datalist id="regions">
                             <!-- Options will be added dynamically by JavaScript -->
                         </datalist>
@@ -112,14 +112,14 @@
                         <input type="text" id="username" name="username" required placeholder="e.g nick2000"><br>
 
                         <label for="pass1">*Password:</label>
-                        <div class="tooltip"><input type="password" id="pass1" name="pass1" required
+                        <div class="tooltip"><input type="password" id="password" name="password" required
                                 placeholder="password" pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
                             <!-- password with 6 characters at least (number&letter) -->
                             <span class="passwordText">The password must be at least 6 characters long and include at
                                 least one number and one letter.</span>
                         </div><br>
                         <label for="pass2">*Confirm password:</label>
-                        <div class="tooltip"><input type="password" id="pass2" name="pass2" required placeholder="repeat password"
+                        <div class="tooltip"><input type="password" id="confirmPassword" name="confirmPassword" required placeholder="repeat password"
                             pattern="^(?=[^0-9]*[0-9])(?=[^a-z]*[a-z]).{6,}$">
                             <span class="passwordText">[REPEAT PASSWORD:] at least 6 characters long and include at
                                 least one number and one letter.</span>

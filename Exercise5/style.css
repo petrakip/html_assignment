@@ -116,6 +116,11 @@ form {
     padding-bottom: 47px;
 }
 
+.rules details p {
+    text-wrap: wrap;
+    padding-left: 20px;
+}
+
 .form-buttons #reset,
 .form-buttons #submit {
     width: 100px;
@@ -181,10 +186,6 @@ fieldset ol li {
     color: rgb(71, 4, 4);
 }
 
-@media only screen and (min-width: 1024px) {
-
-}
-
 /* Tooltip container for password' message */
 .tooltip {
     position: relative;
@@ -235,3 +236,8 @@ border-color: #555 transparent transparent transparent;
 visibility: visible;
 opacity: 1;
   }
+
+@media (min-width: 1024px) {
+
+}
+  
