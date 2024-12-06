@@ -378,139 +378,145 @@
                 </div>
                 <div class="section-desc">
 
-                <h3>Learning and Predicting</h3>
+                    <h3>Learning and Predicting</h3>
 
-                <p>This section explains how to build and train a machine learning model using the Decision Tree
-                    algorithm,
-                    implemented in the Scikit-learn library. The lecture demonstrates importing the
-                    DecisionTreeClassifier
-                    class, creating a model instance, and training it using the .fit() method with input (X) and
-                    output
-                    (y)
-                    datasets. The model is then used to make predictions, such as determining music preferences
-                    for a
-                    21-year-old male and a 22-year-old female, based on the provided patterns in the dataset.
-                    The
-                    predictions
-                    are successful, but the lecture emphasizes the importance of evaluating model accuracy and
-                    making
-                    adjustments if needed, which will be covered in the next lecture.</p>
+                    <p>This section explains how to build and train a machine learning model using the Decision Tree
+                        algorithm,
+                        implemented in the Scikit-learn library. The lecture demonstrates importing the
+                        DecisionTreeClassifier
+                        class, creating a model instance, and training it using the .fit() method with input (X) and
+                        output
+                        (y)
+                        datasets. The model is then used to make predictions, such as determining music preferences
+                        for a
+                        21-year-old male and a 22-year-old female, based on the provided patterns in the dataset.
+                        The
+                        predictions
+                        are successful, but the lecture emphasizes the importance of evaluating model accuracy and
+                        making
+                        adjustments if needed, which will be covered in the next lecture.</p>
                 </div>
             </a>
         </div>
 
 
         <div id="part9" class="video-card">
-            <div class="tutorial-video">
+            <a href="https://www.youtube.com/watch?v=7eh4d6sabA0&start=2000" target="_blank">
+                <div class="tutorial-video">
 
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/7eh4d6sabA0?si=5_7yX8y1io4M7xMc&amp;start=2000"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/7eh4d6sabA0?si=5_7yX8y1io4M7xMc&amp;start=2000"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <div class="section-desc">
+                <div class="section-desc">
 
-            <h3>Calculating the Accuracy</h3>
+                    <h3>Calculating the Accuracy</h3>
 
-            <p>This section focuses on evaluating the accuracy of a machine learning model by splitting the
-                dataset
-                into
-                training and testing sets using Scikit-learn's train_test_split function. Typically, 70–80%
-                of the
-                data
-                is
-                used for training, and 20–30% is reserved for testing. The model is trained with the
-                training set
-                and
-                tested
-                using the testing set. The accuracy_score function from Scikit-learn is used to compare
-                predictions
-                against
-                actual values, producing a score between 0 and 1. The lecture demonstrates how insufficient
-                training
-                data or
-                unclean datasets can negatively impact accuracy and emphasizes the importance of providing
-                ample,
-                high-quality data for optimal model performance. The variability in results due to random
-                data
-                splitting
-                is
-                also highlighted.</p>
-            </div>
+                    <p>This section focuses on evaluating the accuracy of a machine learning model by splitting the
+                        dataset
+                        into
+                        training and testing sets using Scikit-learn's train_test_split function. Typically, 70–80%
+                        of the
+                        data
+                        is
+                        used for training, and 20–30% is reserved for testing. The model is trained with the
+                        training set
+                        and
+                        tested
+                        using the testing set. The accuracy_score function from Scikit-learn is used to compare
+                        predictions
+                        against
+                        actual values, producing a score between 0 and 1. The lecture demonstrates how insufficient
+                        training
+                        data or
+                        unclean datasets can negatively impact accuracy and emphasizes the importance of providing
+                        ample,
+                        high-quality data for optimal model performance. The variability in results due to random
+                        data
+                        splitting
+                        is
+                        also highlighted.</p>
+                </div>
+            </a>
         </div>
 
         <div id="part10" class="video-card">
-            <div class="tutorial-video">
+            <a href="https://www.youtube.com/watch?v=7eh4d6sabA0&start=2381" target="_blank">
+                <div class="tutorial-video">
 
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/7eh4d6sabA0?si=7iWq1ZmLe9lCF_uk&amp;start=2381"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/7eh4d6sabA0?si=7iWq1ZmLe9lCF_uk&amp;start=2381"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <div class="section-desc">
+                <div class="section-desc">
 
-            <h3>Persisting Models</h3>
+                    <h3>Persisting Models</h3>
 
-            <p>This section introduces the concept of model persistence, which allows trained models to be
-                saved and
-                reused
-                without retraining. Training a model every time predictions are needed can be
-                time-consuming,
-                especially
-                with large datasets. Using Scikit-learn's joblib module, the trained model is saved to a
-                file with
-                the
-                dump
-                method. The saved model can later be loaded using the load method to make predictions
-                without
-                retraining.
-                This approach is efficient and practical for real-world applications, where training models
-                on large
-                datasets might take significant time. The lecture provides a step-by-step demonstration of
-                saving
-                and
-                loading a model, emphasizing the importance of persistence in machine learning
-                workflows.</p>
-            </div>
+                    <p>This section introduces the concept of model persistence, which allows trained models to be
+                        saved and
+                        reused
+                        without retraining. Training a model every time predictions are needed can be
+                        time-consuming,
+                        especially
+                        with large datasets. Using Scikit-learn's joblib module, the trained model is saved to a
+                        file with
+                        the
+                        dump
+                        method. The saved model can later be loaded using the load method to make predictions
+                        without
+                        retraining.
+                        This approach is efficient and practical for real-world applications, where training models
+                        on large
+                        datasets might take significant time. The lecture provides a step-by-step demonstration of
+                        saving
+                        and
+                        loading a model, emphasizing the importance of persistence in machine learning
+                        workflows.</p>
+                </div>
+            </a>
         </div>
 
         <div id="part11" class="video-card">
-            <div class="tutorial-video">
+            <a href="https://www.youtube.com/watch?v=7eh4d6sabA0&start=2575" target="_blank">
+                <div class="tutorial-video">
 
-            <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/7eh4d6sabA0?si=iSnZdxfVuVsugOcI&amp;start=2575"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+                    <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/7eh4d6sabA0?si=iSnZdxfVuVsugOcI&amp;start=2575"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <div class="section-desc">
-            <h3>Persisting Models</h3>
+                <div class="section-desc">
+                    <h3>Persisting Models</h3>
 
-            <p>This section demonstrates how to visualize a trained Decision Tree model to understand its
-                decision-making
-                process. Using Scikit-learn's tree.export_graphviz method, the trained model is exported to
-                a .dot
-                file,
-                a
-                graph description format. The visualization is achieved through a VS Code extension that
-                renders the
-                decision tree as a binary tree with conditions at each node. Each condition splits the data,
-                guiding
-                predictions based on user features like age and gender. The lecture explains key parameters,
-                such as
-                feature_names for displaying feature rules, class_names for labeling classes, and formatting
-                options
-                like
-                filled and rounded. This visualization provides a clear view of how the model classifies
-                data and
-                makes
-                predictions.</p>
-            </div>
+                    <p>This section demonstrates how to visualize a trained Decision Tree model to understand its
+                        decision-making
+                        process. Using Scikit-learn's tree.export_graphviz method, the trained model is exported to
+                        a .dot
+                        file,
+                        a
+                        graph description format. The visualization is achieved through a VS Code extension that
+                        renders the
+                        decision tree as a binary tree with conditions at each node. Each condition splits the data,
+                        guiding
+                        predictions based on user features like age and gender. The lecture explains key parameters,
+                        such as
+                        feature_names for displaying feature rules, class_names for labeling classes, and formatting
+                        options
+                        like
+                        filled and rounded. This visualization provides a clear view of how the model classifies
+                        data and
+                        makes
+                        predictions.</p>
+                </div>
+            </a>
         </div>
     </div>
 </main>
