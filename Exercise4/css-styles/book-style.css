@@ -178,7 +178,7 @@ hr {
   }
   
   #top-Btn:hover {
-    background-color: none;
+    background-color: transparent;
     color: #ff312e;
   }
 
