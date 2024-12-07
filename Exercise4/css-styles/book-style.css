@@ -5,6 +5,7 @@
     padding: 10px;
 }
 
+/* link path style */
 .breadcrump {
     margin-bottom: 30px;
     padding: 20px;
@@ -22,6 +23,7 @@
     font-size: 20px;
     line-height: 20px;
 }
+/* !link path style */
 
 .pdf-content {
     background-color: #fffffa;
@@ -144,6 +146,7 @@ hr {
     justify-content: center;
 }
 
+/* figure tag style*/
 .content-section>article>figure {
     text-align: center;
     margin-top: 50px;
@@ -153,7 +156,7 @@ hr {
 }
 
 .content-section>article>figure>img {
-    max-width: 300px;
+    max-width: 300px; /* images do not be wider than 300px*/
 }
 
 .content-section>article>figure>figcaption {
@@ -161,7 +164,9 @@ hr {
     font-weight: 600;
     text-wrap: wrap;
 }
+/* !figure tag style*/
 
+/* button, that when it clicked go to the top style */
 #top-Btn {
     display: none;
     position: fixed;
@@ -178,13 +183,14 @@ hr {
   }
   
   #top-Btn:hover {
-    background-color: none;
+    background-color: transparent;
     color: #ff312e;
   }
 
 html {
     scroll-behavior: smooth;
 }
+/* !button, that when it clicked go to the top style */
 
 @media (min-width:768px) {
     .pdf-container {
@@ -230,7 +236,7 @@ html {
     }
 
     .content-section>article>figure>img {
-        max-width: 400px;
+        max-width: 400px; /* images do not be wider than 400px*/
     }
 
     .content-section>article>figure>figcaption {

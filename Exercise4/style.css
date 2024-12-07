@@ -32,7 +32,7 @@ body, .container {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1600px; /* limit the dimensions of the screen ιν 1600px */
     margin-left: auto;
     margin-right: auto;
 }
@@ -210,15 +210,14 @@ header>h1 {
         font-size: 26px;
     }
 }
-
 /* ---------------- !Site's Footer ------------------- */
 
 /* -------- Navigation bar style -------------*/
 header {
-    position: sticky;
+    position: sticky; /* set header in standard position at the top of screen*/
     top: 0;
     width: 100%;
-    min-height: 66 px;
+    min-height: 66px;
     background: black;
     align-items: center;
     z-index: 30;
@@ -234,7 +233,7 @@ header .mobile-logo {
 }
 
 header .desktop-logo {
-    display: initial;
+    display: initial; /* show logo with the bar with gradient effet */
     width: 100%;
 }
 
@@ -345,11 +344,11 @@ header ul li ul li ul {
     }
 
     .desktop {
-        display: none;
+        display: none; /* hide menu for desktop version */
     }
 
     .mobile {
-        display: initial;
+        display: initial; /* show menu for mobile and tablet version */
     }
 
     header {
@@ -359,11 +358,11 @@ header ul li ul li ul {
     }
 
     header .desktop-logo {
-        display: none;
+        display: none; /* hide logo for desktop version */
     }
 
     header .mobile-logo {
-        display: initial;
+        display: initial; /* show logo for mobile and tablet version */
     }
 
     header .mobile-logo p {
