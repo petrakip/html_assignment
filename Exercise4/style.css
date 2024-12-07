@@ -218,7 +218,7 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    min-height: 66 px;
+    min-height: 66px;
     background: black;
     align-items: center;
     z-index: 30;
