@@ -40,7 +40,7 @@
 }
 
 .sidebar {
-    display: none;
+    display: none; /* hidden quotes */
 }
 
 .mob-tab-img {
@@ -155,7 +155,7 @@ main article a {
     }
 
     .sidebar {
-        display: initial;
+        display: initial; /* show quotes */
         grid-column: 1 / 2;
         margin: 60px 0 60px 0;
         padding: 0 80px 0 0;
@@ -195,6 +195,7 @@ main article a {
         padding: 10px 0 0 10px;
     }
 
+    /* dot position relative to the other dots */
     .dot#quote1 {
         top: 0px;
     }
@@ -238,7 +239,9 @@ main article a {
     .dot#quote6 blockquote {
         top: 65px;
     }
+    /* !dot position relative to the other dots */
 
+    /* text position in dots */
     #quote2 blockquote {
         padding-top: 5px;
      }
@@ -262,6 +265,7 @@ main article a {
     #quote5  blockquote{
         padding-top: 40px;
     }
+    /* !text position in dots */
 
     .dot blockquote p {
         font-size: 0.7rem;
@@ -281,7 +285,7 @@ main article a {
     }
 
     .dot blockquote footer:before {
-        content: "- ";
+        content: "- "; /* put '-' before the text*/
     }
 
     .sidebar footer {
@@ -294,7 +298,7 @@ main article a {
     }
 
     .ad {
-        display: none;
+        display: none; /* hidden ads*/
     }
 }
 
@@ -317,6 +321,7 @@ main article a {
         margin: 150px 0 100px 100px;
     }
 
+    /* gradient effet in introduction's title*/
     .content article h1 {
         padding-bottom: 30px;
         background: linear-gradient(90deg, rgba(241, 12, 9, 1) 0%,
@@ -327,7 +332,7 @@ main article a {
 
     /* ------------------index.html sidebar with quotes--------------- */
     .sidebar {
-        display: initial;
+        display: initial; /* show quotes */
         grid-column: span 1;
         margin: 80px 0 80px 0;
         padding: 0;
@@ -397,7 +402,7 @@ main article a {
 
     /* ---- sidebar with ads ---- */
     .ad {
-        display: initial;
+        display: initial; /* show ads */
         grid-column: 4 / 5;
         margin: auto;
         font-size: 0.7rem;

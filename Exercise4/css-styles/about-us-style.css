@@ -10,13 +10,12 @@
     font-size: 1.3rem;
 }
 
+/* put images-avatar at the end of column */
 .about-us .alexandra img {
-
     justify-self: end;
 }
 
 .about-us .panagiota img {
-
     justify-self: end;
     margin-right: 25px;
 }
@@ -84,7 +83,7 @@ h3 {
     .about-us {
         margin: 0px;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr; /* 2 colums */
     }
 
     .about-us h1 {
@@ -130,7 +129,7 @@ h3 {
         margin-bottom: 50px;
         
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
     }
 
     .about-us h1 {
@@ -153,7 +152,7 @@ h3 {
     }
 
     .line {
-        grid-column: 1 / 4;
+        grid-column: 1 / 4; /* horizontal line takes all columns */
     }
 
     .about-us .alexandra img {
