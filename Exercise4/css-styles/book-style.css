@@ -192,6 +192,7 @@ html {
 }
 /* !button, that when it clicked go to the top style */
 
+/* Tablet */
 @media (min-width:768px) {
     .pdf-container {
         display: grid;
@@ -245,6 +246,7 @@ html {
     }
 }
 
+/* Desktop */
 @media (min-width:1024px) {
         .pdf-container {
         display: grid;
