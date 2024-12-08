@@ -129,43 +129,47 @@ main article a {
     color: #600;
 }
 
-
-
-/* Tablet (mostly large) */
-@media (min-width: 900px) {
+/* Desktop */
+@media (min-width: 1024px) {
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .mob-tab-img {
-        grid-column: 2;   
-    }
-
-    .mob-tab-img > img { 
-        width: 90%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 
     .content {
-        padding-right: 50px;
+        grid-column: 2/4;
+        font-size: 1rem;
     }
 
+
+    .content article {
+        grid-column: 1 / 4;
+        margin: 150px 0 100px 100px;
+    }
+
+    /* gradient effet in introduction's title*/
+    .content article h1 {
+        padding-bottom: 30px;
+        background: linear-gradient(90deg, rgba(241, 12, 9, 1) 0%,
+                             rgba(65, 65, 65, 1) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    /* ------------------index.html sidebar with quotes--------------- */
     .sidebar {
         padding: 0 100px 0 0;
     }
 
     .sidebar {
         display: initial; /* show quotes */
-        grid-column: 1 / 2;
-        margin: 60px 0 60px 0;
-        padding: 0 80px 0 0;
-        height: 800px;
+        grid-column: span 1;
+        margin: 80px 0 80px 0;
+        padding: 0;
+        height: 1000px;
         /* We fixed height because layout thinks that height is the total
                        .dot height's items and it left a lot space above */
-    }
-
-    .content {
-        grid-column: 2 / 3;
     }
 
     .dot {
@@ -241,111 +245,6 @@ main article a {
     }
     /* !dot position relative to the other dots */
 
-    /* text position in dots */
-    #quote2 blockquote {
-        padding-top: 5px;
-     }
- 
-    #quote4 blockquote {
-       padding-top: 20px;
-    }
-
-    #quote6 blockquote {
-        padding-top: 10px;
-     }
-
-    #quote1, blockquote{
-        padding-top: 20px;
-    }
-
-    #quote3  blockquote{
-        padding-top: 20px;
-    }
-
-    #quote5  blockquote{
-        padding-top: 40px;
-    }
-    /* !text position in dots */
-
-    .dot blockquote p {
-        font-size: 0.7rem;
-        text-align: center;
-    }
-
-    .dot blockquote {
-        border-radius: 50%;
-        position: relative;
-        top: 75px;
-    }
-
-    .dot blockquote footer {
-        font-size: .6rem;
-        border-radius: 0%;
-        background: transparent;
-    }
-
-    .dot blockquote footer:before {
-        content: "- "; /* put '-' before the text*/
-    }
-
-    .sidebar footer {
-        background-color: #bbb;
-        border-radius: 50%;
-        text-align: right;
-        padding-right: 10px;
-        font-size: 0.5rem;
-        font-style: italic;
-    }
-
-    .ad {
-        display: none; /* hidden ads*/
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-
-    .content {
-        grid-column: 2/4;
-        font-size: 1rem;
-    }
-
-
-    .content article {
-        grid-column: 1 / 4;
-        margin: 150px 0 100px 100px;
-    }
-
-    /* gradient effet in introduction's title*/
-    .content article h1 {
-        padding-bottom: 30px;
-        background: linear-gradient(90deg, rgba(241, 12, 9, 1) 0%,
-                             rgba(65, 65, 65, 1) 100%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
-
-    /* ------------------index.html sidebar with quotes--------------- */
-    .sidebar {
-        display: initial; /* show quotes */
-        grid-column: span 1;
-        margin: 80px 0 80px 0;
-        padding: 0;
-        height: 1000px;
-        /* We fixed height because layout thinks that height is the total
-                       .dot height's items and it left a lot space above */
-    }
-
-    .dot {
-        height: 200px;
-        width: 200px;
-    }
-
     .dot:nth-child(odd) {
         margin-left: 120px;
     }
@@ -365,7 +264,8 @@ main article a {
     }
 
     #quote2 blockquote {
-        padding-top: 13px;
+        padding-top: 0px;
+        margin-top: 0;
      }
  
     #quote4 blockquote {
@@ -398,6 +298,32 @@ main article a {
 
     .dot blockquote p {
         font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .dot blockquote {
+        border-radius: 50%;
+        position: relative;
+        top: 75px;
+    }
+
+    .dot blockquote footer {
+        font-size: .6rem;
+        border-radius: 0%;
+        background: transparent;
+    }
+
+    .dot blockquote footer:before {
+        content: "- "; /* put '-' before the text*/
+    }
+
+    .sidebar footer {
+        background-color: #bbb;
+        border-radius: 50%;
+        text-align: right;
+        padding-right: 10px;
+        font-size: 0.5rem;
+        font-style: italic;
     }
 
     /* ---- sidebar with ads ---- */
