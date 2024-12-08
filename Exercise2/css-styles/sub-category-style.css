@@ -1,0 +1,131 @@
+/* ---------- sub-category style -----------*/
+.general-subcategory h3 {
+    display: inline-block;
+    margin: 15px;
+}
+
+/* -- book's layout */
+.book article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    transition: .3s;
+}
+
+.general-subcategory article {
+    border-radius: 5%;
+}
+
+.general-subcategory article:hover {
+    /* Add a subtle shadow for emphasis */
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    box-shadow: 0 10px 20px rgb(198, 113, 113);
+    
+    background-color: white;
+    z-index: 10;
+}
+
+.book article a {
+    display: block;
+}
+
+.book article img {
+    width: 50%;
+    height: auto;
+    border: 1px solid #515052;
+}
+
+.book .details {
+    float: right;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.book article .details h4 {
+    margin-bottom: 15px;
+}
+
+.book .details p {
+    padding-bottom: 10px;
+}
+
+.book article h4 {
+    font-size: 0.80rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.book article a p {
+    margin: 0px;
+    padding-top: 5px;
+    font-size: 0.75rem;
+}
+
+.book article p strong {
+    color: #515052;
+}
+
+.description {
+    text-align: justify;
+    margin-top: 10px;
+    text-wrap: wrap;
+}
+
+.book .description {
+    margin-top: 15px;
+}
+
+.description p strong {
+    text-decoration: none;
+}
+
+/* lecture's videos style */
+
+.lectures-list article {
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.lectures-list article img {
+    width: 90%;
+    height: auto;
+    margin: 15px;
+}
+
+.lectures-list .details {
+    margin-top: 10px;
+}
+
+.lectures-list article h4 {
+    margin: 5px;
+    font-size: 0.80rem;
+}
+
+.lectures-list article p {
+    margin: 5px 5px;
+    font-size: 0.75rem;
+}
+
+.lectures-list article p strong {
+    color: #515052;
+}
+
+.lectures-list li {
+    font-size: 0.75rem;
+}
+
+.lectures-list article a .stars {
+    margin-left: 5px;
+    color: #ff312e;
+}

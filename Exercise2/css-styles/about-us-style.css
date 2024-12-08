@@ -1,0 +1,80 @@
+/* --------- about-us.html --------- */
+.about-us section {
+    text-align: justify;
+}
+
+.about-us h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+}
+
+/* put images-avatar at the end of column */
+.about-us .alexandra img {
+    justify-self: end;
+}
+
+.about-us .panagiota img {
+    justify-self: end;
+    margin-right: 25px;
+}
+
+.alexandra>img {
+    width: 165px;
+    height: 165px;
+    padding: 8px;
+}
+
+.panagiota>img {
+    width: 150px;
+    height: 150px;
+    margin: 0px;
+    padding: 8px;
+}
+
+.biography {
+    padding-right: 80px;
+}
+
+.biography-email:hover {
+    color: #ff312e;
+    text-decoration: none;
+}
+
+.line>hr {
+    border: 2px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.about-us {
+    display: block;
+}
+
+.about-us section {
+    display: block;
+    font-size: 0.7rem;
+}
+
+.about-us h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+.about-us img {
+    float: left;
+}
+
+.biography {
+    padding: 0px 30px 30px 30px;
+}
+
+.biography h2,
+h3 {
+    margin: 20px 0px;
+    font-size: medium;
+    font-size: 1rem;
+}
+/* --------- !about-us.html --------- */

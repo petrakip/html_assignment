@@ -1,0 +1,370 @@
+@import "css-styles/book-style.css";
+@import "css-styles/about-us-style.css";
+@import "css-styles/index-style.css";
+@import "css-styles/sub-category-style.css";
+@import "css-styles/category-style.css";
+@import "css-styles/lectures.css";
+
+/* --------- almost common styles ----------*/
+header {
+    top: 0;
+    margin: 0px;
+    padding-bottom: 0px;
+    position: sticky;
+    z-index: 1000;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fffffa;
+    min-height: 100vh;
+    font-size: 1em;
+}
+
+body, .container {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1600px; /* limit the dimensions of the screen ιν 1600px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header's Style */
+header>h1 {
+    text-align: right;
+    float: right;
+}
+
+/* ---------------- Site's Footer ------------------- */
+.footer-container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    background-color: #333138;
+    color: #fffffa;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#contact-info {
+    border-bottom: 1px solid #000000;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#contact-info>h3 {
+    margin-bottom: 0px;
+}
+
+#contact-info>address>p>a {
+    color: #fffffa;
+    text-decoration: none;
+}
+
+#contact-info>address>p>a:active {
+    color: #ff312e;
+}
+
+#contact-info>address>p>a:hover {
+    text-decoration: underline;
+}
+
+#social-media {
+    border-bottom: 1px solid #000000;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#social-media a {
+    padding: 0px 10px;
+}
+
+/* Symbol for 'X' social media*/
+.fa.fa-twitter::before {
+    content: "𝕏";
+    font-size: 1.1em;
+}
+
+.footer-container>section>a>i {
+    font-size: 22px;
+    color: #ff312e;
+}
+
+.footer-container>section>address>p>i {
+    font-size: 22px;
+    color: #ff312e;
+    padding-right: 5px;
+}
+
+#terms-privacy p a {
+    text-decoration: none;
+    color: white;
+}
+
+#terms-privacy {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#terms-privacy p a:hover {
+    text-decoration: underline;
+}
+
+#terms-privacy p a:active {
+    color: #ff312e;
+}
+
+.footer-container>p {
+    color: rgb(128, 124, 124);
+    margin-bottom: 0px;
+    padding: 20px;
+}
+
+.footer-container>section>h3 {
+    font-size: 0.8em;
+    color: rgb(228, 228, 196);
+    padding-bottom: 10px;
+}
+/* ---------------- !Site's Footer ------------------- */
+
+/* -------- Navigation bar style -------------*/
+header {
+    position: sticky; /* set header in standard position at the top of screen*/
+    top: 0;
+    width: 100%;
+    min-height: 66px;
+    background: black;
+    align-items: center;
+    z-index: 30;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header .mobile-logo {
+    display: none;
+}
+
+header .desktop-logo {
+    display: initial; /* show logo with the bar with gradient effet */
+    width: 100%;
+}
+
+.register-btn {
+    font-size: 1rem;
+    padding-right: 10px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-btn i {
+    margin: 2px;
+}
+
+.register-btn:hover {
+    color: #ff312e;
+}
+
+#logo {
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 25px 10px 10px 10px;
+    margin: 0px;
+    align-items: center;
+    background: rgb(254, 252, 255);
+    background: linear-gradient(90deg, rgba(254, 252, 255, 1) 0%,
+            /* Gradient effet on the logo */
+            rgba(255, 49, 46, 1) 25%, rgba(0, 0, 0, 1) 50%,
+            rgba(255, 49, 46, 1) 75%, rgba(249, 247, 244, 1) 100%);
+}
+
+#logo i {
+    font-size: 35px;
+}
+
+header nav {
+    display: flex;
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    color: white;
+    font-size: 1.1em;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li a:hover {
+    background-color: rgb(19, 18, 18);
+    color: #ff312e;
+}
+
+header ul li ul {
+    position: absolute;
+    left: 0;
+    width: 220px;
+    background: rgb(53, 53, 53);
+    display: none;
+}
+
+header ul li:hover>ul {
+    display: block;
+}
+
+header ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header ul li ul li ul {
+    top: 0;
+    left: 220px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.desktop {
+    display: none; /* hide menu for desktop version */
+}
+
+.mobile {
+    display: initial; /* show menu for mobile and tablet version */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header .desktop-logo {
+    display: none; /* hide logo for desktop version */
+}
+
+header .mobile-logo {
+    display: initial; /* show logo for mobile and tablet version */
+}
+
+header .mobile-logo p {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    float: left;
+}
+
+header .mobile-logo i {
+    font-size: 1.4em;
+}
+
+header nav ul li .ihome,
+.iabout,
+.iregister {
+    float: left;
+}
+
+header nav {
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    left: 0;
+    background: rgb(0, 0, 0);
+    display: none;
+}
+
+header.active nav {
+    display: initial;
+}
+
+header nav ul li {
+    width: 100%;
+}
+
+header nav ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+
+header nav ul li ul li ul {
+    top: 0;
+    left: 0;
+}
+
+header nav ul li:hover ul li {
+    background: #555758;
+}
+
+header nav ul li ul li:hover ul li {
+    background: #808181;
+}
+
+.menuToggle {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* create first and second lines in menu button */
+.menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: translateY(-12px); /* first line */
+    box-shadow: 0 12px #fff; /* second line */
+}
+
+/* create third line in menu button */
+.menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: translateY(12px); /* third line */
+}
+
+/* When push button, it becomes from 3 lines to "X" */
+header.active .menuToggle::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 #fff;
+
+}
+
+header.active .menuToggle::after {
+    transform: rotate(315deg);
+}
+/* -------- !Navigation bar style -------------*/

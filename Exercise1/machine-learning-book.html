@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Microservice APIs</title>
+    <script src="script.js" defer></script>
+    <title>Natural Language Processing in Action</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <p> LEARN <i class="fa fa-globe"></i> SPHERE <a href="" class="register-btn"><i class="fa fa-sign-in"></i>Sign
-                In/Sign Up</a></p>
+        <p> LEARN <i class="fa fa-globe"></i> SPHERE</p>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
-                    <ul>
+                <li><a href="index.html" class="ihome"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a></li>
 
-                        <li><a href="machine-learning.html">Machine Learning</a>
+                <li class="desktop"><a href="categories.html">Categories<b>▼</b></a>
+                    <ul>
+                        <li><a href="machine-learning.html">Machine Learning<b>+</b></a>
                             <ul>
-                                <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
-                                <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
+                                <li><a href="machine-learning-book.html">Natural Language Processing in Action</a></li>
+                                <li><a href="machine-learning-lectures.html">Python Machine Learning</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="web.html">Web</a>
+                        <li><a href="web.html">Web<b>+</b></a>
                             <ul>
                                 <li><a href="web-book.html">Microservice APIs</a></li>
                                 <li><a href="web-lectures.html">Java Tutorial</a></li>
@@ -34,31 +35,37 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="about-us.html"><i class="fa fa-info-circle"></i>About Us</a></li>
+
+                <li><a href="about-us.html" class="iabout"><i class="fa fa-info-circle">&nbsp;</i>About Us</a></li>
             </ul>
         </nav>
     </header>
 
+    <button onclick="topFunction()" id="top-Btn" title="Go to top"><i class='fa fa-chevron-up' style='font-size:36px'></i></button>
+    
     <!--Main-->
-    <h1><a href="index.html">Home </a> ><a href="categories.html">Categories </a>> <a href="web.html">Web </a> >
-        Microservice APIs</h1>
-    <main class="pdf-content">
-        <section class="book-details">
-            <img src="images/ml-category-images/Lane-2ed-MEAP-HI.png" alt="Book Cover"
-                style="width: 200px; height: auto; margin-right: 20px;">
-            <p><i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
-                <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
-                <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
-                <i class="fa fa-star" style="font-size:22px;color:#ff312e"></i>
-                <i class="fa fa-star-half-full" style="font-size:22px;color:#ff312e"></i> - 150 Reviews
+    <h1>
+        <a href="index.html">Home</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp;<a href="categories.html">Categories</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp;<a href="machine-learning.html">Machine Learning</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp; Natural Language Processing in Action
+    </h1>
+
+    <main>
+        <section>
+            <img src="images/ml-category-images/Lane-2ed-MEAP-HI.png" alt="Book Cover">
+            <p><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-full"></i> - 150 Reviews
             </p>
             <p><strong>Author:</strong>Hobson Lane, Maria Dyshel</p>
             <p><strong>Year:</strong>2024</p>
         </section>
-        <p class="chapter-change"></p>
 
-        <section class="content-section">
-            <article class="summary">
+        <section>
+            <article>
                 <h4>Summary</h4>
 
                 <p>The book <em>"Natural Language Processing in Action"</em> by Hobson Lane and Maria Dyshel provides a
@@ -85,7 +92,7 @@
             </article>
         </section>
 
-        <section class="book-contents">
+        <section>
             <table cellspacing="0" cellpadding="0" class="table-of-contents">
                 <caption>Table of Contents</caption>
                 <colgroup>
@@ -149,7 +156,7 @@
             </table>
         </section>
 
-        <section class="content-section" id="chapter1">
+        <section>
             <h2>Chapter 1</h2>
             <h3>Machines that read and write: a natural language processing overview</h3>
             <article>
@@ -206,9 +213,9 @@
 
         </section>
 
-        <p class="chapter-change">The end of chapter 1</p>
+        <p>The end of chapter 1</p>
 
-        <section class="content-section" id="chapter2">
+        <section>
             <h2>Chapter 2</h2>
             <h3>Tokens of thought (natural language words)</h3>
 
@@ -267,29 +274,19 @@
                 </figure>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 2</p>
-        <section class="content-section" id="chapter3">
+        <p>The end of chapter 2</p>
+        <section>
             <h2>Chapter 3</h2>
             <h3>Math with words (TF-IDF vectors)</h3>
 
-            <figure>
-                <img src="images/ml-category-images/vectors.png">
-                <figcaption>tokenization involves splitting text into smaller units, known as tokens, which can be
-                    individual
-                    words, phrases, sentences, or even characters, depending on the application's requirements.
-                </figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/ml-category-images/vectors2.png">
-                <figcaption>Dependency parsing is a process in natural language processing (NLP) where the syntactic
-                    structure of a sentence is analyzed by identifying relationships between words. Arrows show
-                    dependency,
-                    indicating how each word is syntactically related to another.
-                </figcaption>
-            </figure>
-
             <article>
+                <figure>
+                    <img src="images/ml-category-images/vectors.png">
+                    <figcaption>tokenization involves splitting text into smaller units, known as tokens, which can be
+                        individual
+                        words, phrases, sentences, or even characters, depending on the application's requirements.
+                    </figcaption>
+                </figure>
                 <p>Parsing text into words and n-grams, also known as tokenization, is a fundamental process in
                     natural
                     language processing (NLP) that breaks down text into manageable units for computational
@@ -311,6 +308,14 @@
                     than
                     single
                     words alone.</p>
+                <figure>
+                    <img src="images/ml-category-images/vectors2.png">
+                    <figcaption>Dependency parsing is a process in natural language processing (NLP) where the syntactic
+                        structure of a sentence is analyzed by identifying relationships between words. Arrows show
+                        dependency,
+                        indicating how each word is syntactically related to another.
+                    </figcaption>
+                </figure>
                 <p>Tokenization and n-grams are especially useful in applications like text classification,
                     where they serve as features for models, and in language modeling, where they help predict the
                     next
@@ -329,76 +334,76 @@
                     machine translation.</p>
             </article>
         </section>
+        <p>The end of chapter 3</p>
 
-        <section id="chapter4">
-            <h2>Ch 4</h2>
-            <h3>Math with words (TF-IDF vectors)</h3>
-
-            <figure>
-                <img src="images/ml-category-images/vectors.png">
-                <figcaption>tokenization involves splitting text into smaller units, known as tokens, which can be
-                    individual
-                    words, phrases, sentences, or even characters, depending on the application's requirements.
-                </figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/web-category-images/02-02.png">
-                <figcaption>Dependency parsing is a process in natural language processing (NLP) where the syntactic
-                    structure of a sentence is analyzed by identifying relationships between words. Arrows show
-                    dependency,
-                    indicating how each word is syntactically related to another.
-                </figcaption>
-            </figure>
+        <section>
+            <h2>Chapter 4</h2>
+            <h3>Finding meaning in word counts (semantic analysis)</h3>
 
             <article>
-                <p>Parsing text into words and n-grams, also known as tokenization, is a fundamental process in
-                    natural
-                    language processing (NLP) that breaks down text into manageable units for computational
-                    analysis.
-                    Tokenization involves dividing a sentence or document into individual components called tokens,
-                    which
-                    can be single words, sub-words, or phrases.
-                    For example, in a simple word tokenization approach, the
-                    sentence "Tokenizing text is fun" would be split into ["Tokenizing", "text", "is", "fun"].
-                    Beyond
-                    single
-                    words, n-grams—sequences of "n" words—capture context by grouping words together, creating
-                    bigrams
-                    like
-                    ["Tokenizing text", "text is", "is fun"] or trigrams like ["Tokenizing text is", "text is fun"].
-                    These
-                    n-grams help retain contextual information, allowing NLP systems to understand common phrases,
-                    disambiguate meanings based on word combinations, and capture more nuanced language patterns
-                    than
-                    single
-                    words alone.</p>
-                <p>Tokenization and n-grams are especially useful in applications like text classification,
-                    where they serve as features for models, and in language modeling, where they help predict the
-                    next
-                    word
-                    in a sequence. Despite its simplicity, tokenization presents challenges, such as handling
-                    punctuation,
-                    special characters, and language-specific structures, especially in languages that lack clear
-                    word
-                    boundaries or follow complex grammatical rules. Tools like NLTK, spaCy, and HuggingFace’s
-                    Tokenizers
-                    offer robust solutions for these challenges, enabling tokenization to be performed effectively
-                    across
-                    multiple languages and use cases. By transforming raw text into structured, analyzable units,
-                    tokenization lays the groundwork for a wide range of NLP applications, from sentiment analysis
-                    to
-                    machine translation.</p>
+                <p>In natural language processing, this marks a significant step toward enabling machines to grasp the
+                    meaning of words. Earlier, TF-IDF (term frequency-inverse document frequency) vectors were
+                    introduced as a way to assess the significance of words within a body of text. These vectors allowed
+                    us to determine how important specific words or short phrases (n-grams) are within a document
+                    collection, making them effective tools for searching text based on exact matches. However, TF-IDF
+                    has its limitations—it primarily focuses on word frequencies and does not capture the deeper meaning
+                    or relationships between words. To move beyond counting words, a more nuanced representation that
+                    incorporates meaning is often necessary.</p>
+                <figure>
+                    <img src="images/ml-category-images/ch4_3D.png">
+                    <figcaption>Word embeddings are a numerical representation of words in a continuous vector space,
+                        where
+                        similar words are positioned closer together. Each word is represented as a vector of numbers in
+                        a
+                        multi-dimensional space, capturing semantic relationships and context. The geometric arrangement
+                        of
+                        these vectors reflects the similarity and differences between words.
+                    </figcaption>
+                </figure>
+                <p>Understanding the meaning of words involves creating representations that capture their semantic
+                    relationships. This is achieved through techniques such as word embeddings or topic modeling, which
+                    generate topic vectors that represent the underlying concepts in text. These vectors go beyond
+                    surface-level word counts, encapsulating deeper contextual relationships and meanings. By analyzing
+                    how words co-occur and relate within a large corpus, these models position words, sentences, or even
+                    documents in a multi-dimensional space, where similar ideas are represented closer together. This
+                    allows for a richer and more meaningful analysis of text.</p>
+                <figure>
+                    <img src="images/ml-category-images/confusion-matrix_drawio.png">
+                    <figcaption>A confusion matrix is a valuable tool for evaluating the performance of classification
+                        models, particularly in binary or multi-class problems. It provides a detailed breakdown of the
+                        model's predictions by categorizing them into true positives, true negatives, false positives,
+                        and
+                        false negatives. True positives and true negatives represent correct classifications, while
+                        false
+                        positives and false negatives indicate errors made by the model. This matrix helps assess the
+                        effectiveness of the model by calculating metrics such as accuracy, precision, recall, and
+                        F1-score,
+                        offering insights into areas where the model excels and where it requires improvement.
+                    </figcaption>
+                </figure>
+                <p> Semantic search leverages these topic vectors to retrieve information based on meaning rather than
+                    exact keyword matches. This approach compares the similarity between the vector representation of a
+                    query and those of potential results, identifying content that is contextually relevant. For
+                    example, a search for "climate change solutions" could return documents discussing "renewable
+                    energy" or "carbon offsets," even if those exact phrases were not used in the query. By focusing on
+                    the relationships and context between words, semantic search provides a more intuitive and effective
+                    way to find information.</p>
+
+                <p> As these techniques are applied to massive collections of documents, scalability becomes a critical
+                    factor. Handling large corpora requires optimization techniques such as approximate nearest neighbor
+                    search and distributed processing to maintain efficiency. Pre-trained language models like BERT or
+                    Sentence Transformers, which can be fine-tuned for specific domains, make it possible to generate
+                    meaningful topic vectors at scale. This enables robust applications in areas such as enterprise
+                    search systems, large-scale text analysis, and intelligent recommendation engines, where capturing
+                    and leveraging semantic meaning is essential for navigating vast amounts of data effectively.</p>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 4</p>
+        <p>The end of chapter 4</p>
 
-        <section class="content-section" id="chapter5">
+        <section>
             <h2>Chapter 5</h2>
             <h3>Word brain (neural networks)</h3>
             <article>
-                <p>
-
                 <figure>
                     <img src="images/ml-category-images/perceptron.png">
                     <figcaption>An artificial neuron in a neural network mimics a biological neuron by processing
@@ -466,12 +471,11 @@
 
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 5</p>
+        <p>The end of chapter 5</p>
 
-        <section class="content-section" id="chapter6">
+        <section>
             <h2>Chapter 6</h2>
             <h3>Word brain (neural networks)</h3>
-
 
             <article>
                 <p>
@@ -569,13 +573,12 @@
                 </p>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 6</p>
+        <p>The end of chapter 6</p>
 
 
-        <section class="content-section" id="chapter7">
+        <section>
             <h2>Chapter 7</h2>
             <h3>Finding Kernels of Knowledge in Text with Convolutional Neural Networks (CNNs)</h3>
-
 
             <article>
                 <p>
@@ -661,12 +664,11 @@
                 </p>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 7</p>
+        <p>The end of chapter 7</p>
 
-        <section id="chapter8">
+        <section>
             <h2>Chapter 8</h2>
             <h3>Reduce, Reuse, Recycle Your Words (RNNs and LSTMs)</h3>
-
 
             <article>
                 <p>
@@ -751,12 +753,11 @@
                 </figure>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 8</p>
+        <p>The end of chapter 8</p>
 
-        <section class="content-section" id="chapter9">
+        <section>
             <h2>Chapter 9</h2>
             <h3>Stackable deep learning (Transformers)</h3>
-
 
             <article>
                 <p>
@@ -844,12 +845,11 @@
                 </figure>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 9</p>
+        <p>The end of chapter 9</p>
 
-        <section class="content-section" id="chapter10">
+        <section>
             <h2>Chapter 10</h2>
             <h3>Large Language Models in the real world</h3>
-
 
             <article>
                 <p>
@@ -885,7 +885,6 @@
                             answers.
                         </p>
                     </figcaption>
-
                 </figure>
                 <figure>
                     <img src="images/ml-category-images/llm_survey.png" alt="example">
@@ -912,7 +911,6 @@
                     the
                     model's responses with ethical guidelines, ensuring it behaves responsibly in a variety of
                     situations.</p>
-
 
                 <p> Despite these safeguards, some users attempt to "jailbreak" LLMs, exploiting their flexibility
                     to
@@ -951,12 +949,11 @@
                 </p>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 10</p>
+        <p>The end of chapter 10</p>
 
-        <section class="content-section" id="chapter11">
+        <section>
             <h2>Chapter 11</h2>
             <h3>Information extraction and knowledge graphs (grounding)</h3>
-
 
             <article>
                 <p>
@@ -1057,9 +1054,9 @@
                     unstructured data into structured knowledge is a cornerstone of modern AI applications.</p>
             </article>
         </section>
-        <p class="chapter-change">The end of chapter 11</p>
+        <p>The end of chapter 11</p>
 
-        <section id="chapter12">
+        <section>
             <h2>Chapter 12</h2>
             <h3>Getting Chatty with dialog engines</h3>
 
@@ -1080,7 +1077,7 @@
                     less
                     suitable for dynamic, open-ended conversations.</p>
                 <figure>
-                    <img src="images/ml-category-images/chatbot-flow-diagram.drawio.png">
+                    <img src="images/ml-category-images/chatbot-flow-diagram.drawio.png" alt="flow diagram">
                     <figcaption>
                         <p>
                             The chatbot flow diagram outlines how a chatbot processes user input through Natural
@@ -1165,7 +1162,9 @@
                 </p>
             </article>
         </section>
+        <p>The end of chapter 12</p>
     </main>
+
 
     <!-- Footer -->
     <footer>
@@ -1177,7 +1176,7 @@
                         15126</a></p>
                 <p><i class="fa fa-phone"></i><a href="tel:+302101234567">+30 210
                         123 4567</a></p>
-                <p><i class="fa fa-envelope"></i><a href="mailto:learnsphere@gmail.com">learnsphere@gmail.com</a></p>
+                <p><i class="fa fa-envelope"></i><a href="mailto:eschool@gmail.com">learnspere@gmail.com</a></p>
             </address>
         </section>
 
