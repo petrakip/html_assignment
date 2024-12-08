@@ -1,59 +1,28 @@
+.video-card {
+    height: 50vh;
+    margin: 10px 10px 10px; /* Center the card containing the tutorial */
+    background: rgba(249, 247, 244, 1);
+    position: relative;
+    padding: 10px;
+    border: 1px solid #b4b4bd;
+    transition: 0.3s ease-out; /* transition effect for the description text*/
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+}
 
-.overlay-list ul li a:hover {
-    color: #c84a4a; /* Turns the link red */
-    font-weight: bold;
-}
-.overlay-content h2, .overlay-content p {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
 .tutorial-video {
-    min-height: 0;
-    min-width: 0;
     overflow: hidden;
     object-fit: cover;
     position: relative;
     transition: 0.5s;
 }
 
-.video-card .section-desc h3 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-
-}
-.overlay-list ul, .overlay-content p {
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.overlay-list ul li {
-    margin-bottom: 7px;
-}
-
-/*Mobile*/
-.video-card {
-    height: 50vh;
-    margin: 10px 10px 10px; /* Center horizontally with automatic margins */
-    background: rgba(249, 247, 244, 1);
-    position: relative;
-    grid-column: 1/-1;
-    grid-row: auto; /* Automatically position in the row it appears (optional) */
-    padding: 10px;
-    border: 1px solid #b4b4bd;
-    transition: 0.3s ease-out;/* transition effect for the description text*/
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
-
-}
-
 .description-card {
-    grid-row: auto; /* Automatically position in the row it appears (optional) */
     background-color: rgba(255, 255, 255, 0.98);
     padding: 10px; /* Optional: inner padding for the content */
     border: 1px solid #ccc; /* Optional: border for visibility */
     margin: 20px 10px 20px 20px;
 }
+
 
 .video-card .section-desc {
     color: white;
@@ -75,16 +44,10 @@
     height: 100%;
 }
 
-.lecture-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
+
 .image-box {
-    grid-column: 1 / -1; /* Span entire grid width */
     position: relative;
-    max-width: 95%; /* Adjust width to leave equal space on sides */
-    margin: 0 auto; /* Center horizontally with automatic margins */
+    margin: 0 auto ; /* Center horizontally with automatic margins */
     padding: 0; /* Remove extra padding */
     overflow: hidden; /* Prevent content overflow */
     border-radius: 10px; /* Optional: rounded corners */
@@ -111,7 +74,6 @@
     color: white;
     padding: 15px;
     width: 100%;
-    max-width: none;
     margin-bottom: 10px;
     border-radius: 0 0 10px 10px;
 
@@ -128,12 +90,34 @@
 
 }
 
-
 .overlay-list ul li a {
     text-decoration: none; /* Removes the underline */
     color: white; /* Changes the text color */
 }
 
+.overlay-list ul li a:hover {
+    color: #c84a4a; /* Turns the link red */
+    font-weight: bold; /* Makes the text bold */
+}
 
+.overlay-content h2, .overlay-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
 
+.overlay-list ul, .overlay-content p {
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
+.overlay-list ul li {
+    margin-bottom: 7px;
+}
+
+.video-card .section-desc h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+
+}
