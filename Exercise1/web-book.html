@@ -4,29 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
     <title>Microservice APIs</title>
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        <p> LEARN <i class="fa fa-globe"></i> SPHERE <a href=""><i class="fa fa-sign-in"></i>Sign
-                In/Sign Up</a></p>
+        <p> LEARN <i class="fa fa-globe"></i> SPHERE</p>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-                <li><a href="categories.html"><i class="fa fa-navicon"></i>Categories</a>
-                    <ul>
+                <li><a href="index.html" class="ihome"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a></li>
 
-                        <li><a href="machine-learning.html">Machine Learning</a>
+                <li class="desktop"><a href="categories.html">Categories<b>▼</b></a>
+                    <ul>
+                        <li><a href="machine-learning.html">Machine Learning<b>+</b></a>
                             <ul>
-                                <li><a href="machine-learning-book.html">Machine Learning Book</a></li>
-                                <li><a href="machine-learning-lectures.html">Machine Learning Lecture</a></li>
+                                <li><a href="machine-learning-book.html">Natural Language Processing in Action</a></li>
+                                <li><a href="machine-learning-lectures.html">Python Machine Learning</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="web.html">Web</a>
+                        <li><a href="web.html">Web<b>+</b></a>
                             <ul>
                                 <li><a href="web-book.html">Microservice APIs</a></li>
                                 <li><a href="web-lectures.html">Java Tutorial</a></li>
@@ -34,19 +36,22 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="about-us.html"><i class="fa fa-info-circle"></i>About Us</a></li>
+
+                <li><a href="about-us.html" class="iabout"><i class="fa fa-info-circle">&nbsp;</i>About Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!--Main-->
-
-    <h1><a href="index.html">Home </a> ><a href="categories.html">Categories </a>> <a href="web.html">Web </a> >
-        Microservice APIs</h1>
+    <h1>
+        <a href="index.html">Home</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp;<a href="categories.html">Categories</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp;<a href="web.html">Web</a>&nbsp;
+        <span class="arrow">&#129170;</span>&nbsp;Microservice APIs
+    </h1>
 
     <main>
         <section>
-
             <img src="images/web-book-lecture/micro-APIs_cover.jpg">
             <p><i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -111,12 +116,13 @@
             </article>
         </section>
 
+        <hr>
         <section>
-            <table cellspacing="0" cellpadding="0">
+            <table cellspacing="0" cellpadding="0" class="table-of-contents">
                 <caption>Table of Contents</caption>
                 <colgroup>
-                    <col />
-                    <col />
+                    <col id="chapter-column" />
+                    <col id="description-column" />
                 </colgroup>
                 <tr>
                     <th>Chapter</th>
@@ -181,7 +187,7 @@
             </table>
         </section>
 
-        <section id="chapter1">
+        <section>
             <h3>1. What are microservice APIs?</h3>
 
             <article>
@@ -252,7 +258,7 @@
 
         <p>The end of chapter 1</p>
 
-        <section id="chapter2">
+        <section>
             <h3>2. A basic API implementation</h3>
 
             <article>
@@ -322,7 +328,7 @@
 
         <p>The end of chapter 2</p>
 
-        <section id="chapter3">
+        <section>
             <h3>3. Designing microservices</h3>
 
             <article>
@@ -373,7 +379,7 @@
 
         <p>The end of chapter 3</p>
 
-        <section id="chapter4">
+        <section>
             <h3>4. Principles of REST API design</h3>
 
             <article>
@@ -431,7 +437,7 @@
 
         <p>The end of chapter 4</p>
 
-        <section id="chapter5">
+        <section>
             <h3>5. Documenting REST APIs with OpenAPI</h3>
 
             <article>
@@ -488,7 +494,7 @@
 
         <p>The end of chapter 5</p>
 
-        <section id="chapter6">
+        <section>
             <h3>6. Building REST APIs with Python</h3>
 
             <article>
@@ -554,7 +560,7 @@
 
         <p>The end of chapter 6</p>
 
-        <section id="chapter7">
+        <section>
             <h3>7. Service implementation patterns for microservices</h3>
 
             <article>
@@ -633,7 +639,7 @@
 
         <p>The end of chapter 7</p>
 
-        <section id="chapter8">
+        <section>
             <h3>8. Designing GraphQL APIs</h3>
 
             <article>
@@ -694,7 +700,7 @@
 
         <p>The end of chapter 8</p>
 
-        <section id="chapter9">
+        <section>
             <h3>9. Consuming GraphQL APIs</h3>
 
             <article>
@@ -753,7 +759,7 @@
 
         <p>The end of chapter 9</p>
 
-        <section id="chapter10">
+        <section>
             <h3>10. Building GraphQL APIs with Python</h3>
 
             <article>
@@ -826,7 +832,7 @@
 
         <p>The end of chapter 10</p>
 
-        <section id="chapter11">
+        <section>
             <h3>11. API authorization and authentication</h3>
 
             <article>
@@ -904,7 +910,7 @@
 
         <p>The end of chapter 11</p>
 
-        <section id="chapter12">
+        <section>
             <h3>12. Testing and validating APIs</h3>
 
             <article>
@@ -977,7 +983,7 @@
 
         <p>The end of chapter 12</p>
 
-        <section id="chapter13">
+        <section>
             <h3>13. Dockerizing microservice APIs</h3>
 
             <article>
@@ -1046,7 +1052,7 @@
 
         <p>The end of chapter 13</p>
 
-        <section id="chapter14">
+        <section>
             <h3>14. Deploying microservice APIs with Kubernetes</h3>
 
             <article>
@@ -1120,7 +1126,7 @@
 
         <p>The end of chapter 14</p>
     </main>
-    </div>
+
 
     <!-- Footer -->
     <footer>
@@ -1128,11 +1134,11 @@
             <h3>Contact Us</h3>
             <address>
                 <p><i class="fa fa-map-marker"></i><a href="address:156 Kifissia Avenue, Marousi,
-                    15126">156 Kifissia Avenue, Marousi,
+                15126">156 Kifissia Avenue, Marousi,
                         15126</a></p>
                 <p><i class="fa fa-phone"></i><a href="tel:+302101234567">+30 210
                         123 4567</a></p>
-                <p><i class="fa fa-envelope"></i><a href="mailto:learnsphere@gmail.com">learnsphere@gmail.com</a></p>
+                <p><i class="fa fa-envelope"></i><a href="mailto:eschool@gmail.com">learnspere@gmail.com</a></p>
             </address>
         </section>
 
