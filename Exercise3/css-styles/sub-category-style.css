@@ -129,14 +129,8 @@
     margin-left: 5px;
 }
 
-/* Tablet */
-@media (min-width: 768px) {
-    .details {
-        width: 100%;
-        grid-column: 2;
-        padding: 0px 10px;
-    }
-
+/* desktop */
+@media (min-width: 1024px) {
     .book {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -166,6 +160,12 @@
 
     }
 
+    .details {
+        width: 100%;
+        grid-column: 2;
+        padding: 0px 10px;
+    }
+    
     .book .details {
         float: none;
         width: 100%;
@@ -185,25 +185,6 @@
 
     .lectures-list article {
         margin: 20px;
-    }
-
-    .lectures-list article a {
-        display: block;
-    }
-
-    .lectures-list article img {
-        width: 90%;
-    }
-
-    .lectures-list article a .stars {
-        margin-left: 5px;
-    }
-}
-
-/* desktop */
-@media (min-width: 1024px) {
-    .book {
-        margin: 0 3%;
     }
 
     .lectures-list article a {
