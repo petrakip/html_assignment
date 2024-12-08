@@ -5,11 +5,6 @@
 @import "css-styles/category-style.css";
 @import "css-styles/lectures.css";
 
-@font-face {
-    font-family: Roboto;
-    src: url(fonts/Roboto-Regular.ttf);
-}
-
 /* --------- almost common styles ----------*/
 header {
     top: 0;
@@ -20,7 +15,7 @@ header {
 }
 
 body {
-    font-family: Roboto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #fffffa;
     min-height: 100vh;
     font-size: 1em;
@@ -112,12 +107,6 @@ header>h1 {
     color: white;
 }
 
-@media screen and (max-width: 600px) {
-    #social-media>i {
-        display: flex;
-    }
-}
-
 #terms-privacy {
     text-align: center;
     width: 100%;
@@ -142,73 +131,6 @@ header>h1 {
     font-size: 0.8em;
     color: rgb(228, 228, 196);
     padding-bottom: 10px;
-}
-
-/* Tablet's style */
-@media (min-width: 768px) {
-    .footer-container {
-        font-size: 1rem;
-    }
-
-    .footer-container>section>h3 {
-        font-size: 1.1rem !important;
-    }
-
-    .footer-container>section>a>i {
-        font-size: 28px;
-    }
-
-    .footer-container>section>address>p>i {
-        font-size: 24px;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-    .footer-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        font-size: 1.1rem;
-    }
-
-    .footer-container>section>h3 {
-        padding-bottom: 10px;
-        font-size: 1.3rem !important;
-        color: white;
-    }
-
-    #social-media {
-        border-right: 1px solid #000000;
-        border-bottom: none;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    #contact-info {
-        border-right: 1px solid #000000;
-        border-bottom: none;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    #terms-privacy {
-        margin-top: 20px !important;
-    }
-
-    /* Copyright is center to footer */
-    .footer-container>p {
-        padding-bottom: 20px;
-        grid-column: 2;
-        color: white;
-    }
-
-    .footer-container>section>a>i {
-        font-size: 36px;
-    }
-
-    .footer-container>section>address>p>i {
-        font-size: 26px;
-    }
 }
 /* ---------------- !Site's Footer ------------------- */
 
@@ -323,146 +245,126 @@ header ul li ul li ul {
     left: 220px;
 }
 
-.iregister {
-    display: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .desktop {
-    display: block;
+    display: none; /* hide menu for desktop version */
 }
 
 .mobile {
+    display: initial; /* show menu for mobile and tablet version */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header .desktop-logo {
+    display: none; /* hide logo for desktop version */
+}
+
+header .mobile-logo {
+    display: initial; /* show logo for mobile and tablet version */
+}
+
+header .mobile-logo p {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    float: left;
+}
+
+header .mobile-logo i {
+    font-size: 1.4em;
+}
+
+header nav ul li .ihome,
+.iabout,
+.iregister {
+    float: left;
+}
+
+header nav {
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    left: 0;
+    background: rgb(0, 0, 0);
     display: none;
 }
 
-/* Responsive menu */
-@media (max-width: 1023px) {
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+header.active nav {
+    display: initial;
+}
 
-    .desktop {
-        display: none; /* hide menu for desktop version */
-    }
+header nav ul li {
+    width: 100%;
+}
 
-    .mobile {
-        display: initial; /* show menu for mobile and tablet version */
-    }
+header nav ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
-    }
+header nav ul li ul li ul {
+    top: 0;
+    left: 0;
+}
 
-    header .desktop-logo {
-        display: none; /* hide logo for desktop version */
-    }
+header nav ul li:hover ul li {
+    background: #555758;
+}
 
-    header .mobile-logo {
-        display: initial; /* show logo for mobile and tablet version */
-    }
+header nav ul li ul li:hover ul li {
+    background: #808181;
+}
 
-    header .mobile-logo p {
-        color: white;
-        font-size: 1.3em;
-        font-weight: 600;
-        float: left;
-    }
+.menuToggle {
+    position: relative;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    header .mobile-logo i {
-        font-size: 1.4em;
-    }
+    /* create first and second lines in menu button */
+.menuToggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: translateY(-12px); /* first line */
+    box-shadow: 0 12px #fff; /* second line */
+}
 
-    header nav ul li .ihome,
-    .iabout,
-    .iregister {
-        float: left;
-    }
+/* create third line in menu button */
+.menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: translateY(12px); /* third line */
+}
 
-    .iregister {
-        display: initial;
-        width: 100%;
-    }
+/* When push button, it becomes from 3 lines to "X" */
+header.active .menuToggle::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 #fff;
 
-    header nav {
-        position: absolute;
-        width: 100%;
-        top: 66px;
-        left: 0;
-        background: rgb(0, 0, 0);
-        display: none;
-    }
+}
 
-    header.active nav {
-        display: initial;
-    }
-
-    header nav ul li {
-        width: 100%;
-    }
-
-    header nav ul li ul {
-        position: relative;
-        width: 100%;
-        left: 0;
-    }
-
-    header nav ul li ul li ul {
-        top: 0;
-        left: 0;
-    }
-
-    header nav ul li:hover ul li {
-        background: #555758;
-    }
-
-    header nav ul li ul li:hover ul li {
-        background: #808181;
-    }
-
-    .menuToggle {
-        position: relative;
-        width: 40px;
-        height: 50px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-     /* create first and second lines in menu button */
-    .menuToggle::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: white;
-        transform: translateY(-12px); /* first line */
-        box-shadow: 0 12px #fff; /* second line */
-    }
-
-    /* create third line in menu button */
-    .menuToggle::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background: white;
-        transform: translateY(12px); /* third line */
-    }
-
-    /* When push button, it becomes from 3 lines to "X" */
-    header.active .menuToggle::before {
-        transform: rotate(45deg);
-        box-shadow: 0 0 #fff;
-
-    }
-
-    header.active .menuToggle::after {
-        transform: rotate(315deg);
-    }
+header.active .menuToggle::after {
+    transform: rotate(315deg);
 }
 /* -------- !Navigation bar style -------------*/
