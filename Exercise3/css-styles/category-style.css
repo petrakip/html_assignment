@@ -68,6 +68,49 @@
     color: #600;
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+    .cat-content-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 2% 5% 2%;
+    }
+
+    .card {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .text {
+        place-items: center;
+    }
+
+    .text ul li a {
+        font-size: 0.7rem;
+    }
+
+    .cat-content-container .diamond-list {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        width: 100%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    .card p {
+        float: none;
+    }
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
     .cat-content-container {

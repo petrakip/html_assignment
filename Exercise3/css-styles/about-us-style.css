@@ -78,6 +78,49 @@ h3 {
     font-size: 1rem;
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+    .about-us {
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* 2 colums */
+    }
+
+    .about-us h1 {
+        grid-column: span 2;
+        font-size: 1.5rem;
+    }
+
+    .about-us section {
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .about-us img {
+        grid-column: 1 / 2;
+    }
+
+    .about-us .biography {
+        grid-column: 2 / 3;
+        font-size: 0.9rem;
+    }
+
+    .about-us .biography h2 {
+        font-size: 1.25rem;
+    }
+
+    .about-us .biography h3 {
+        font-size: 1.15rem;
+    }
+
+    .line {
+        grid-column: span 2;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
     .about-us {
