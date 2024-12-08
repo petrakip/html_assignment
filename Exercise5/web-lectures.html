@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Java Tutorial</title>
+</head>
+
+<body>
+   <!-- Header -->
+   <header>
+    <div class="desktop-logo">
+        <p id="logo"> LEARN <i class="fa fa-globe"></i> SPHERE <a href="form/form.html" class="register-btn"><i
+                    class="fa fa-sign-in" style="font-size:18px"></i>Sign In/Sign Up</a></p>
+    </div>
+    <div class="mobile-logo">
+        <p> LEARN <i class="fa fa-globe"></i> SPHERE</p>
+    </div>
+    <div class="menuToggle"></div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="ihome"><i class="fa fa-fw fa-home">&nbsp;</i>Home</a></li>
+
+            <li class="desktop"><a href="categories.html">Categories<b>▼</b></a>
+                <ul>
+                    <li><a href="machine-learning.html">Machine Learning<b>+</b></a>
+                        <ul>
+                            <li><a href="machine-learning-book.html">Natural Language Processing in Action</a></li>
+                            <li><a href="machine-learning-lectures.html">Python Machine Learning</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="web.html">Web<b>+</b></a>
+                        <ul>
+                            <li><a href="web-book.html">Microservice APIs</a></li>
+                            <li><a href="web-lectures.html">Java Tutorial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="mobile"><a href="#">Categories<b>▼</b></a>
+                <ul>
+                    <li><a href="categories.html">Categories Home</a></li>
+
+                    <li><a href="#">Machine Learning<b>+</b></a>
+                        <ul>
+                            <li><a href="machine-learning.html">Machine Learning Home</a></li>
+                            <li><a href="machine-learning-book.html">Natural Language Processing in Action</a></li>
+                            <li><a href="machine-learning-lectures.html">Python Machine Learning</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Web<b>+</b></a>
+                        <ul>
+                            <li><a href="web.html">Web Home</a></li>
+                            <li><a href="web-book.html">Microservice APIs</a></li>
+                            <li><a href="web-lectures.html">Java Tutorial</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="about-us.html" class="iabout"><i class="fa fa-info-circle">&nbsp;</i>About Us</a></li>
+            <li><a href="form/form.html" class="iregister"><i class="fa fa-sign-in" style="font-size:18px">&nbsp;</i>Sign In/Sign
+                    Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <button onclick="topFunction()" id="top-Btn" title="Go to top"><i class='fa fa-chevron-up' style='font-size:36px'></i></button>
+    
+    <!--Main-->
+    <main class="ml-lecture">
+        <div class="lecture-list-container">
+            <section class="intro-box">
+                <div class="lecture-grid-container">
+                    <!-- Image with Overlayed Boxes -->
+                    <div class="image-box">
+                        <img src="images/web-category-images/web_bg_lecture.jpeg" alt="Grid Background Image">
+
+                        <!-- Overlayed Topics Table -->
+                        <div class="overlay-list topics-table">
+                            <ul>
+                                <li><a href="#part1">Anatomy of a Java Program</a></li>
+                                <li><a href="#part2">How Java Code Gets Executed</a></li>
+                                <li><a href="#part3">Types</a></li>
+                                <li><a href="#part4">Variables</a></li>
+                                <li><a href="#part5">Primitive Types</a></li>
+                                <li><a href="#part6">Reference Types</a></li>
+                                <li><a href="#part7">Strings</a></li>
+                                <li><a href="#part8">Arrays</a></li>
+                                <li><a href="#part9">Casting</a></li>
+                                <li><a href="#part10">If Statements</a></li>
+                                <li><a href="#part11">For Loops</a></li>
+                                <li><a href="#part12">While Loops</a></li>
+                                <li><a href="#part13">Switch Statements</a></li>
+                                <li><a href="#part14">Clean Coding</a></li>
+                            </ul>
+                        </div>
+                        <!-- Overlayed Description Card -->
+                        <div class="overlay-content description-card">
+                            <section class="vid-summary">
+                                <h2>Java Tutorial</h2>
+                                <p><strong>Video Creator:</strong>Mosh Hamedani</p>
+                                <p><strong>Year:</strong>2019</p>
+                                <p><strong>Rating:</strong> (4.8/5) - 181 Reviews</p>
+                            </section>
+                            <section class="vid-description">
+                                <p>This Java tutorial video provides a comprehensive introduction to the fundamentals of
+                                    Java programming,
+                                    designed for beginners and intermediate learners. The video starts by explaining the
+                                    basics of setting
+                                    up a Java development environment and walks viewers through the installation of
+                                    essential tools like the
+                                    Java Development Kit (JDK) and an Integrated Development Environment (IDE). From
+                                    there, it covers the
+                                    structure of a simple Java program, giving detailed explanations of key components
+                                    such as classes,
+                                    methods, and the main function, as well as the syntax necessary to write and execute
+                                    code. Viewers are
+                                    guided step-by-step through creating, compiling, and running a Java program, making
+                                    it easy to follow
+                                    along and understand each phase of the process.</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="part1" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=239&si=kClE-zpDp1_RgiGu" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=Bq1-HtDxmaezAUAA"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Anatomy of a Java Program</h3>
+
+                        <p>This section provides an overview of the core structure of a Java program, breaking down each
+                            part of
+                            the
+                            code and its purpose. It introduces elements like the class definition, which is the
+                            blueprint for
+                            objects, and the main method, where program execution begins. You'll learn about essential
+                            syntax,
+                            such
+                            as statements, expressions, and comments, and how these elements work together to create a
+                            functional
+                            Java application. Understanding this foundational structure is crucial for writing,
+                            organizing, and
+                            troubleshooting Java code effectively.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part2" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=989&si=_OgipEjo33nxzhTL" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=0i6tJIju78dGZa6-"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>How Java Code Gets Executed</h3>
+
+                        <p>Java code execution follows a structured and well-defined process. First, the Java source
+                            code is written in .java files and compiled by the Java Compiler (javac) into bytecode,
+                            which is stored in .class files. This bytecode is platform-independent and can be executed
+                            on any system with a Java Virtual Machine (JVM). At runtime, the JVM reads and interprets
+                            the bytecode, converting it into native machine code through Just-In-Time (JIT) compilation
+                            for optimized performance. The execution process also involves memory management via the
+                            JVM's garbage collector and dynamic linking of classes as needed. This multi-step execution
+                            model ensures Java's portability, performance, and reliability across diverse computing
+                            environments.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part3" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=1522&si=kJ1LWutxt1m3Rycr" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=HgU_GGJv34R0UqAQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Types</h3>
+
+                        <p>Types in Java refer to the classification of data that determines how it can be stored and
+                            manipulated. Java supports two broad categories: primitive types, which are predefined and
+                            store basic values like numbers or characters, and reference types, which point to objects
+                            or arrays. Each type in Java is strongly defined, making Java a statically typed language.
+                            This strong typing enables compile-time error checking and improves code safety.
+                            Understanding types is fundamental to working with Java, as it ensures proper data handling,
+                            compatibility in operations, and efficient memory usage.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part4" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=1557&si=xFKB5m8zkNjW314O" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=HgU_GGJv34R0UqAQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Variables</h3>
+
+                        <p>Variables in Java are named storage locations in memory that hold values during a program's
+                            execution. A variable must be declared with a specific type, such as int, String, or a
+                            custom class, determining what kind of data it can store. There are several types of
+                            variables in Java, including local variables (declared within a method), instance variables
+                            (associated with an object), and static variables (shared among all instances of a class).
+                            Variables are fundamental to programming as they allow developers to store, manipulate, and
+                            retrieve data dynamically. Proper naming conventions and scope management are essential for
+                            writing clean and maintainable Java code.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part5" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=1747&si=JGvPxaw3qlHyrv3B" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=0jWxb8iY6OshRYzC"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="section-desc">
+                        <h3>Primitive Types</h3>
+
+                        <p>Primitive types in Java are the basic building blocks of data. They include eight predefined
+                            types: byte, short, int, long, float, double, char, and boolean. Each primitive type is
+                            associated with a specific size and range, determined by the Java specification, making them
+                            memory-efficient and fast. Unlike objects, primitives are stored directly in the stack
+                            memory, and they do not come with methods or properties. They are typically used for simple
+                            values, such as numerical computations, logical operations, and characters. Java developers
+                            often use primitives for performance-critical tasks due to their lightweight nature compared
+                            to objects.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part6" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=2067&si=3WAy_QKwYFcKeaUZ" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=45QWzUKltaKQvF10"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Reference Types</h3>
+
+                        <p>Reference types in Java refer to objects or instances created from classes, as opposed to
+                        primitive types. When a reference type is declared, it does not store the actual value but
+                        instead holds a memory address pointing to the object. Common examples include arrays, strings,
+                        and user-defined classes. Unlike primitive types, reference types are managed in the heap
+                        memory, and their manipulation is done via their references. Reference types allow for complex
+                        data structures and functionalities, supporting object-oriented programming principles like
+                        inheritance and polymorphism. Understanding the distinction between references and the actual
+                        objects is crucial for effectively managing memory and avoiding issues such as null pointer
+                        exceptions.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part7" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=2619&si=P6iievZV0LfHdjLX" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=3aVaHLF0tI4NoYbX"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Strings</h3>
+
+                        <p>Strings in Java are objects that represent sequences of characters. Unlike primitive types,
+                            strings are immutable, meaning their content cannot be changed once created. This
+                            immutability ensures thread safety and allows string objects to be reused, enhancing
+                            performance in certain scenarios. Java provides the String class, which includes numerous
+                            methods for operations such as concatenation, substring extraction, and character searching.
+                            Strings can also be created using string literals, which are stored in the string pool for
+                            efficient memory use. Java developers often use strings in text processing, user input
+                            handling, and file operations, making them one of the most fundamental data types in
+                            programming.</p>
+                    </div>
+                </a>
+            </section>
+
+            <section id="part8" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=3202&si=M3TBdnJbvBoCA_UU" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=-T-tqe_kvQ_QJG6o"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="section-desc">
+                        <h3>Arrays</h3>
+
+                        <p>Arrays in Java are data structures that store multiple values of the same type in a
+                            contiguous block of memory. Each value, known as an element, is accessed via an index, with
+                            the first element having an index of 0. Arrays are fixed in size once created, making them
+                            memory-efficient but not dynamically resizable. Java supports single-dimensional arrays as
+                            well as multi-dimensional arrays, such as two-dimensional arrays used for matrices. Arrays
+                            are often used to group related data, like a list of student grades or a set of
+                            configurations. Their straightforward syntax and direct memory access make them powerful
+                            tools, but managing large arrays can sometimes require careful handling to avoid issues like
+                            out-of-bounds errors.</p>
+                    </div>
+                </a>
+            </section>
+
+
+            <section id="part9" class="video-card">
+                <a href="https://youtu.be/eIrMbAQSU34?t=4120&si=btu3dZuofPAGOgN0" target="_blank">
+                    <div class="tutorial-video">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/eIrMbAQSU34?si=btu3dZuofPAGOgN0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="section-desc">
+                        <h3>Casting</h3>
+                        Casting in Java refers to the process of converting one data type into another. There are two
+                        primary types: implicit casting (also known as widening) and explicit casting (narrowing).
+                        Implicit casting happens automatically when converting a smaller or less precise data type to a
+                        larger or more precise one, such as converting an integer to a double. Explicit casting, on the
+                        other hand, requires manual intervention and is used when converting a larger data type to a
+                        smaller one, like a double to an integer. This involves a potential loss of data or precision,
+                        which is why it must be explicitly specified by the programmer using parentheses. Casting is
+                        essential when working with mixed data types or performing operations like type conversions in
+                        collections or generics.</p>
+                    </div>
+                </a>
+        </section>
+
+        <section id="part10" class="video-card">
+            <a href="https://youtu.be/eIrMbAQSU34?t=6352&si=T7ix6fkX6Bdi1whz" target="_blank">
+                <div class="tutorial-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=T7ix6fkX6Bdi1whz"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="section-desc">
+                    <h3>If Statements</h3>
+
+                    <p><dfn>If statements</dfn> are among the most basic yet essential control structures in Java,
+                        enabling
+                        programs to make decisions during execution. They evaluate a boolean expression, and if the
+                        expression returns true, the code block inside the "if" statement is executed. If the condition
+                        is false, the program skips that block and moves to the next part of the code. "If statements"
+                        can be extended using "else" to handle cases where the condition does not hold, and "else if"
+                        for multiple conditional branches. This flexibility allows developers to create dynamic programs
+                        capable of responding to various runtime conditions, such as user input or data values.
+                        Understanding "if statements" is crucial for implementing logical flows in any Java application.
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <section id="part11" class="video-card">
+            <a href="https://youtu.be/eIrMbAQSU34?t=7565&si=3j34jFXVdMzsK02z" target="_blank">
+                <div class="tutorial-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=3j34jFXVdMzsK02z"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="section-desc">
+                    <h3>For Loops</h3>
+
+                    <p><dfn>For loops</dfn> in Java are a core construct for handling repetitive tasks by iterating over
+                        a range
+                        of values or elements. The loop consists of three main parts: initialization, which sets the
+                        starting point of the loop; a condition, which determines whether the loop will continue to
+                        execute; and an increment or decrement operation, which updates the loop variable after each
+                        iteration. These components are written in a single line of syntax, making "for loops" compact
+                        and easy to read. Common use cases include iterating over arrays, processing collections, or
+                        generating repetitive sequences. Additionally, enhanced "for loops" (also called "for-each
+                        loops") provide a simpler way to iterate through arrays and collections without managing an
+                        index, increasing readability and reducing errors.</p>
+                </div>
+            </a>
+        </section>
+
+        <section id="part12" class="video-card">
+            <a href="https://youtu.be/eIrMbAQSU34?t=7793&si=ElBHKRPuzuQ5JPU-" target="_blank">
+                <div class="tutorial-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=ElBHKRPuzuQ5JPU-"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="section-desc">
+                    <h3>While Loops</h3>
+
+                    <p><dfn>While loops</dfn> are another fundamental looping construct in Java, designed to execute a
+                        block of code repeatedly as long as a specified boolean condition evaluates to true. Unlike "for
+                        loops,"
+                        "while loops" are better suited for situations where the number of iterations is uncertain and
+                        depends on dynamic factors during runtime. The condition is evaluated before entering the loop,
+                        meaning the loop body may not execute at all if the condition is false from the start. A
+                        variant, the "do-while loop," guarantees at least one execution of the loop body because the
+                        condition is checked after the execution. "While loops" are often used in scenarios like reading
+                        input until a certain value is provided or processing data until a termination condition is met.
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <section id="part13" class="video-card">
+            <a href="https://youtu.be/eIrMbAQSU34?t=6976&si=RCszhoCRDd_U9-W9" target="_blank">
+                <div class="tutorial-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=RCszhoCRDd_U9-W9"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="section-desc">
+                    <h3>Switch Statements</h3>
+
+                    <p><dfn>Switch statements</dfn> are a versatile control flow mechanism in Java that allows you to
+                        evaluate a
+                        single variable against multiple potential values and execute different blocks of code
+                        accordingly. They simplify the logic for cases where you might otherwise use multiple
+                        "if-else-if" statements, making the code more readable and efficient. A "switch" begins with the
+                        keyword "switch" followed by a variable in parentheses, and the cases for each value are
+                        specified using the "case" keyword. A "default" case can also be included to handle situations
+                        where none of the specified cases match. Switch statements are especially useful in menu-driven
+                        programs, state machines, or when dealing with enums, offering a cleaner and more structured
+                        approach to conditional branching.</p>
+                </div>
+            </a>
+        </section>
+
+        <section id="part14" class="video-card">
+            <a href="https://youtu.be/eIrMbAQSU34?t=8965&si=_BFaU_GyvighYw9S" target="_blank">
+                <div class="tutorial-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eIrMbAQSU34?si=_BFaU_GyvighYw9S"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="section-desc">
+                    <h3>Clean Coding</h3>
+
+                    <p><dfn>Clean coding</dfn> is a practice that focuses on writing software that is not only
+                        functional but
+                        also easy to read, maintain, and extend. It involves adhering to principles like using
+                        descriptive and meaningful variable names, keeping methods short and focused on a single
+                        responsibility, and avoiding unnecessary complexity. Proper indentation, consistent formatting,
+                        and logical organization of code files further contribute to its clarity. Following clean coding
+                        practices enhances collaboration among developers, as clean code is easier to understand and
+                        debug. Moreover, clean code minimizes technical debt, making future updates or scaling of the
+                        software more manageable. Developers are encouraged to write self-documenting code, reducing the
+                        need for extensive comments, as well as adhering to established conventions and best practices
+                        within the Java community.</p>
+                </div>
+            </a>
+        </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <section id="contact-info">
+            <h3>Contact Us</h3>
+            <address>
+                <p><i class="fa fa-map-marker"></i><a href="address:156 Kifissia Avenue, Marousi,
+                    15126">156 Kifissia Avenue, Marousi,
+                        15126</a></p>
+                <p><i class="fa fa-phone"></i><a href="tel:+302101234567">+30 210
+                        123 4567</a></p>
+                <p><i class="fa fa-envelope"></i><a href="mailto:eschool@gmail.com">learnspere@gmail.com</a></p>
+            </address>
+        </section>
+
+        <section id="social-media">
+            <h3>Follow Us</h3>
+            <a href=""><i class="fa fa-facebook-f"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-youtube-play"></i></a>
+            <a href=""><i class='fa fa-skype'></i></a>
+        </section>
+
+        <section id="terms-privacy">
+            <h3>Information</h3>
+            <p><a href="">Terms of Services</a></p>
+            <p><a href="">Privacy Policy</a></p>
+        </section>
+
+        <p>© Copyright 2024-2025</p>
+    </footer>
+</body>
+
+</html>
